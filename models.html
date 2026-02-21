@@ -1209,6 +1209,13 @@
       // --- Expose render globally for wishlist toggle ---
       window._dbRender = render;
 
+      // --- URL parameter: auto-fill search from ?search=xxx ---
+      var urlParams = new URLSearchParams(window.location.search);
+      var searchParam = urlParams.get('search');
+      if (searchParam) {
+        searchInput.value = searchParam;
+      }
+
       // --- Initial render ---
       render();
     })();

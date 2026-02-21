@@ -396,6 +396,9 @@
 
               <!-- Search Results -->
               <div id="search-results-container" style="display:none;">
+                <h3 class="search-section-heading" onclick="var el=document.getElementById('model-results');el.style.display=el.style.display==='none'?'':'none';">🚗 모델 DB <span class="search-section-count" id="model-results-count"></span> <span style="font-size:11px;color:var(--text-muted);">▼</span></h3>
+                <div id="model-results" class="search-results"></div>
+
                 <h3 class="search-section-heading" onclick="var el=document.getElementById('page-results');el.style.display=el.style.display==='none'?'':'none';">📄 관련 페이지 <span class="search-section-count" id="page-results-count"></span> <span style="font-size:11px;color:var(--text-muted);">▼</span></h3>
                 <div id="page-results" class="search-results"></div>
 
@@ -467,6 +470,7 @@
     </aside>
   </div>
 
+  <script src="js/db-models.js"></script>
   <script src="js/search.js"></script>
   <script src="js/app.js"></script>
 
@@ -477,6 +481,8 @@
 
     var searchInput = document.getElementById('search-input');
     var searchResultsContainer = document.getElementById('search-results-container');
+    var modelResultsEl = document.getElementById('model-results');
+    var modelResultsCount = document.getElementById('model-results-count');
     var pageResultsEl = document.getElementById('page-results');
     var faqResultsEl = document.getElementById('faq-results');
     var pageResultsCount = document.getElementById('page-results-count');
@@ -525,6 +531,45 @@
       } else {
         summaryAnswerRelated.style.display = 'none';
       }
+    }
+
+    function searchModels(query) {
+      if (!query || query.trim().length === 0 || typeof MODELS_DATA === 'undefined') return [];
+      var words = query.trim().toLowerCase().split(/\s+/).filter(function(w) { return w.length > 0; });
+      var results = [];
+      for (var i = 0; i < MODELS_DATA.length; i++) {
+        var m = MODELS_DATA[i];
+        var haystack = (m.name + ' ' + m.partNumber + ' ' + m.category + ' ' + m.parentModel + ' ' + (m.description || '') + ' ' + (m.features || []).join(' ')).toLowerCase();
+        var score = 0;
+        var matched = 0;
+        for (var w = 0; w < words.length; w++) {
+          var word = words[w];
+          if (m.name.toLowerCase().indexOf(word) !== -1) { score += 100; matched++; }
+          else if (m.partNumber.toLowerCase().indexOf(word) !== -1) { score += 80; matched++; }
+          else if (m.parentModel.toLowerCase().indexOf(word) !== -1) { score += 60; matched++; }
+          else if (haystack.indexOf(word) !== -1) { score += 20; matched++; }
+        }
+        if (words.length >= 2 && matched < words.length * 0.5) continue;
+        if (score > 0) results.push({ model: m, score: score });
+      }
+      results.sort(function(a, b) { return b.score - a.score; });
+      return results.slice(0, 10);
+    }
+
+    function renderModelResults(results, query) {
+      modelResultsCount.textContent = '(' + results.length + '건)';
+      if (results.length === 0) { modelResultsEl.innerHTML = '<p class="text-muted" style="padding:8px 0;font-size:12px;">일치하는 모델 없음</p>'; return; }
+      var html = '';
+      for (var i = 0; i < results.length; i++) {
+        var m = results[i].model;
+        var url = 'models.html?search=' + encodeURIComponent(m.partNumber);
+        html += '<a href="' + url + '" class="search-result">';
+        html += '<div class="search-result-title">' + highlightText(m.name, query) + ' <span style="font-size:11px;color:var(--text-muted);">(' + m.partNumber + ')</span></div>';
+        html += '<div class="search-result-snippet">' + highlightText(m.category + ' · ' + m.parentModel + ' · ' + m.scale + ' · ' + m.drivetrain + ' · ' + m.priceRange, query) + '</div>';
+        html += '<div class="search-result-meta"><span class="tag tag-blue">' + m.category + '</span> <span class="tag tag-green">' + m.parentModel + '</span></div>';
+        html += '</a>';
+      }
+      modelResultsEl.innerHTML = html;
     }
 
     function renderPageResults(results, query) {
@@ -606,11 +651,12 @@
         summaryAnswerEl.style.display = 'none';
         return;
       }
+      var modelResults = searchModels(query);
       var pageResults = searchContent(query);
       var faqResults = searchFAQ(query);
       var summary = generateSummaryAnswer(query);
       emptyState.style.display = 'none';
-      if (pageResults.length === 0 && faqResults.length === 0) {
+      if (pageResults.length === 0 && faqResults.length === 0 && modelResults.length === 0) {
         searchResultsContainer.style.display = 'none';
         noMatchState.style.display = '';
       } else {
@@ -618,6 +664,7 @@
         searchResultsContainer.style.display = '';
       }
       renderSummaryAnswer(summary, query);
+      renderModelResults(modelResults, query);
       renderPageResults(pageResults, query);
       renderFAQResults(faqResults, query);
     }
