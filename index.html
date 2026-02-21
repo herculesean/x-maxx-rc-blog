@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X-Maxx RC Car Blog — 홈</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Mobile Menu Toggle -->
+  <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
+  <div class="sidebar-overlay"></div>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <span>🏎️</span> X-Maxx RC Blog
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <!-- Home -->
+        <a href="index.html" class="sidebar-link sidebar-link--top">🏠 홈</a>
+
+        <!-- 기초 학습 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="basics">
+            <span class="arrow">▼</span> 📚 기초 학습
+          </button>
+          <div class="sidebar-section-items" data-section-items="basics">
+            <a href="how-it-works.html" class="sidebar-link">RC카 작동 원리</a>
+            <a href="parts-map.html" class="sidebar-link">핵심 부품 맵</a>
+            <a href="power-system.html" class="sidebar-link">파워 시스템</a>
+          </div>
+        </div>
+
+        <!-- 세팅 & 관리 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="setup">
+            <span class="arrow">▼</span> 🔧 세팅 &amp; 관리
+          </button>
+          <div class="sidebar-section-items" data-section-items="setup">
+            <a href="tuning.html" class="sidebar-link">셋업 &amp; 튜닝</a>
+            <a href="maintenance.html" class="sidebar-link">유지보수</a>
+          </div>
+        </div>
+
+        <!-- Traxxas -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="traxxas">
+            <span class="arrow">▼</span> 🔴 Traxxas
+          </button>
+          <div class="sidebar-section-items" data-section-items="traxxas">
+            <a href="traxxas-ecosystem.html" class="sidebar-link">Traxxas 생태계</a>
+            <a href="traxxas-models.html" class="sidebar-link">Traxxas 모델</a>
+          </div>
+        </div>
+
+        <!-- FMS -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="fms">
+            <span class="arrow">▼</span> 🟢 FMS
+          </button>
+          <div class="sidebar-section-items" data-section-items="fms">
+            <a href="fms-models.html" class="sidebar-link">FMS 모델</a>
+          </div>
+        </div>
+
+        <!-- 구매 & 커뮤니티 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="community">
+            <span class="arrow">▼</span> 🛒 구매 &amp; 커뮤니티
+          </button>
+          <div class="sidebar-section-items" data-section-items="community">
+            <a href="selection-checklist.html" class="sidebar-link">RC카 선택 체크리스트</a>
+            <a href="community.html" class="sidebar-link">커뮤니티 용어</a>
+          </div>
+        </div>
+
+        <!-- 안전 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="safety">
+            <span class="arrow">▼</span> ⚡ 안전
+          </button>
+          <div class="sidebar-section-items" data-section-items="safety">
+            <a href="battery-safety.html" class="sidebar-link">배터리 안전</a>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- 데이터베이스 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="database">
+            <span class="arrow">▼</span> 📊 데이터베이스
+          </button>
+          <div class="sidebar-section-items" data-section-items="database">
+            <a href="glossary.html" class="sidebar-link">용어 사전</a>
+            <a href="models.html" class="sidebar-link">모델 DB</a>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- Q&A -->
+        <a href="qa.html" class="sidebar-link sidebar-link--top">🔍 Q&amp;A / 검색</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="theme-toggle">🌙 다크 모드</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="content">
+        <!-- Page Header -->
+        <div class="page-icon">🏎️</div>
+        <h1 class="page-title">X-Maxx RC Car Blog</h1>
+        <p class="page-description">Traxxas RC카의 모든 것 — 초보자를 위한 완벽 가이드</p>
+
+        <!-- Start Here -->
+        <div class="start-here">
+          <h2>🚀 여기서 시작하세요!</h2>
+          <p>RC카가 처음이신가요? 아래 3개 글을 순서대로 읽으면 기본기를 빠르게 익힐 수 있습니다.</p>
+          <div class="start-here-links">
+            <a href="how-it-works.html" class="start-here-link">1. RC카 작동 원리 →</a>
+            <a href="parts-map.html" class="start-here-link">2. 핵심 부품 맵 →</a>
+            <a href="power-system.html" class="start-here-link">3. 파워 시스템 →</a>
+          </div>
+        </div>
+
+        <!-- 목적별 찾기 -->
+        <h2 id="purpose">🎯 목적별 찾기</h2>
+        <div class="dashboard-grid">
+          <a href="how-it-works.html" class="dashboard-card">
+            <div class="dashboard-card-icon">🔰</div>
+            <div class="dashboard-card-title">RC카가 처음이에요</div>
+            <div class="dashboard-card-desc">RC카 작동 원리부터 기본 부품까지, 아무것도 몰라도 괜찮아요.</div>
+          </a>
+          <a href="selection-checklist.html" class="dashboard-card">
+            <div class="dashboard-card-icon">🛒</div>
+            <div class="dashboard-card-title">어떤 RC카를 살까?</div>
+            <div class="dashboard-card-desc">예산, 목적, 주행 환경별 체크리스트로 나에게 맞는 RC카를 찾아보세요.</div>
+          </a>
+          <a href="tuning.html" class="dashboard-card">
+            <div class="dashboard-card-icon">🔧</div>
+            <div class="dashboard-card-title">세팅을 바꾸고 싶어요</div>
+            <div class="dashboard-card-desc">기어비, 서스펜션, 타이어 등 튜닝의 기초를 배워보세요.</div>
+          </a>
+          <a href="battery-safety.html" class="dashboard-card">
+            <div class="dashboard-card-icon">⚡</div>
+            <div class="dashboard-card-title">배터리가 걱정돼요</div>
+            <div class="dashboard-card-desc">LiPo 배터리 안전 관리법, Do &amp; Don't를 정리했습니다.</div>
+          </a>
+          <a href="traxxas-ecosystem.html" class="dashboard-card">
+            <div class="dashboard-card-icon">🔴</div>
+            <div class="dashboard-card-title">Traxxas가 뭐가 좋은데?</div>
+            <div class="dashboard-card-desc">TSM, TQi, iD 커넥터 등 Traxxas만의 기술 생태계를 알아보세요.</div>
+          </a>
+          <a href="maintenance.html" class="dashboard-card">
+            <div class="dashboard-card-icon">🛠️</div>
+            <div class="dashboard-card-title">관리는 어떻게 하나요?</div>
+            <div class="dashboard-card-desc">주행 전후 체크리스트, 청소 루틴, 교체 주기 가이드.</div>
+          </a>
+        </div>
+
+        <!-- 추천 읽기 -->
+        <h2 id="recommended">📖 추천 읽기 순서</h2>
+        <p>RC카 입문자를 위한 순서대로 정리한 로드맵입니다.</p>
+        <ol>
+          <li><a href="how-it-works.html"><strong>RC카 작동 원리</strong></a> — RC카의 기본 구조와 신호 흐름을 이해합니다.</li>
+          <li><a href="parts-map.html"><strong>핵심 부품 맵</strong></a> — 전자/구동/섀시 3가지 구역으로 나눠 부품을 살펴봅니다.</li>
+          <li><a href="power-system.html"><strong>파워 시스템</strong></a> — 모터와 배터리의 종류, 선택 기준을 배웁니다.</li>
+          <li><a href="traxxas-ecosystem.html"><strong>Traxxas 생태계</strong></a> — Traxxas만의 기술과 편의 기능을 이해합니다.</li>
+          <li><a href="tuning.html"><strong>셋업 &amp; 튜닝</strong></a> — 기본 세팅과 조정 방법을 익힙니다.</li>
+          <li><a href="battery-safety.html"><strong>배터리 안전</strong></a> — LiPo 배터리를 안전하게 다루는 법을 꼭 알아두세요.</li>
+          <li><a href="maintenance.html"><strong>유지보수</strong></a> — 오래 타기 위한 관리 루틴을 세워봅니다.</li>
+        </ol>
+
+        <!-- 빠른 링크 -->
+        <h2 id="quick-links">⚡ 빠른 링크</h2>
+        <div class="quick-links">
+          <a href="glossary.html" class="quick-link">📖 용어 사전</a>
+          <a href="models.html" class="quick-link">🚗 모델 DB</a>
+          <a href="qa.html" class="quick-link">🔍 Q&amp;A 검색</a>
+          <a href="community.html" class="quick-link">💬 커뮤니티 용어</a>
+          <a href="traxxas-models.html" class="quick-link">🔴 Traxxas 모델</a>
+        </div>
+
+        <!-- About -->
+        <hr>
+        <div class="callout info">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content">
+            <p>이 블로그는 <strong>Traxxas RC카 초보자</strong>를 위해 만들어졌습니다. 전문 용어는 모두 <a href="glossary.html">용어 사전</a>에서 찾을 수 있고, 궁금한 것은 <a href="qa.html">Q&amp;A 검색</a>에서 검색해보세요.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- TOC -->
+    <aside class="toc">
+      <div class="toc-title">목차</div>
+      <ul class="toc-list"></ul>
+    </aside>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

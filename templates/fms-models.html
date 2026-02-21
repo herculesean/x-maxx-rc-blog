@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ d.pageTitle }} — X-Maxx RC Blog</title>
+  <meta name="description" content="{{ d.pageDescription }}">
+  <link rel="stylesheet" href="css/style.css">
+{% include '_model_styles.html' %}
+</head>
+<body>
+{% include '_sidebar.html' %}
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="content">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+          <a href="index.html">홈</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>FMS</span>
+          <span class="breadcrumb-sep">›</span>
+          <span>FMS 모델</span>
+        </div>
+
+        <!-- Page Header -->
+        <div class="page-icon">🟢</div>
+        <h1 class="page-title">{{ d.pageTitle }}</h1>
+        <p class="page-description">{{ d.pageDescription }}</p>
+
+        <!-- ===== 한 줄 요약 ===== -->
+        <h2 id="overview">한 줄 요약</h2>
+        <div class="callout info">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content">
+            <p><strong>{{ d.overviewCallout }}</strong></p>
+          </div>
+        </div>
+        <p>{{ d.overviewText }}</p>
+
+        <!-- ===== FMS 핵심 특징 ===== -->
+        <h2 id="fms-features">FMS 핵심 특징</h2>
+        <div class="dashboard-grid">
+{%- for feat in d.features %}
+          <div class="dashboard-card">
+            <div class="dashboard-card-header-inline"><div class="dashboard-card-icon">{{ feat.icon }}</div><div class="dashboard-card-title">{{ feat.title }}</div></div>
+            <div class="dashboard-card-desc">{{ feat.desc }}</div>
+          </div>
+{%- endfor %}
+        </div>
+
+        <!-- ===== 스케일 카테고리 ===== -->
+        <h2 id="categories">스케일별 카테고리</h2>
+        <p>FMS의 RC카는 크게 {{ d.categories | length }}가지 스케일로 나뉩니다.</p>
+
+        <div class="dashboard-grid">
+{%- for card in d.categoryCards %}
+          <div class="dashboard-card">
+            <div class="dashboard-card-header-inline"><div class="dashboard-card-icon">{{ card.icon }}</div><div class="dashboard-card-title">{{ card.title }}</div></div>
+            <div class="dashboard-card-desc">{{ card.desc }}</div>
+          </div>
+{%- endfor %}
+        </div>
+
+        <!-- ===== 카테고리별 모델 ===== -->
+{%- for cat in d.categories %}
+
+        <!-- ================================================================= -->
+        <!-- ===== {{ cat.name }} ===== -->
+        <!-- ================================================================= -->
+        <h2 id="{{ cat.id }}">{{ cat.icon }} {{ cat.name }} ({{ cat.parentCount }}개 상위모델)</h2>
+        <p>{{ cat.description }}</p>
+
+{%- for model in cat.parentModels %}
+
+        <!-- === {{ model.name }} === -->
+        <h3 id="{{ model.id }}">{{ model.name }}{% for tag in model.tags %} <span class="tag tag-{{ tag.color }}">{{ tag.text }}</span>{% endfor %}</h3>
+        <p>{{ model.description }}</p>
+{%- if model.images %}
+        <div class="model-gallery">
+{%- for img in model.images %}
+          <figure><img src="{{ img.src }}" alt="{{ img.alt }}"><figcaption>{{ img.caption }}</figcaption></figure>
+{%- endfor %}
+        </div>
+{%- endif %}
+        <div class="spec-block">
+          <div class="spec-block-title">📋 {{ model.specTitle | default(model.name + ' 대표 사양') }}</div>
+{%- for spec in model.specs %}
+          <div class="spec-row"><span class="spec-label">{{ spec.label }}</span><span class="spec-value">{{ spec.value }}</span></div>
+{%- endfor %}
+        </div>
+{%- if model.subModels %}
+        <p><strong>{{ model.subModelLabel }}:</strong></p>
+        <ul>
+{%- for sub in model.subModels %}
+          <li><strong>{{ sub.name }}</strong> — {{ sub.details }}</li>
+{%- endfor %}
+        </ul>
+{%- endif %}
+{%- endfor %}
+{%- endfor %}
+
+        <!-- ===== 상위모델 비교표 ===== -->
+        <h2 id="comparison">{{ d.comparison.title }}</h2>
+        <p>{{ d.comparison.description }}</p>
+
+        <div class="comparison-table">
+          <table>
+            <thead>
+              <tr>
+{%- for col in d.comparison.columns %}
+                <th>{{ col }}</th>
+{%- endfor %}
+              </tr>
+            </thead>
+            <tbody>
+{%- for catRow in d.comparison.categoryRows %}
+              <!-- {{ catRow.label }} -->
+              <tr class="category-row"><td colspan="{{ d.comparison.columns | length }}" style="background:var(--bg-tertiary);font-weight:700;font-size:13px;color:var(--text-secondary);">{{ catRow.label }}</td></tr>
+{%- for row in catRow.rows %}
+              <tr>
+{%- for cell in row %}
+{%- if loop.first %}
+                <td><strong>{{ cell }}</strong></td>
+{%- else %}
+                <td>{{ cell }}</td>
+{%- endif %}
+{%- endfor %}
+              </tr>
+{%- endfor %}
+{%- endfor %}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout info">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content">
+            <p>{{ d.priceCallout }}</p>
+          </div>
+        </div>
+
+        <!-- ===== 추천 가이드 ===== -->
+        <h2 id="recommendations">추천 가이드</h2>
+        <ul>
+{%- for rec in d.recommendations %}
+          <li><strong>{{ rec.target }}</strong> — {{ rec.model }}</li>
+{%- endfor %}
+        </ul>
+
+        <div class="callout info">
+          <div class="callout-icon">🏆</div>
+          <div class="callout-content">
+            <p>{{ d.recommendationCallout }}</p>
+          </div>
+        </div>
+
+        <!-- ===== 관련 용어 ===== -->
+        <h2 id="glossary-links">관련 용어</h2>
+        <div class="quick-links">
+{%- for link in d.glossaryLinks %}
+          <a href="{{ link.href }}" class="quick-link">{{ link.icon }} {{ link.text }}</a>
+{%- endfor %}
+        </div>
+
+        <!-- ===== Next Read ===== -->
+        <div class="next-read">
+          <div class="next-read-title">다음 읽기</div>
+          <div class="next-read-grid">
+{%- for nr in d.nextReads %}
+            <a href="{{ nr.href }}" class="next-read-card">
+              <div class="next-read-card-icon">{{ nr.icon }}</div>
+              <div class="next-read-card-title">{{ nr.title }}</div>
+              <div class="next-read-card-desc">{{ nr.desc }}</div>
+            </a>
+{%- endfor %}
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- TOC -->
+    <aside class="toc">
+      <div class="toc-title">목차</div>
+      <ul class="toc-list"></ul>
+    </aside>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

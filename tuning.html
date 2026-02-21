@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>셋업 &amp; 튜닝 — X-Maxx RC Car Blog</title>
+  <meta name="description" content="기어비, 서스펜션, 타이어 설정을 조정하여 RC카 성능을 최적화하는 방법을 배웁니다.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Mobile Menu Toggle -->
+  <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
+  <div class="sidebar-overlay"></div>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <span>🏎️</span> X-Maxx RC Blog
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <!-- Home -->
+        <a href="index.html" class="sidebar-link sidebar-link--top">🏠 홈</a>
+
+        <!-- 기초 학습 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="basics">
+            <span class="arrow">▼</span> 📚 기초 학습
+          </button>
+          <div class="sidebar-section-items" data-section-items="basics">
+            <a href="how-it-works.html" class="sidebar-link">RC카 작동 원리</a>
+            <a href="parts-map.html" class="sidebar-link">핵심 부품 맵</a>
+            <a href="power-system.html" class="sidebar-link">파워 시스템</a>
+          </div>
+        </div>
+
+        <!-- 세팅 & 관리 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="setup">
+            <span class="arrow">▼</span> 🔧 세팅 &amp; 관리
+          </button>
+          <div class="sidebar-section-items" data-section-items="setup">
+            <a href="tuning.html" class="sidebar-link active">셋업 &amp; 튜닝</a>
+            <a href="maintenance.html" class="sidebar-link">유지보수</a>
+          </div>
+        </div>
+
+        <!-- Traxxas -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="traxxas">
+            <span class="arrow">▼</span> 🔴 Traxxas
+          </button>
+          <div class="sidebar-section-items" data-section-items="traxxas">
+            <a href="traxxas-ecosystem.html" class="sidebar-link">Traxxas 생태계</a>
+            <a href="traxxas-models.html" class="sidebar-link">Traxxas 모델</a>
+          </div>
+        </div>
+
+        <!-- FMS -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="fms">
+            <span class="arrow">▼</span> 🟢 FMS
+          </button>
+          <div class="sidebar-section-items" data-section-items="fms">
+            <a href="fms-models.html" class="sidebar-link">FMS 모델</a>
+          </div>
+        </div>
+
+        <!-- 구매 & 커뮤니티 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="community">
+            <span class="arrow">▼</span> 🛒 구매 &amp; 커뮤니티
+          </button>
+          <div class="sidebar-section-items" data-section-items="community">
+            <a href="selection-checklist.html" class="sidebar-link">RC카 선택 체크리스트</a>
+            <a href="community.html" class="sidebar-link">커뮤니티 용어</a>
+          </div>
+        </div>
+
+        <!-- 안전 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="safety">
+            <span class="arrow">▼</span> ⚡ 안전
+          </button>
+          <div class="sidebar-section-items" data-section-items="safety">
+            <a href="battery-safety.html" class="sidebar-link">배터리 안전</a>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- 데이터베이스 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="database">
+            <span class="arrow">▼</span> 📊 데이터베이스
+          </button>
+          <div class="sidebar-section-items" data-section-items="database">
+            <a href="glossary.html" class="sidebar-link">용어 사전</a>
+            <a href="models.html" class="sidebar-link">모델 DB</a>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- Q&A -->
+        <a href="qa.html" class="sidebar-link sidebar-link--top">🔍 Q&amp;A / 검색</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="theme-toggle">🌙 다크 모드</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="content">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+          <a href="index.html">홈</a> &gt;
+          <span>세팅 &amp; 관리</span> &gt;
+          <span>셋업 &amp; 튜닝</span>
+        </nav>
+
+        <!-- Page Header -->
+        <div class="page-icon">🔧</div>
+        <h1 class="page-title">셋업 &amp; 튜닝</h1>
+        <p class="page-description">기어비, 서스펜션, 타이어 설정을 조정하여 RC카 성능을 최적화하는 방법을 배웁니다.</p>
+
+        <!-- ===================== 한 줄 요약 ===================== -->
+        <h2 id="overview">한 줄 요약</h2>
+        <p><strong>튜닝은 주행 환경과 목적에 맞게 기어비, 서스펜션, 타이어를 조정하는 것입니다.</strong></p>
+        <p>RC카를 처음 구입하면 공장 기본 세팅으로도 충분히 즐길 수 있습니다. 하지만 주행 환경이나 운전 스타일에 맞게 몇 가지 설정을 조정하면 체감 성능이 크게 달라집니다. 이 글에서는 초보자도 쉽게 따라 할 수 있도록 <strong>기어링, 서스펜션, 타이어</strong> 세 가지 핵심 튜닝 영역을 하나씩 설명하겠습니다.</p>
+
+        <!-- ===================== 기어링 (기어비 조정) ===================== -->
+        <h2 id="gearing">⚙️ 기어링 (기어비 조정)</h2>
+        <p>기어비는 RC카의 <strong>가속력과 최고 속도의 균형</strong>을 결정하는 가장 기본적인 튜닝 요소입니다. 모터 축에 끼우는 작은 <strong>피니언기어</strong>와 그에 맞물리는 큰 <strong>스퍼기어</strong>의 이빨 수 비율로 결정됩니다.</p>
+
+        <div class="callout info">
+          <div class="callout-icon">📐</div>
+          <div class="callout-content">
+            <p><strong>기어비 계산법:</strong> 기어비 = 스퍼기어 이빨 수 ÷ 피니언기어 이빨 수<br>
+            예: 스퍼 54T ÷ 피니언 18T = <strong>기어비 3.0</strong></p>
+          </div>
+        </div>
+
+        <h3>📊 피니언 크기별 효과 비교</h3>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>항목</th>
+                <th>🔽 피니언 작게 (기어비 ↑)</th>
+                <th>🔼 피니언 크게 (기어비 ↓)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>🏎️ 최고 속도</strong></td>
+                <td>❌ 감소</td>
+                <td>✅ 증가</td>
+              </tr>
+              <tr>
+                <td><strong>🚀 가속력</strong></td>
+                <td>✅ 증가</td>
+                <td>❌ 감소</td>
+              </tr>
+              <tr>
+                <td><strong>🌡️ 모터 발열</strong></td>
+                <td>✅ 낮음</td>
+                <td>⚠️ 높음</td>
+              </tr>
+              <tr>
+                <td><strong>🔋 배터리 소모</strong></td>
+                <td>✅ 적음</td>
+                <td>⚠️ 많음</td>
+              </tr>
+              <tr>
+                <td><strong>추천 용도</strong></td>
+                <td>오프로드 배싱, 내구성</td>
+                <td>온로드, 스피드런</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="flow-diagram">
+          <p><strong>기어비 조정 흐름:</strong></p>
+          <p>피니언기어 크기 변경 → 기어비 변화 → 속도/가속/발열 균형 변화 → 모터 온도 확인 → 적정 기어비 결정</p>
+        </div>
+
+        <p><strong>Traxxas 예시:</strong> Slash 4X4 VXL의 기본 기어 구성은 피니언 11T / 스퍼 54T로, 기어비는 약 4.91입니다. 이는 가속력과 내구성을 우선시한 보수적인 세팅으로, 오프로드 주행에 적합합니다. 속도를 높이고 싶다면 피니언을 13T~15T로 올릴 수 있지만, 반드시 모터 온도를 체크해야 합니다.</p>
+
+        <div class="callout warning">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content">
+            <strong>기어비를 바꿀 때는 반드시 모터 온도를 확인하세요.</strong>
+            <p>피니언기어를 키우면 모터에 가해지는 부하가 증가하여 발열이 심해집니다. 주행 직후 모터 온도가 <strong>80도C 이상</strong>이면 위험합니다! 모터나 ESC가 손상될 수 있으므로, 기어비를 올릴 때는 한 단계씩(1~2T씩) 올리면서 온도를 확인하세요. 적외선 온도계를 사용하면 편리합니다.</p>
+          </div>
+        </div>
+
+        <div class="spec-block">
+          <h4>일반적인 기어비 범위 (참고용)</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>주행 환경</th>
+                <th>권장 기어비</th>
+                <th>피니언 예시 (54T 스퍼 기준)</th>
+                <th>특징</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>배싱 (오프로드)</strong></td>
+                <td>4.5 ~ 5.5</td>
+                <td>10T ~ 12T</td>
+                <td>가속 좋음, 발열 낮음</td>
+              </tr>
+              <tr>
+                <td><strong>일반 주행</strong></td>
+                <td>3.5 ~ 4.5</td>
+                <td>12T ~ 16T</td>
+                <td>균형 잡힌 세팅</td>
+              </tr>
+              <tr>
+                <td><strong>스피드런 (온로드)</strong></td>
+                <td>2.5 ~ 3.5</td>
+                <td>16T ~ 22T</td>
+                <td>최고 속도 우선, 발열 주의</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ===================== 기어 메시 ===================== -->
+        <h3 id="gear-mesh">기어 메시 (간격 조정)</h3>
+        <p>피니언기어와 스퍼기어 사이의 맞물림 간격을 <strong>기어 메시(Gear Mesh)</strong>라고 합니다. 기어를 교체할 때마다 반드시 메시를 확인해야 합니다.</p>
+        <ul>
+          <li><strong>간격이 너무 좁으면:</strong> 기어끼리 과도하게 눌려 마모가 빨라지고, 구동 저항이 커져 효율이 떨어집니다.</li>
+          <li><strong>간격이 너무 넓으면:</strong> 기어 이빨이 제대로 맞물리지 않아 이빨이 빠지거나(스트리핑) 덜컹거리는 소리가 납니다.</li>
+        </ul>
+
+        <div class="callout tip">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content">
+            <strong>종이 한 장 두께 팁</strong>
+            <p>기어 메시를 맞추는 가장 쉬운 방법은 <strong>일반 복사 용지 한 장</strong>을 피니언과 스퍼기어 사이에 끼운 뒤 모터 마운트 나사를 조이는 것입니다. 그런 다음 종이를 빼내면 딱 적절한 간격이 생깁니다. 기어를 손으로 돌렸을 때 약간의 유격이 느껴지면서 부드럽게 돌아가면 성공입니다.</p>
+          </div>
+        </div>
+
+        <!-- ===================== 서스펜션 세팅 ===================== -->
+        <h2 id="suspension">🔧 서스펜션 세팅</h2>
+        <p>서스펜션은 RC카의 <strong>주행 안정성과 핸들링</strong>을 좌우하는 중요한 영역입니다. 노면 상태와 주행 스타일에 따라 세밀하게 조절할 수 있습니다. 크게 <strong>스프링 프리로드, 쇼크 오일(댐핑), 캠버와 토</strong> 세 가지 요소를 조정합니다.</p>
+
+        <!-- ===== 스프링 프리로드 ===== -->
+        <h3 id="spring-preload">스프링 프리로드</h3>
+        <p><strong>프리로드(Preload)</strong>란 쇼크 스프링이 차체 무게를 받기 전에 이미 압축되어 있는 정도를 말합니다. 쇼크 위쪽의 조절 너트(프리로드 칼라)를 돌려서 설정합니다.</p>
+        <ul>
+          <li><strong>프리로드를 높이면:</strong> 라이드 하이트(차고)가 올라갑니다. 오프로드나 점프 주행 시 바닥 긁힘을 방지합니다.</li>
+          <li><strong>프리로드를 낮추면:</strong> 라이드 하이트가 내려갑니다. 무게 중심이 낮아져 온로드에서 안정적입니다.</li>
+        </ul>
+        <p><strong>좌우 균형이 핵심입니다.</strong> 평평한 바닥에 RC카를 놓았을 때 차체가 한쪽으로 기울면 안 됩니다. 좌우 쇼크의 프리로드를 동일하게 맞추고, 앞뒤 라이드 하이트도 원하는 수준으로 맞춰주세요. 자로 재면서 확인하는 것이 가장 정확합니다.</p>
+
+        <!-- ===== 쇼크 오일 (댐핑) ===== -->
+        <h3 id="shock-oil">쇼크 오일 (댐핑)</h3>
+        <p>쇼크 업소버 안에 채워진 <strong>실리콘 오일</strong>의 점도(무게, wt)에 따라 서스펜션이 압축되고 복원되는 속도가 달라집니다. 점도가 높을수록 오일이 천천히 흐르므로 댐핑이 강해집니다.</p>
+
+        <ul>
+          <li><strong>낮은 점도 (예: 20wt ~ 30wt):</strong> 서스펜션이 부드럽게 움직입니다. 평탄한 노면이나 가벼운 차량에 적합합니다. 점프 후 착지 시 바닥을 칠 수 있습니다.</li>
+          <li><strong>높은 점도 (예: 40wt ~ 50wt):</strong> 서스펜션이 단단하게 움직입니다. 울퉁불퉁한 오프로드나 무거운 차량에 적합합니다. 큰 점프 후 착지 충격을 잘 흡수합니다.</li>
+        </ul>
+        <p>대부분의 Traxxas 모델은 기본적으로 <strong>30wt</strong> 전후의 오일이 들어있습니다. 주행 후 차가 너무 덜컹거리면 점도를 올리고, 노면 요철을 제대로 흡수하지 못하면 점도를 낮춰보세요.</p>
+
+        <!-- ===== 캠버 & 토 ===== -->
+        <h3 id="camber-toe">📐 캠버 &amp; 토</h3>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>세팅</th>
+                <th>설명</th>
+                <th>효과</th>
+                <th>권장 값</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="4" style="background:var(--bg-secondary);font-weight:700;">캠버 — 정면에서 본 타이어 기울기</td>
+              </tr>
+              <tr>
+                <td>⬅️ <strong>네거티브</strong><br><small>(안쪽 기울임)</small></td>
+                <td>타이어 상단이 안쪽으로</td>
+                <td>✅ 코너링 그립 향상</td>
+                <td>-1° ~ -2° (일반적)</td>
+              </tr>
+              <tr>
+                <td>➡️ <strong>포지티브</strong><br><small>(바깥 기울임)</small></td>
+                <td>타이어 상단이 바깥으로</td>
+                <td>❌ 직진성 ↓, 마모 불균일</td>
+                <td>거의 사용 안 함</td>
+              </tr>
+              <tr>
+                <td colspan="4" style="background:var(--bg-secondary);font-weight:700;">토 — 위에서 본 타이어 방향</td>
+              </tr>
+              <tr>
+                <td>🔽 <strong>토인</strong><br><small>(안쪽으로 모임)</small></td>
+                <td>타이어 앞쪽이 안으로</td>
+                <td>✅ 직진 안정성 향상</td>
+                <td>뒷바퀴에 약간</td>
+              </tr>
+              <tr>
+                <td>🔼 <strong>토아웃</strong><br><small>(바깥으로 벌어짐)</small></td>
+                <td>타이어 앞쪽이 바깥으로</td>
+                <td>✅ 회전 반응성 향상</td>
+                <td>앞바퀴에 약간</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content">
+            <strong>초보자는 기본 세팅에서 시작하고, 한 번에 하나씩만 바꾸세요.</strong>
+            <p>여러 세팅을 동시에 바꾸면 어떤 변경이 어떤 효과를 냈는지 알 수 없습니다. 기본(스톡) 세팅에서 출발하여, 한 번에 <strong>하나의 요소만</strong> 조정하고 주행해 보세요. 변경 전후의 차이를 체감한 뒤 다음 항목으로 넘어가는 것이 가장 효율적인 튜닝 방법입니다.</p>
+          </div>
+        </div>
+
+        <!-- ===================== 타이어 선택 ===================== -->
+        <h2 id="tires">🛞 타이어 선택</h2>
+        <p>타이어는 RC카가 노면과 직접 접촉하는 <strong>유일한 부품</strong>으로, 주행 환경에 맞는 타이어를 선택하면 핸들링과 접지력이 크게 달라집니다. 노면 종류, 타이어 패턴, 컴파운드(고무 경도) 세 가지를 고려하여 선택합니다.</p>
+
+        <h3>📊 컴파운드(고무 경도) 비교</h3>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>경도</th>
+                <th>그립</th>
+                <th>내구성</th>
+                <th>추천 용도</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>🟡 <strong>소프트</strong></td>
+                <td>⭐⭐⭐</td>
+                <td>⭐</td>
+                <td>레이스, 단시간 고그립</td>
+              </tr>
+              <tr>
+                <td>🟢 <strong>미디엄</strong></td>
+                <td>⭐⭐</td>
+                <td>⭐⭐</td>
+                <td>범용 — 대부분 상황 OK</td>
+              </tr>
+              <tr>
+                <td>🔵 <strong>하드</strong></td>
+                <td>⭐</td>
+                <td>⭐⭐⭐</td>
+                <td>배싱, 거친 노면, 장시간</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>🗺️ 노면별 추천</h3>
+
+        <div class="comparison-table">
+          <table>
+            <thead>
+              <tr>
+                <th>노면</th>
+                <th>추천 타이어 패턴</th>
+                <th>추천 컴파운드</th>
+                <th>Traxxas 예시</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>🛣️ <strong>아스팔트</strong></td>
+                <td>슬릭 / 반슬릭</td>
+                <td>소프트 ~ 미디엄</td>
+                <td>Response 타이어</td>
+              </tr>
+              <tr>
+                <td>🏜️ <strong>흙 / 다트</strong></td>
+                <td>핀 / 스파이크</td>
+                <td>미디엄</td>
+                <td>Talon EXT</td>
+              </tr>
+              <tr>
+                <td>🌿 <strong>잔디</strong></td>
+                <td>중간 트레드</td>
+                <td>미디엄 ~ 하드</td>
+                <td>Talon EXT</td>
+              </tr>
+              <tr>
+                <td>🏖️ <strong>모래</strong></td>
+                <td>패들</td>
+                <td>하드</td>
+                <td>Paddle 타이어</td>
+              </tr>
+              <tr>
+                <td>💧 <strong>진흙</strong></td>
+                <td>넓은 간격 스파이크</td>
+                <td>미디엄</td>
+                <td>Badlands MX</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ===================== 바디 & 공력 ===================== -->
+        <h2 id="body-and-aero">💨 바디 &amp; 공력</h2>
+        <p>RC카에서 바디 쉘과 공력 부품은 <strong>외관뿐만 아니라 주행 성능</strong>에도 영향을 미칩니다. 특히 고속 주행 시 공기 저항과 다운포스는 무시할 수 없는 요소입니다.</p>
+
+        <h3>바디 무게와 공기 저항</h3>
+        <ul>
+          <li><strong>가벼운 바디:</strong> 가속이 빠르고 점프 시 체공 시간이 길어집니다. 단, 고속에서 바람에 흔들릴 수 있습니다.</li>
+          <li><strong>무거운 바디:</strong> 무게 중심이 높아져 롤오버(전복) 위험이 커질 수 있습니다. 반면 바람의 영향을 덜 받습니다.</li>
+          <li><strong>공기 저항:</strong> 바디의 형태에 따라 고속에서 공기 저항이 달라집니다. 트럭 바디는 저항이 크고, 낮은 세단 바디는 저항이 작습니다.</li>
+        </ul>
+
+        <h3>윙 효과 (다운포스)</h3>
+        <p><strong>윙(리어 스포일러)</strong>은 주행 중 공기를 이용해 뒷바퀴를 노면에 눌러주는 <strong>다운포스(Downforce)</strong>를 만들어냅니다.</p>
+        <ul>
+          <li><strong>큰 윙 / 높은 각도:</strong> 다운포스가 커져 고속에서 뒷바퀴 접지력이 향상됩니다. 대신 공기 저항이 증가하여 최고 속도가 약간 줄어들 수 있습니다.</li>
+          <li><strong>작은 윙 / 낮은 각도:</strong> 다운포스가 약해지지만 공기 저항이 줄어 최고 속도에 유리합니다.</li>
+          <li><strong>윙 없음:</strong> 스피드런 등 직선 최고 속도를 추구할 때 윙을 제거하기도 합니다. 단, 고속 안정성이 크게 떨어집니다.</li>
+        </ul>
+
+        <div class="callout info">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content">
+            <strong>배싱에서는 윙이 필수!</strong>
+            <p>오프로드 배싱이나 점프 주행을 즐긴다면 윙은 꼭 달아두세요. 윙이 없으면 고속에서 차가 뜨거나 착지 시 뒤집히기 쉽습니다. Traxxas 모델에는 기본적으로 윙이 장착되어 있으니, 특별한 이유가 없다면 그대로 사용하는 것을 권장합니다.</p>
+          </div>
+        </div>
+
+        <!-- ===================== Traxxas 세팅 예시 ===================== -->
+        <h2 id="traxxas-tuning">🔴 Traxxas 세팅 예시</h2>
+        <p>아래는 Traxxas 인기 모델별 주행 목적에 맞는 튜닝 세팅 예시입니다. 기본 세팅에서 크게 벗어나지 않는 범위에서 조정한 것이므로 초보자도 시도해볼 수 있습니다.</p>
+
+        <h3>🏁 Slash 4X4 — 숏코스 레이스 세팅</h3>
+        <div class="spec-block">
+          <h4>Slash 4X4 레이스 세팅</h4>
+          <table>
+            <tbody>
+              <tr><td><strong>기어비</strong></td><td>피니언 15T / 스퍼 54T (기어비 3.6)</td></tr>
+              <tr><td><strong>쇼크 오일</strong></td><td>앞 30wt / 뒤 35wt</td></tr>
+              <tr><td><strong>스프링 프리로드</strong></td><td>앞뒤 동일, 라이드 하이트 약 25mm</td></tr>
+              <tr><td><strong>캠버</strong></td><td>앞 -1도 / 뒤 -2도</td></tr>
+              <tr><td><strong>토</strong></td><td>앞 약간 토아웃 / 뒤 약간 토인</td></tr>
+              <tr><td><strong>타이어</strong></td><td>숏코스 전용 핀타이어 (미디엄 컴파운드)</td></tr>
+              <tr><td><strong>특징</strong></td><td>코너링 반응이 빠르고, 직선 가속력과 최고 속도의 균형이 잡힌 세팅</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>🦖 X-Maxx — 배싱 세팅</h3>
+        <div class="spec-block">
+          <h4>X-Maxx 배싱 세팅</h4>
+          <table>
+            <tbody>
+              <tr><td><strong>기어비</strong></td><td>기본 스톡 유지 (피니언 18T / 스퍼 54T)</td></tr>
+              <tr><td><strong>쇼크 오일</strong></td><td>앞 40wt / 뒤 50wt</td></tr>
+              <tr><td><strong>스프링 프리로드</strong></td><td>약간 높게 설정 (점프 착지 대비)</td></tr>
+              <tr><td><strong>캠버</strong></td><td>기본값 유지 (약 -1도)</td></tr>
+              <tr><td><strong>토</strong></td><td>기본값 유지</td></tr>
+              <tr><td><strong>타이어</strong></td><td>Talon EXT (기본 장착 타이어, 범용)</td></tr>
+              <tr><td><strong>특징</strong></td><td>높은 점프와 거친 노면을 견디는 내구성 중심 세팅. 쇼크 오일 점도를 올려 큰 충격을 흡수</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>🪨 TRX-4 — 크롤링 세팅</h3>
+        <div class="spec-block">
+          <h4>TRX-4 크롤링 세팅</h4>
+          <table>
+            <tbody>
+              <tr><td><strong>기어비</strong></td><td>저속 기어 (하이/로우 트랜스미션 로우 사용)</td></tr>
+              <tr><td><strong>쇼크 오일</strong></td><td>앞뒤 모두 20wt (부드러운 서스펜션)</td></tr>
+              <tr><td><strong>스프링 프리로드</strong></td><td>낮게 설정 (최대 서스펜션 이동 확보)</td></tr>
+              <tr><td><strong>캠버</strong></td><td>0도 (수직, 바위 위 접지력 극대화)</td></tr>
+              <tr><td><strong>토</strong></td><td>0도 (기본, 저속 주행에서 영향 미미)</td></tr>
+              <tr><td><strong>타이어</strong></td><td>Canyon Trail 소프트 컴파운드 (바위 접지력 극대화)</td></tr>
+              <tr><td><strong>특징</strong></td><td>느리지만 정밀한 제어, 최대 접지력과 서스펜션 유연성 확보</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ===================== 자주 묻는 질문 ===================== -->
+        <h2 id="faq">자주 묻는 질문</h2>
+
+        <details class="toggle">
+          <summary>처음 세팅은 뭐부터 건드려야 하나요?</summary>
+          <div class="toggle-content">
+            <p><strong>타이어부터 시작하세요.</strong> 타이어는 RC카 성능에 가장 직접적인 영향을 미치는 부품이면서, 교체도 가장 쉽습니다. 주행하는 노면(아스팔트, 흙, 잔디 등)에 맞는 타이어를 장착하는 것만으로도 핸들링이 크게 개선됩니다.</p>
+            <p>타이어를 맞춘 후에는 <strong>쇼크 오일 점도</strong>를 조절해보세요. 차가 너무 덜컹거리면 점도를 올리고, 노면 변화에 반응이 느리면 점도를 내리면 됩니다. 기어비 변경은 모터 온도 관리가 필요하므로 어느 정도 경험이 쌓인 뒤에 시도하는 것을 권장합니다.</p>
+          </div>
+        </details>
+
+        <details class="toggle">
+          <summary>기어비를 바꾸면 배터리가 빨리 닳나요?</summary>
+          <div class="toggle-content">
+            <p><strong>네, 기어비가 높아지면(피니언을 키우면) 배터리 소모가 빨라집니다.</strong> 기어비를 높이면 모터에 가해지는 부하가 커지고, 더 많은 전류를 소비하게 됩니다. 결과적으로 배터리 지속 시간이 짧아지고 발열도 증가합니다.</p>
+            <p>반대로 기어비를 낮추면(피니언을 줄이면) 모터 부하가 줄어 배터리 효율이 좋아집니다. 배싱처럼 오래 주행하고 싶다면 보수적인 기어비를 유지하는 것이 좋습니다.</p>
+          </div>
+        </details>
+
+        <details class="toggle">
+          <summary>비 오는 날 주행할 때 세팅을 바꿔야 하나요?</summary>
+          <div class="toggle-content">
+            <p><strong>완전히 바꿀 필요는 없지만, 몇 가지 조정이 도움이 됩니다.</strong></p>
+            <ul>
+              <li><strong>타이어:</strong> 젖은 노면에서는 트레드 패턴이 깊은 타이어가 배수 성능이 좋아 접지력을 유지합니다. 슬릭 타이어는 젖은 노면에서 매우 미끄럽습니다.</li>
+              <li><strong>기어비:</strong> 접지력이 떨어지므로 피니언을 한두 단계 줄여 가속 시 휠스핀을 줄이는 것이 좋습니다.</li>
+              <li><strong>주행 후 관리:</strong> 방수 RC카라도 주행 후 반드시 물기를 닦고 건조시키세요. 베어링, 기어박스, 커넥터 부분에 수분이 남으면 부식의 원인이 됩니다.</li>
+            </ul>
+            <p>또한 Traxxas 모델은 기본적으로 방수 설계가 되어 있지만, 완전 침수는 피하는 것이 좋습니다. 깊은 웅덩이는 가급적 피하세요.</p>
+          </div>
+        </details>
+
+        <!-- ===================== 관련 용어 ===================== -->
+        <h2 id="glossary-links">관련 용어</h2>
+        <p>이 글에서 등장한 주요 용어들을 <a href="glossary.html">용어 사전</a>에서 더 자세히 확인할 수 있습니다.</p>
+        <ul>
+          <li><a href="glossary.html#gear-ratio">기어비 (Gear Ratio)</a> — 피니언기어와 스퍼기어의 이빨 수 비율</li>
+          <li><a href="glossary.html#gear-mesh">기어 메시 (Gear Mesh)</a> — 피니언과 스퍼기어 사이의 맞물림 간격</li>
+          <li><a href="glossary.html#camber">캠버 (Camber)</a> — 타이어의 안쪽/바깥쪽 기울기 각도</li>
+          <li><a href="glossary.html#toe">토 (Toe)</a> — 타이어가 안쪽/바깥쪽으로 향하는 각도</li>
+          <li><a href="glossary.html#shock-absorber">쇼크 업소버 (Shock Absorber)</a> — 주행 중 충격을 흡수하는 댐퍼 장치</li>
+        </ul>
+
+        <!-- ===================== 다음 읽기 ===================== -->
+        <h2>다음에 읽어볼 글</h2>
+        <div class="next-read">
+          <a href="maintenance.html" class="next-read-card">
+            <div class="next-read-icon">🛠️</div>
+            <div class="next-read-title">유지보수</div>
+            <div class="next-read-desc">주행 전후 체크리스트, 청소 루틴, 부품 교체 주기를 알아봅니다. 튜닝한 RC카를 오래 타려면 관리가 필수입니다.</div>
+          </a>
+          <a href="power-system.html" class="next-read-card">
+            <div class="next-read-icon">🔋</div>
+            <div class="next-read-title">파워 시스템</div>
+            <div class="next-read-desc">모터와 배터리의 종류, 선택 기준을 배워 기어비 튜닝의 기초 지식을 넓혀보세요.</div>
+          </a>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- TOC -->
+    <aside class="toc">
+      <div class="toc-title">목차</div>
+      <ul class="toc-list"></ul>
+    </aside>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FMS 모델 라인업 — X-Maxx RC Blog</title>
+  <meta name="description" content="3개 스케일, 16개 상위모델 — FMS 전체 RC카 라인업을 스케일별로 정리합니다.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .model-card-img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: contain;
+      border-radius: var(--radius-md);
+      margin-bottom: 12px;
+      background: var(--bg-tertiary);
+    }
+    .model-section-img {
+      float: right;
+      max-width: 300px;
+      margin: 0 0 16px 24px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+    }
+    .model-gallery {
+      display: flex;
+      gap: 8px;
+      margin: 12px 0 16px;
+    }
+    .model-gallery figure {
+      flex: 1;
+      min-width: 0;
+      margin: 0;
+      text-align: center;
+    }
+    .model-gallery img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: contain;
+      border-radius: var(--radius-md);
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
+    }
+    .model-gallery figcaption {
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+    @media (max-width: 768px) {
+      .model-section-img {
+        float: none;
+        max-width: 100%;
+        margin: 0 0 16px 0;
+      }
+      .model-gallery {
+        flex-direction: column;
+      }
+      .model-gallery img {
+        max-height: 200px;
+      }
+    }
+  </style></head>
+<body>
+  <!-- Mobile Menu Toggle -->
+  <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
+  <div class="sidebar-overlay"></div>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <span>🏎️</span> X-Maxx RC Blog
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <!-- Home -->
+        <a href="index.html" class="sidebar-link sidebar-link--top">🏠 홈</a>
+
+        <!-- 기초 학습 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="basics">
+            <span class="arrow">▼</span> 📚 기초 학습
+          </button>
+          <div class="sidebar-section-items" data-section-items="basics">
+            <a href="how-it-works.html" class="sidebar-link">RC카 작동 원리</a>
+            <a href="parts-map.html" class="sidebar-link">핵심 부품 맵</a>
+            <a href="power-system.html" class="sidebar-link">파워 시스템</a>
+          </div>
+        </div>
+
+        <!-- 세팅 & 관리 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="setup">
+            <span class="arrow">▼</span> 🔧 세팅 &amp; 관리
+          </button>
+          <div class="sidebar-section-items" data-section-items="setup">
+            <a href="tuning.html" class="sidebar-link">셋업 &amp; 튜닝</a>
+            <a href="maintenance.html" class="sidebar-link">유지보수</a>
+          </div>
+        </div>
+
+        <!-- Traxxas -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="traxxas">
+            <span class="arrow">▼</span> 🔴 Traxxas
+          </button>
+          <div class="sidebar-section-items" data-section-items="traxxas">
+            <a href="traxxas-ecosystem.html" class="sidebar-link">Traxxas 생태계</a>
+            <a href="traxxas-models.html" class="sidebar-link">Traxxas 모델</a>
+          </div>
+        </div>
+
+        <!-- FMS -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="fms">
+            <span class="arrow">▼</span> 🟢 FMS
+          </button>
+          <div class="sidebar-section-items" data-section-items="fms">
+            <a href="fms-models.html" class="sidebar-link active">FMS 모델</a>
+          </div>
+        </div>
+
+        <!-- 구매 & 커뮤니티 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="community">
+            <span class="arrow">▼</span> 🛒 구매 &amp; 커뮤니티
+          </button>
+          <div class="sidebar-section-items" data-section-items="community">
+            <a href="selection-checklist.html" class="sidebar-link">RC카 선택 체크리스트</a>
+            <a href="community.html" class="sidebar-link">커뮤니티 용어</a>
+          </div>
+        </div>
+
+        <!-- 안전 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="safety">
+            <span class="arrow">▼</span> ⚡ 안전
+          </button>
+          <div class="sidebar-section-items" data-section-items="safety">
+            <a href="battery-safety.html" class="sidebar-link">배터리 안전</a>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- 데이터베이스 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="database">
+            <span class="arrow">▼</span> 📊 데이터베이스
+          </button>
+          <div class="sidebar-section-items" data-section-items="database">
+            <a href="glossary.html" class="sidebar-link">용어 사전</a>
+            <a href="models.html" class="sidebar-link">모델 DB</a>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- Q&A -->
+        <a href="qa.html" class="sidebar-link sidebar-link--top">🔍 Q&amp;A / 검색</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="theme-toggle">🌙 다크 모드</button>
+      </div>
+    </aside>
+    <!-- Main Content -->
+    <main class="main">
+      <div class="content">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+          <a href="index.html">홈</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>FMS</span>
+          <span class="breadcrumb-sep">›</span>
+          <span>FMS 모델</span>
+        </div>
+
+        <!-- Page Header -->
+        <div class="page-icon">🟢</div>
+        <h1 class="page-title">FMS 모델 라인업</h1>
+        <p class="page-description">3개 스케일, 16개 상위모델 — FMS 전체 RC카 라인업을 스케일별로 정리합니다.</p>
+
+        <!-- ===== 한 줄 요약 ===== -->
+        <h2 id="overview">한 줄 요약</h2>
+        <div class="callout info">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content">
+            <p><strong>FMS는 크롤러/스케일 트럭 전문 브랜드로, 1:10 / 1:18 / 1:24 세 가지 스케일에 걸쳐 실차 라이선스 모델을 중심으로 라인업을 구성합니다. 총 16개 상위모델.</strong></p>
+          </div>
+        </div>
+        <p>FMS(Flight Model Simulation)는 원래 비행기 RC로 유명한 브랜드이지만, 최근 FCX 시리즈를 통해 RC 크롤러/스케일 트럭 시장에서 빠르게 입지를 넓히고 있습니다. Toyota, Land Rover, Chevrolet, Mercedes-Benz 등 유명 자동차 브랜드의 공식 라이선스를 획득하여 실차의 디테일을 충실히 재현한 것이 가장 큰 특징입니다.</p>
+
+        <!-- ===== FMS 핵심 특징 ===== -->
+        <h2 id="fms-features">FMS 핵심 특징</h2>
+        <div class="dashboard-grid">          <div class="dashboard-card">
+            <div class="dashboard-card-header-inline"><div class="dashboard-card-icon">📜</div><div class="dashboard-card-title">공식 라이선스</div></div>
+            <div class="dashboard-card-desc">Toyota, Land Rover, Chevrolet, Mercedes-Benz, GM 등 유명 자동차 브랜드의 공식 라이선스를 보유. 실차를 충실하게 재현합니다.</div>
+          </div>          <div class="dashboard-card">
+            <div class="dashboard-card-header-inline"><div class="dashboard-card-icon">⚙️</div><div class="dashboard-card-title">2단 변속기</div></div>
+            <div class="dashboard-card-desc">거의 모든 모델에 2단 변속기(Hi/Lo) 기본 탑재. 저속 고토크 크롤링과 고속 주행을 하나의 차량으로.</div>
+          </div>          <div class="dashboard-card">
+            <div class="dashboard-card-header-inline"><div class="dashboard-card-icon">🪨</div><div class="dashboard-card-title">포탈 액슬</div></div>
+            <div class="dashboard-card-desc">금속 기어 포탈 액슬로 지상고를 높이고 크롤링 성능을 극대화. 볼 베어링 기본 장착.</div>
+          </div>          <div class="dashboard-card">
+            <div class="dashboard-card-header-inline"><div class="dashboard-card-icon">🔋</div><div class="dashboard-card-title">배터리 포함</div></div>
+            <div class="dashboard-card-desc">1:18과 1:24 모델은 배터리 + USB 충전기 기본 포함. 1:10은 RS(Ready Set)로 배터리 별도 구매.</div>
+          </div>        </div>
+
+        <!-- ===== 스케일 카테고리 ===== -->
+        <h2 id="categories">스케일별 카테고리</h2>
+        <p>FMS의 RC카는 크게 3가지 스케일로 나뉩니다.</p>
+
+        <div class="dashboard-grid">          <div class="dashboard-card">
+            <div class="dashboard-card-header-inline"><div class="dashboard-card-icon">🏔️</div><div class="dashboard-card-title">1:10 크롤러 (FCX10)</div></div>
+            <div class="dashboard-card-desc">풀사이즈 크롤러. 550 모터, 4링크 서스펜션, XT60 배터리(별도). $279~$549. 5개 상위모델.</div>
+          </div>          <div class="dashboard-card">
+            <div class="dashboard-card-header-inline"><div class="dashboard-card-icon">🛻</div><div class="dashboard-card-title">1:18 크롤러 (FCX18)</div></div>
+            <div class="dashboard-card-desc">중형 크롤러. 180 모터, 900mAh 배터리 포함, 메탈 프레임. $139~$239. 4개 상위모델.</div>
+          </div>          <div class="dashboard-card">
+            <div class="dashboard-card-header-inline"><div class="dashboard-card-icon">🔬</div><div class="dashboard-card-title">1:24 미니 (FCX24)</div></div>
+            <div class="dashboard-card-desc">미니 크롤러. 130/050 모터, 380mAh 배터리 포함, 2단 변속. $139~$229. 7개 상위모델.</div>
+          </div>        </div>
+
+        <!-- ===== 카테고리별 모델 ===== -->
+        <!-- ================================================================= -->
+        <!-- ===== 1:10 크롤러 — FCX10 시리즈 ===== -->
+        <!-- ================================================================= -->
+        <h2 id="scale-10">🏔️ 1:10 크롤러 — FCX10 시리즈 (5개 상위모델)</h2>
+        <p>FMS의 플래그십 스케일. 550 브러시드 또는 브러시리스 모터, 4링크 서스펜션, 스트레이트/포탈 액슬을 갖춘 본격 크롤러입니다. 배터리(2S/3S LiPo XT60)는 별도 구매해야 합니다.</p>
+        <!-- === FCX10 PRO LC80 === -->
+        <h3 id="parent-fcx10-pro-lc80">FCX10 PRO LC80 <span class="tag tag-red">플래그십</span></h3>
+        <p>FMS 크롤러의 최상위 모델. FCX10 PRO 섀시에 브러시리스 모터, 25kg 디지털 서보, 잠금식 디퍼렌셜, 포탈 액슬을 장착한 프리미엄 크롤러입니다. Toyota 공식 라이선스.</p>        <div class="model-gallery">          <figure><img src="https://cdn.shopify.com/s/files/1/0558/5829/8965/files/New_Year_FCX10_PRO_LC80.jpg?v=1769759144" alt="FCX10 PRO LC80"><figcaption>FCX10 PRO LC80</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 FCX10 PRO LC80 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/10</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">3541-2100KV 브러시리스</span></div>          <div class="spec-row"><span class="spec-label">ESC</span><span class="spec-value">SL50A 2-3S 독립 브러시리스 ESC</span></div>          <div class="spec-row"><span class="spec-label">서보</span><span class="spec-value">25kg Predator 디지털 서보</span></div>          <div class="spec-row"><span class="spec-label">변속</span><span class="spec-value">2단 변속기, 잠금식 전/후 디퍼렌셜</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">2S/3S 5000mAh XT60 (별도)</span></div>          <div class="spec-row"><span class="spec-label">크기</span><span class="spec-value">572 x 251 x 288mm (휠베이스 325mm)</span></div>          <div class="spec-row"><span class="spec-label">지상고</span><span class="spec-value">76mm</span></div>          <div class="spec-row"><span class="spec-label">가격</span><span class="spec-value">$499.99 ~ $549.99</span></div>        </div>
+        <!-- === FCX10 Land Rover Camel Trophy === -->
+        <h3 id="parent-fcx10-landrover">FCX10 Land Rover Camel Trophy <span class="tag tag-green">라이선스</span></h3>
+        <p>Land Rover 공식 라이선스의 Camel Trophy Edition. Discovery, Range Rover, Defender 110 세 가지 바디를 선택할 수 있습니다. PC 소프트 바디에 실차 디테일(스포트라이트, 스노클, 인테리어)을 충실하게 재현합니다.</p>        <div class="model-gallery">          <figure><img src="https://cdn.shopify.com/s/files/1/0558/5829/8965/files/FebruaryFCX10LandRover.jpg?v=1769760482" alt="FCX10 Land Rover Camel Trophy"><figcaption>FCX10 Land Rover Camel Trophy</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 FCX10 Land Rover Camel Trophy 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/10</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">550 32T 브러시드</span></div>          <div class="spec-row"><span class="spec-label">변속</span><span class="spec-value">4링크 서스펜션, 스트레이트 액슬</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">2S/3S 5000mAh XT60 (별도)</span></div>          <div class="spec-row"><span class="spec-label">가격</span><span class="spec-value">$399.99 ~ $449.99</span></div>        </div>        <p><strong>하위 모델 (바디 변형):</strong></p>
+        <ul>          <li><strong>Discovery</strong> — 609 x 293 x 341mm, 휠베이스 321mm, 지상고 68mm</li>          <li><strong>Range Rover</strong> — 588 x 263 x 290mm, 휠베이스 321mm, 지상고 62mm</li>          <li><strong>Defender 110</strong> — 577 x 243 x 337mm, 휠베이스 326mm, 지상고 62mm</li>        </ul>
+        <!-- === FCX10 Chevrolet K5 Blazer === -->
+        <h3 id="parent-fcx10-k5">FCX10 Chevrolet K5 Blazer <span class="tag tag-green">라이선스</span></h3>
+        <p>GM 공식 라이선스. FMS 최초의 1/10 고성능 시뮬레이션 크롤러입니다. DIG 모드(전륜 독립 구동), 2WD/4WD 전환, 잠금식 디퍼렌셜, 포탈 액슬 등 프리미엄 기능을 갖추고 있습니다.</p>        <div class="model-gallery">          <figure><img src="https://cdn.shopify.com/s/files/1/0558/5829/8965/files/February_FCX10_K5.jpg?v=1769756801" alt="FCX10 K5 Blazer"><figcaption>FCX10 K5 Blazer</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 FCX10 Chevrolet K5 Blazer 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/10</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD (2WD/4WD 전환, DIG 모드)</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">550 브러시드</span></div>          <div class="spec-row"><span class="spec-label">변속</span><span class="spec-value">2단 변속기, 포탈 액슬</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">2S LiPo XT60 (별도)</span></div>          <div class="spec-row"><span class="spec-label">크기</span><span class="spec-value">548 x 249 x 285mm (휠베이스 324mm)</span></div>          <div class="spec-row"><span class="spec-label">지상고</span><span class="spec-value">89mm</span></div>          <div class="spec-row"><span class="spec-label">가격</span><span class="spec-value">$459.99 ~ $509.99</span></div>        </div>
+        <!-- === Canyon === -->
+        <h3 id="parent-canyon">Canyon</h3>
+        <p>두바이 미래형 경찰차에서 영감을 받은 러기드 오프로드 머신. 5개 서보(스티어링, Hi/Lo, 전/후 디퍼, DIG)와 마그네틱 바디 마운트, 동기식 LED 시스템(헤드/턴/테일)을 갖추고 있습니다.</p>        <div class="model-gallery">          <figure><img src="https://cdn.shopify.com/s/files/1/0558/5829/8965/files/FMS_Canyon_2.jpg?v=1760517327" alt="Canyon"><figcaption>Canyon</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 Canyon 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/10</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD (DIG 모드)</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">550 32T 브러시드 (Hobbywing 1060 ESC)</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">15 km/h</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">2S/3S 5000mAh XT60 (별도)</span></div>          <div class="spec-row"><span class="spec-label">크기</span><span class="spec-value">580 x 260 x 256mm (휠베이스 325mm)</span></div>          <div class="spec-row"><span class="spec-label">등판 각도</span><span class="spec-value">40°</span></div>          <div class="spec-row"><span class="spec-label">가격</span><span class="spec-value">$449.99 ~ $485.99</span></div>        </div>
+        <!-- === Atlas 4x4 === -->
+        <h3 id="parent-atlas-4x4">Atlas 4x4</h3>
+        <p>ROCHOBBY 협업 모델. 리지드 메탈 프레임에 나일론 롤 케이지, 2단 변속기를 갖춘 가성비 크롤러입니다.</p>        <div class="model-gallery">          <figure><img src="https://cdn.shopify.com/s/files/1/0558/5829/8965/products/yw.jpg?v=1764905511" alt="Atlas 4x4"><figcaption>Atlas 4x4</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 Atlas 4x4 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/10</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">550 35T 브러시드</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">15 km/h</span></div>          <div class="spec-row"><span class="spec-label">무게</span><span class="spec-value">1,000g</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">2S 5000mAh XT60 (별도)</span></div>          <div class="spec-row"><span class="spec-label">크기</span><span class="spec-value">537 x 241 x 247mm (휠베이스 340mm)</span></div>          <div class="spec-row"><span class="spec-label">지상고</span><span class="spec-value">79mm</span></div>          <div class="spec-row"><span class="spec-label">가격</span><span class="spec-value">$279.99 ~ $329.99</span></div>        </div>
+        <!-- ================================================================= -->
+        <!-- ===== 1:18 크롤러 — FCX18 시리즈 ===== -->
+        <!-- ================================================================= -->
+        <h2 id="scale-18">🛻 1:18 크롤러 — FCX18 시리즈 (4개 상위모델)</h2>
+        <p>중형 스케일 크롤러. 180 모터 기반의 컴팩트한 사이즈에 배터리 + USB 충전기 포함으로 구매 즉시 주행 가능합니다. 메탈 프레임, 2단 변속기, LED 라이트를 기본 탑재합니다.</p>
+        <!-- === FCX18 Land Cruiser 80 === -->
+        <h3 id="parent-fcx18-lc80">FCX18 Land Cruiser 80 <span class="tag tag-green">라이선스</span></h3>
+        <p>Toyota 공식 라이선스. FCX18 시리즈의 대표 모델입니다. 브러시드와 브러시리스 두 가지 버전을 제공합니다.</p>        <div class="model-gallery">          <figure><img src="https://cdn.shopify.com/s/files/1/0558/5829/8965/files/FCX18LC80Blue.jpg?v=1767164244" alt="FCX18 LC80 V2"><figcaption>FCX18 LC80 V2</figcaption></figure>          <figure><img src="https://cdn.shopify.com/s/files/1/0558/5829/8965/files/FMSFCX18LC80Brushless_1.jpg?v=1747208176" alt="FCX18 LC80 Brushless"><figcaption>FCX18 LC80 Brushless</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 FCX18 Land Cruiser 80 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/18</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">크기</span><span class="spec-value">282 x 126 x 136mm (휠베이스 160mm)</span></div>          <div class="spec-row"><span class="spec-label">무게</span><span class="spec-value">535g</span></div>          <div class="spec-row"><span class="spec-label">지상고</span><span class="spec-value">35mm</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">7.4V 900mAh LiPo (포함)</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>FCX18 LC80 V2 (브러시드)</strong> — 180 모터, Blue/Gray/Yellow, $189.99</li>          <li><strong>FCX18 LC80 Brushless</strong> — 1212 3200KV 모터, 포탈 액슬, Black, 런타임 ~45분, $239.99</li>        </ul>
+        <!-- === FCX18 Chevrolet K10 V2 === -->
+        <h3 id="parent-fcx18-k10">FCX18 Chevrolet K10 V2 <span class="tag tag-green">라이선스</span></h3>
+        <p>Chevrolet 공식 라이선스. 코일 스프링 + 메탈 오일 댐퍼, 개방형 테일게이트, 헤드/턴/테일 라이트를 갖춘 1:18 픽업 크롤러입니다.</p>        <div class="model-gallery">          <figure><img src="https://cdn.shopify.com/s/files/1/0558/5829/8965/files/1-18K10Black.jpg?v=1766052779" alt="FCX18 K10 V2"><figcaption>FCX18 K10 V2</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 FCX18 Chevrolet K10 V2 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/18</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">180 브러시드</span></div>          <div class="spec-row"><span class="spec-label">크기</span><span class="spec-value">336 x 139 x 139mm (휠베이스 199mm)</span></div>          <div class="spec-row"><span class="spec-label">지상고</span><span class="spec-value">40mm</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">7.4V 900mAh LiPo (포함)</span></div>          <div class="spec-row"><span class="spec-label">색상</span><span class="spec-value">Black / Red / Yellow</span></div>          <div class="spec-row"><span class="spec-label">가격</span><span class="spec-value">$189.99 ~ $199.99</span></div>        </div>
+        <!-- === FCX18 Hummer EV === -->
+        <h3 id="parent-fcx18-hummer">FCX18 Hummer EV <span class="tag tag-green">라이선스</span></h3>
+        <p>GM 공식 라이선스. 포탈 액슬, 메탈 기어, 24개 볼 베어링을 갖춘 Hummer EV 픽업 크롤러. 최대 60분 런타임.</p>        <div class="spec-block">
+          <div class="spec-block-title">📋 FCX18 Hummer EV 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/18</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">180 브러시드</span></div>          <div class="spec-row"><span class="spec-label">런타임</span><span class="spec-value">~60분</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">7.4V 900mAh LiPo (포함)</span></div>          <div class="spec-row"><span class="spec-label">색상</span><span class="spec-value">Black / White</span></div>          <div class="spec-row"><span class="spec-label">가격</span><span class="spec-value">$179.99</span></div>        </div>
+        <!-- === Atlas V2 6x6 === -->
+        <h3 id="parent-atlas-6x6">Atlas V2 6x6</h3>
+        <p>6륜 구동(6WD) 크롤러. V2에서 130 모터로 업그레이드, 메탈 기어, 글로시 바디, 마그네틱 힌지 바디 마운트를 적용했습니다. FPV 레디 ESC 탑재.</p>        <div class="spec-block">
+          <div class="spec-block-title">📋 Atlas V2 6x6 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/18</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">6WD</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">130 브러시드 (V2 업그레이드)</span></div>          <div class="spec-row"><span class="spec-label">기어비</span><span class="spec-value">100T 토크 (V1 55T에서 업그레이드)</span></div>          <div class="spec-row"><span class="spec-label">무게</span><span class="spec-value">454g</span></div>          <div class="spec-row"><span class="spec-label">런타임</span><span class="spec-value">~30분</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">7.4V 600mAh LiPo (포함)</span></div>          <div class="spec-row"><span class="spec-label">색상</span><span class="spec-value">Red / Blue</span></div>          <div class="spec-row"><span class="spec-label">가격</span><span class="spec-value">$139.99</span></div>        </div>
+        <!-- ================================================================= -->
+        <!-- ===== 1:24 미니 크롤러 — FCX24 시리즈 ===== -->
+        <!-- ================================================================= -->
+        <h2 id="scale-24">🔬 1:24 미니 크롤러 — FCX24 시리즈 (7개 상위모델)</h2>
+        <p>FMS에서 가장 인기 있는 스케일. 손바닥 크기의 미니 크롤러이지만 2단 변속기, 포탈 액슬, 메탈 기어를 갖추고 있습니다. 380mAh 배터리와 USB 충전기가 포함됩니다. FCX24(130 모터)와 FCX24M(050 모터, 신형 섀시) 두 가지 플랫폼이 있습니다.</p>
+        <!-- === FCX24 Power Wagon === -->
+        <h3 id="parent-fcx24-powerwagon">FCX24 Power Wagon</h3>
+        <p>1949년 Dodge Power Wagon을 재현한 머드 오프로드 트럭. FCX24 시리즈의 대표 모델이자 베스트셀러입니다.</p>        <div class="model-gallery">          <figure><img src="https://cdn.shopify.com/s/files/1/0558/5829/8965/products/26.jpg?v=1767164319" alt="FCX24 Power Wagon"><figcaption>Power Wagon (브러시드)</figcaption></figure>          <figure><img src="https://cdn.shopify.com/s/files/1/0558/5829/8965/files/1-24PowerWagonBluewithDecorationSet_WithBattery.jpg?v=1769752270" alt="FCX24 Power Wagon Brushless"><figcaption>Power Wagon Brushless</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 FCX24 Power Wagon 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/24</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">크기</span><span class="spec-value">237 x 126 x 126mm (휠베이스 139mm)</span></div>          <div class="spec-row"><span class="spec-label">무게</span><span class="spec-value">390g</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">8 km/h</span></div>          <div class="spec-row"><span class="spec-label">런타임</span><span class="spec-value">~20분</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">7.4V 380mAh LiPo (포함)</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>Power Wagon (브러시드)</strong> — 130 모터, Blue/Red/Yellow, $159.99</li>          <li><strong>Power Wagon Brushless</strong> — 1212 3200KV, Batrazzi 머드 타이어, Metallic Green, $229.99</li>        </ul>
+        <!-- === FCX24 Chevrolet K5 Blazer === -->
+        <h3 id="parent-fcx24-k5">FCX24 Chevrolet K5 Blazer <span class="tag tag-green">라이선스</span></h3>
+        <p>Chevrolet 공식 라이선스의 1:24 미니 크롤러. 높은 지상고(38mm)와 2단 포탈 액슬 변속기를 갖추고 있습니다.</p>        <div class="model-gallery">          <figure><img src="https://cdn.shopify.com/s/files/1/0558/5829/8965/files/1-24_K5_Gift_Version_Orange.jpg?v=1749179396" alt="FCX24 K5 Blazer"><figcaption>K5 Blazer (브러시드)</figcaption></figure>          <figure><img src="https://cdn.shopify.com/s/files/1/0558/5829/8965/files/FCX24K5BlackBrushless20.jpg?v=1748512388" alt="FCX24 K5 Blazer Brushless"><figcaption>K5 Blazer Brushless</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 FCX24 Chevrolet K5 Blazer 대표 사양</div>          <div class="spec-row"><span class="spec-label">크기</span><span class="spec-value">253 x 129 x 128mm (휠베이스 139mm)</span></div>          <div class="spec-row"><span class="spec-label">지상고</span><span class="spec-value">38mm</span></div>          <div class="spec-row"><span class="spec-label">런타임</span><span class="spec-value">~20분 (브러시드) / ~30분 (브러시리스)</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">7.4V 380mAh LiPo (포함)</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>K5 Blazer (브러시드)</strong> — 130 모터, Orange, $159.99</li>          <li><strong>K5 Blazer Brushless</strong> — 1212 3200KV, Black Edition, $229.99 (단종)</li>        </ul>
+        <!-- === FCX24M Toyota Tacoma === -->
+        <h3 id="parent-fcx24m-tacoma">FCX24M Toyota Tacoma <span class="tag tag-green">라이선스</span></h3>
+        <p>Toyota 공식 라이선스의 Tacoma 픽업. 신형 FCX24M 섀시에 153mm 확장 휠베이스, 래더 프레임, ABS 하드 바디를 적용한 스케일 크롤러입니다.</p>        <div class="model-gallery">          <figure><img src="https://cdn.shopify.com/s/files/1/0558/5829/8965/files/FCX24MToyotaTacoma_1.jpg?v=1769075603" alt="FCX24M Tacoma"><figcaption>FCX24M Tacoma</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 FCX24M Toyota Tacoma 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/24</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">050 브러시드 (고토크)</span></div>          <div class="spec-row"><span class="spec-label">크기</span><span class="spec-value">253 x 105 x 105mm (휠베이스 153mm)</span></div>          <div class="spec-row"><span class="spec-label">지상고</span><span class="spec-value">30mm</span></div>          <div class="spec-row"><span class="spec-label">런타임</span><span class="spec-value">~30분</span></div>          <div class="spec-row"><span class="spec-label">조종 거리</span><span class="spec-value">80m+</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">7.4V 380mAh LiPo (포함)</span></div>          <div class="spec-row"><span class="spec-label">색상</span><span class="spec-value">Gray / Red / Blue</span></div>          <div class="spec-row"><span class="spec-label">가격</span><span class="spec-value">$139.99</span></div>        </div>
+        <!-- === FCX24M Land Rover Family === -->
+        <h3 id="parent-fcx24m-landrover">FCX24M Land Rover Family <span class="tag tag-green">라이선스</span></h3>
+        <p>Land Rover 공식 라이선스. FCX24M 섀시에 Camel Trophy 옐로우 리버리, 4가지 바디(Discovery, Range Rover, Defender 90, Defender 110) 중 선택 가능합니다.</p>        <div class="model-gallery">          <figure><img src="https://cdn.shopify.com/s/files/1/0558/5829/8965/files/FCX24MLandRoverCamelTrophy-Discovery.jpg?v=1767164276" alt="FCX24M Land Rover Discovery"><figcaption>FCX24M Land Rover Discovery</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 FCX24M Land Rover Family 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/24</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">050 브러시드</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">7.4V 380mAh LiPo (포함)</span></div>          <div class="spec-row"><span class="spec-label">가격</span><span class="spec-value">$139.99 ~ $155.99</span></div>        </div>        <p><strong>하위 모델 (바디 변형):</strong></p>
+        <ul>          <li><strong>Discovery</strong> — 232 x 105 x 133mm, 휠베이스 134mm</li>          <li><strong>Range Rover</strong> — 227 x 103 x 120mm, 휠베이스 134mm</li>          <li><strong>Defender 110</strong> — 240 x 107 x 128mm, 휠베이스 135mm</li>          <li><strong>Defender 90</strong> — 214 x 107 x 128mm, 휠베이스 111mm</li>        </ul>
+        <!-- === FCX24 Unimog 421 === -->
+        <h3 id="parent-fcx24-unimog">FCX24 Unimog 421 <span class="tag tag-green">라이선스</span></h3>
+        <p>Daimler-Benz 공식 라이선스의 유니목. 실차 디테일(개방형 후드, 대시보드, 그릴)과 포탈 액슬을 갖추고 있습니다.</p>        <div class="model-gallery">          <figure><img src="https://cdn.shopify.com/s/files/1/0558/5829/8965/files/unimog_40.jpg?v=1755237897" alt="FCX24 Unimog 421"><figcaption>FCX24 Unimog 421</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 FCX24 Unimog 421 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/24</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">130 브러시드</span></div>          <div class="spec-row"><span class="spec-label">크기</span><span class="spec-value">249 x 160 x 153mm (휠베이스 142mm)</span></div>          <div class="spec-row"><span class="spec-label">무게</span><span class="spec-value">478g</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">5 km/h</span></div>          <div class="spec-row"><span class="spec-label">지상고</span><span class="spec-value">40mm</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">7.4V 380mAh LiPo (포함)</span></div>          <div class="spec-row"><span class="spec-label">색상</span><span class="spec-value">Green / Grey / Red</span></div>          <div class="spec-row"><span class="spec-label">가격</span><span class="spec-value">$149.99</span></div>        </div>
+        <!-- === FCX24 Lemur === -->
+        <h3 id="parent-fcx24-lemur">FCX24 Lemur</h3>
+        <p>록 버기 스타일. BFGoodrich 레플리카 타이어, 나일론 튜브 프레임, LED 루프 라이트바를 갖춘 미니 록 버기입니다.</p>        <div class="spec-block">
+          <div class="spec-block-title">📋 FCX24 Lemur 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/24</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">130 브러시드</span></div>          <div class="spec-row"><span class="spec-label">크기</span><span class="spec-value">209 x 128 x 120mm (휠베이스 136mm)</span></div>          <div class="spec-row"><span class="spec-label">지상고</span><span class="spec-value">41mm</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">7.4V 380mAh LiPo (포함)</span></div>          <div class="spec-row"><span class="spec-label">색상</span><span class="spec-value">Green / Orange / Red</span></div>          <div class="spec-row"><span class="spec-label">가격</span><span class="spec-value">$145.99</span></div>        </div>
+        <!-- === FCX24 Max Smasher V2 === -->
+        <h3 id="parent-fcx24-smasher">FCX24 Max Smasher V2</h3>
+        <p>미니 몬스터트럭 스타일. 거대한 68mm 할로우 타이어로 충격 흡수, 유성기어 디퍼렌셜을 갖추고 있습니다.</p>        <div class="spec-block">
+          <div class="spec-block-title">📋 FCX24 Max Smasher V2 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/24</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">130 브러시드</span></div>          <div class="spec-row"><span class="spec-label">크기</span><span class="spec-value">227 x 156 x 127mm (휠베이스 139mm)</span></div>          <div class="spec-row"><span class="spec-label">지상고</span><span class="spec-value">44mm</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">8 km/h</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">7.4V 380mAh LiPo (포함)</span></div>          <div class="spec-row"><span class="spec-label">색상</span><span class="spec-value">Blue / Red / White</span></div>          <div class="spec-row"><span class="spec-label">가격</span><span class="spec-value">$159.99</span></div>        </div>
+        <!-- ===== 상위모델 비교표 ===== -->
+        <h2 id="comparison">상위모델 비교표</h2>
+        <p>각 스케일의 상위모델을 한눈에 비교해 보세요.</p>
+
+        <div class="comparison-table">
+          <table>
+            <thead>
+              <tr>                <th>상위모델</th>                <th>스케일</th>                <th>구동</th>                <th>모터 타입</th>                <th>가격대</th>                <th>배터리</th>                <th>추천 대상</th>              </tr>
+            </thead>
+            <tbody>              <!-- 🏔️ 1:10 크롤러 (5개 상위모델) -->
+              <tr class="category-row"><td colspan="7" style="background:var(--bg-tertiary);font-weight:700;font-size:13px;color:var(--text-secondary);">🏔️ 1:10 크롤러 (5개 상위모델)</td></tr>              <tr>                <td><strong>FCX10 PRO LC80</strong></td>                <td>1/10</td>                <td>4WD</td>                <td>브러시리스</td>                <td>$499~$549</td>                <td>별도 (XT60)</td>                <td>프리미엄 크롤러</td>              </tr>              <tr>                <td><strong>FCX10 K5 Blazer</strong></td>                <td>1/10</td>                <td>4WD/DIG</td>                <td>브러시드</td>                <td>$459~$509</td>                <td>별도 (XT60)</td>                <td>고성능 크롤러</td>              </tr>              <tr>                <td><strong>Canyon</strong></td>                <td>1/10</td>                <td>4WD/DIG</td>                <td>브러시드</td>                <td>$449~$485</td>                <td>별도 (XT60)</td>                <td>오프로드 머신</td>              </tr>              <tr>                <td><strong>FCX10 Land Rover</strong></td>                <td>1/10</td>                <td>4WD</td>                <td>브러시드</td>                <td>$399~$449</td>                <td>별도 (XT60)</td>                <td>스케일 디테일</td>              </tr>              <tr>                <td><strong>Atlas 4x4</strong></td>                <td>1/10</td>                <td>4WD</td>                <td>브러시드</td>                <td>$279~$329</td>                <td>별도 (XT60)</td>                <td>가성비 크롤러</td>              </tr>              <!-- 🛻 1:18 크롤러 (4개 상위모델) -->
+              <tr class="category-row"><td colspan="7" style="background:var(--bg-tertiary);font-weight:700;font-size:13px;color:var(--text-secondary);">🛻 1:18 크롤러 (4개 상위모델)</td></tr>              <tr>                <td><strong>FCX18 LC80</strong></td>                <td>1/18</td>                <td>4WD</td>                <td>브러시드/리스</td>                <td>$189~$239</td>                <td>포함 (900mAh)</td>                <td>중형 스케일 대표</td>              </tr>              <tr>                <td><strong>FCX18 K10</strong></td>                <td>1/18</td>                <td>4WD</td>                <td>브러시드</td>                <td>$189~$199</td>                <td>포함 (900mAh)</td>                <td>스케일 픽업</td>              </tr>              <tr>                <td><strong>FCX18 Hummer EV</strong></td>                <td>1/18</td>                <td>4WD</td>                <td>브러시드</td>                <td>$179</td>                <td>포함 (900mAh)</td>                <td>EV 모델</td>              </tr>              <tr>                <td><strong>Atlas V2 6x6</strong></td>                <td>1/18</td>                <td>6WD</td>                <td>브러시드</td>                <td>$139</td>                <td>포함 (600mAh)</td>                <td>6륜 크롤러</td>              </tr>              <!-- 🔬 1:24 미니 크롤러 (7개 상위모델) -->
+              <tr class="category-row"><td colspan="7" style="background:var(--bg-tertiary);font-weight:700;font-size:13px;color:var(--text-secondary);">🔬 1:24 미니 크롤러 (7개 상위모델)</td></tr>              <tr>                <td><strong>FCX24 Power Wagon</strong></td>                <td>1/24</td>                <td>4WD</td>                <td>브러시드/리스</td>                <td>$159~$229</td>                <td>포함 (380mAh)</td>                <td>베스트셀러</td>              </tr>              <tr>                <td><strong>FCX24 K5 Blazer</strong></td>                <td>1/24</td>                <td>4WD</td>                <td>브러시드/리스</td>                <td>$159~$229</td>                <td>포함 (380mAh)</td>                <td>라이선스 미니</td>              </tr>              <tr>                <td><strong>Max Smasher V2</strong></td>                <td>1/24</td>                <td>4WD</td>                <td>브러시드</td>                <td>$159</td>                <td>포함 (380mAh)</td>                <td>미니 몬스터</td>              </tr>              <tr>                <td><strong>FCX24 Unimog 421</strong></td>                <td>1/24</td>                <td>4WD</td>                <td>브러시드</td>                <td>$149</td>                <td>포함 (380mAh)</td>                <td>유니목 팬</td>              </tr>              <tr>                <td><strong>FCX24 Lemur</strong></td>                <td>1/24</td>                <td>4WD</td>                <td>브러시드</td>                <td>$145</td>                <td>포함 (380mAh)</td>                <td>록 버기</td>              </tr>              <tr>                <td><strong>FCX24M Tacoma</strong></td>                <td>1/24</td>                <td>4WD</td>                <td>브러시드</td>                <td>$139</td>                <td>포함 (380mAh)</td>                <td>가성비 입문</td>              </tr>              <tr>                <td><strong>FCX24M Land Rover</strong></td>                <td>1/24</td>                <td>4WD</td>                <td>브러시드</td>                <td>$139~$155</td>                <td>포함 (380mAh)</td>                <td>미니 스케일</td>              </tr>            </tbody>
+          </table>
+        </div>
+
+        <div class="callout info">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content">
+            <p>가격은 FMS 미국 공식 RTR 기준 USD입니다. 1:18과 1:24 모델은 배터리와 USB 충전기가 포함되어 있으며, 1:10 모델은 배터리를 별도 구매해야 합니다.</p>
+          </div>
+        </div>
+
+        <!-- ===== 추천 가이드 ===== -->
+        <h2 id="recommendations">추천 가이드</h2>
+        <ul>          <li><strong>입문자 (가성비 + 즉시 주행)</strong> — FCX24M Tacoma ($139.99) 또는 Atlas V2 6x6 ($139.99)</li>          <li><strong>미니 크롤링 입문</strong> — FCX24 Power Wagon ($159.99) 또는 FCX24 K5 Blazer ($159.99)</li>          <li><strong>스케일 디테일 중시</strong> — FCX10 Land Rover Camel Trophy ($399.99)</li>          <li><strong>최고 성능 크롤러</strong> — FCX10 PRO LC80 ($499.99) 또는 FCX10 K5 Blazer ($459.99)</li>          <li><strong>브러시리스 업그레이드</strong> — 브러시드 대비 $50~70 추가로 더 조용하고 강력한 성능</li>        </ul>
+
+        <div class="callout info">
+          <div class="callout-icon">🏆</div>
+          <div class="callout-content">
+            <p>첫 FMS로 가장 많이 추천되는 모델은 FCX24 Power Wagon입니다. 가격, 성능, 부품 호환성 모두 뛰어나며 업그레이드 파츠가 풍부합니다. 1:10 스케일에서는 FCX10 Land Rover Camel Trophy가 스케일 디테일과 가격의 균형이 좋습니다.</p>
+          </div>
+        </div>
+
+        <!-- ===== 관련 용어 ===== -->
+        <h2 id="glossary-links">관련 용어</h2>
+        <div class="quick-links">          <a href="glossary.html#rtr" class="quick-link">📦 RTR</a>          <a href="glossary.html#brushless" class="quick-link">🔄 브러시리스</a>          <a href="glossary.html#lipo" class="quick-link">🔋 LiPo</a>          <a href="glossary.html#portal-axle" class="quick-link">🪨 포탈 액슬</a>          <a href="glossary.html#crawler" class="quick-link">🏔️ 크롤러</a>        </div>
+
+        <!-- ===== Next Read ===== -->
+        <div class="next-read">
+          <div class="next-read-title">다음 읽기</div>
+          <div class="next-read-grid">            <a href="traxxas-models.html" class="next-read-card">
+              <div class="next-read-card-icon">🔴</div>
+              <div class="next-read-card-title">Traxxas 모델 라인업</div>
+              <div class="next-read-card-desc">5개 카테고리, 24개 상위모델, 77개 모델 — Traxxas 전체 라인업</div>
+            </a>            <a href="selection-checklist.html" class="next-read-card">
+              <div class="next-read-card-icon">🛒</div>
+              <div class="next-read-card-title">RC카 선택 체크리스트</div>
+              <div class="next-read-card-desc">예산, 목적, 주행 환경별 체크리스트로 나에게 맞는 RC카를 찾아보세요.</div>
+            </a>          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- TOC -->
+    <aside class="toc">
+      <div class="toc-title">목차</div>
+      <ul class="toc-list"></ul>
+    </aside>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+  <style>
+    /* Modal overlay for traxxas-models */
+    .detail-modal-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+    .detail-modal-content {
+      background: #1e1e1e;
+      color: #e0e0e0;
+      border-radius: 8px;
+      max-width: 860px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .detail-modal-close {
+      position: absolute;
+      top: 12px; right: 14px;
+      background: none; border: none;
+      font-size: 22px; cursor: pointer;
+      color: #aaa; line-height: 1;
+      padding: 4px 8px; border-radius: 4px;
+    }
+    .detail-modal-close:hover { background: #333; color: #fff; }
+    .detail-modal-content .detail-top-bar-title { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .detail-modal-content .detail-grid { display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap; }
+    .detail-modal-content .detail-grid-image { flex: 0 0 auto; }
+    .detail-modal-content .detail-grid-specs { flex: 1 1 300px; }
+    .detail-modal-content .detail-product-image { max-width: 300px; max-height: 220px; object-fit: contain; border-radius: 4px; background: #2a2a2a; border: 1px solid #444; display: block; margin-bottom: 12px; }
+    .detail-modal-content .product-link-btn { display: inline-block; margin-top: 10px; padding: 6px 14px; background: #2383e2; color: #fff; border-radius: 4px; text-decoration: none; font-size: 13px; font-weight: 600; }
+    .detail-modal-content .product-link-btn:hover { background: #1b6ec2; }
+    .detail-modal-content .detail-tree-section { border: 1px solid #444; border-radius: 4px; margin-bottom: 8px; overflow: hidden; }
+    .detail-modal-content .detail-tree-header { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: #2a2a2a; cursor: pointer; user-select: none; font-weight: 700; font-size: 14px; color: #e0e0e0; }
+    .detail-modal-content .detail-tree-header:hover { background: #333; }
+    .detail-modal-content .detail-tree-arrow { display: inline-block; width: 16px; font-size: 12px; color: #888; transition: transform 0.2s; }
+    .detail-modal-content .detail-tree-section.collapsed .detail-tree-arrow { transform: rotate(0deg); }
+    .detail-modal-content .detail-tree-section:not(.collapsed) .detail-tree-arrow { transform: rotate(90deg); }
+    .detail-modal-content .detail-tree-body { padding: 8px 14px 12px; border-top: 1px solid #444; }
+    .detail-modal-content .detail-tree-section.collapsed .detail-tree-body { display: none; }
+    .detail-modal-content .spec-row { display: flex; padding: 4px 0; border-bottom: 1px solid #333; font-size: 13px; }
+    .detail-modal-content .spec-label { min-width: 100px; font-weight: 600; color: #aaa; }
+    .detail-modal-content .spec-value { color: #e0e0e0; }
+    .detail-modal-content .tag { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 11px; font-weight: 600; }
+    .detail-modal-content .tag-red { background: #5c2020; color: #f88; }
+    .detail-modal-content .tag-blue { background: #1e3a5f; color: #7cb9f5; }
+    .detail-modal-content .tag-green { background: #1e4620; color: #7cf58a; }
+    .detail-modal-content .tag-orange { background: #5f3a1e; color: #f5b97c; }
+    .detail-modal-content .tag-pink { background: #5c2040; color: #f5a0c0; }
+    .detail-modal-content .tag-purple { background: #3a1e5f; color: #b97cf5; }
+    .detail-modal-content .tag-gray { background: #3a3a3a; color: #bbb; }
+    .detail-modal-content .variant-item { display: flex; gap: 12px; padding: 6px 0; border-bottom: 1px solid #333; font-size: 13px; align-items: center; }
+    .detail-modal-content .variant-item:last-child { border-bottom: none; }
+    .detail-modal-content .variant-name { font-weight: 600; color: #e0e0e0; min-width: 180px; }
+    .detail-modal-content .variant-pn { color: #aaa; font-family: monospace; font-size: 12px; min-width: 120px; }
+    .detail-modal-content .variant-body { color: #aaa; }
+    @media (max-width: 600px) {
+      .detail-modal-overlay { padding: 12px; }
+      .detail-modal-content { max-height: 90vh; padding: 16px; }
+      .detail-modal-content .detail-grid { flex-direction: column; }
+      .detail-modal-content .detail-product-image { max-width: 100%; }
+      .detail-modal-content .variant-item { flex-direction: column; gap: 2px; }
+      .detail-modal-content .variant-name, .detail-modal-content .variant-pn { min-width: unset; }
+    }
+  </style>
+  <script>
+  (function() {
+    'use strict';
+    var CATEGORY_COLORS = { '몬스터트럭':'red','숏코스 트럭':'blue','스타디움&버기':'green','온로드&랠리':'pink','크롤러&트레일':'orange' };
+    var DRIVETRAIN_COLORS = { '4WD':'blue','2WD':'orange','6WD':'red' };
+    var MOTOR_TYPE_COLORS = { '브러시리스':'green','브러시드':'gray','니트로':'purple' };
+
+    function esc(t) { if (!t) return ''; var d = document.createElement('div'); d.appendChild(document.createTextNode(t)); return d.innerHTML; }
+
+    function buildHTML(item) {
+      var cc = CATEGORY_COLORS[item.category]||'gray', dc = DRIVETRAIN_COLORS[item.drivetrain]||'gray', mc = MOTOR_TYPE_COLORS[item.motorType]||'gray';
+      var h = '<div class="detail-grid"><div class="detail-grid-image">';
+      if (item.imageUrl) h += '<img src="'+esc(item.imageUrl)+'" alt="'+esc(item.name)+'" class="detail-product-image" onerror="this.style.display=\'none\'">';
+      if (item.productUrl) h += '<a href="'+esc(item.productUrl)+'" target="_blank" rel="noopener" class="product-link-btn">Traxxas 공식 페이지 &rarr;</a>';
+      h += '</div><div class="detail-grid-specs">';
+      h += '<div class="detail-tree-section"><div class="detail-tree-header" onclick="this.parentElement.classList.toggle(\'collapsed\')"><span class="detail-tree-arrow">▶</span>기본 정보</div><div class="detail-tree-body">';
+      h += '<div class="spec-row"><span class="spec-label">품번</span><span class="spec-value">'+esc(item.partNumber)+'</span></div>';
+      h += '<div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">'+esc(item.scale)+'</span></div>';
+      h += '<div class="spec-row"><span class="spec-label">카테고리</span><span class="spec-value"><span class="tag tag-'+cc+'">'+esc(item.category)+'</span></span></div>';
+      h += '<div class="spec-row"><span class="spec-label">상위모델</span><span class="spec-value">'+esc(item.parentModel||'-')+'</span></div>';
+      h += '<div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value"><strong>'+esc(item.priceRange)+'</strong></span></div>';
+      h += '</div></div>';
+      h += '<div class="detail-tree-section"><div class="detail-tree-header" onclick="this.parentElement.classList.toggle(\'collapsed\')"><span class="detail-tree-arrow">▶</span>파워트레인</div><div class="detail-tree-body">';
+      h += '<div class="spec-row"><span class="spec-label">구동</span><span class="spec-value"><span class="tag tag-'+dc+'">'+esc(item.drivetrain)+'</span></span></div>';
+      h += '<div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">'+esc(item.motor)+' <span class="tag tag-'+mc+'">'+esc(item.motorType)+'</span></span></div>';
+      h += '<div class="spec-row"><span class="spec-label">ESC</span><span class="spec-value">'+esc(item.esc)+'</span></div>';
+      h += '<div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">'+esc(item.battery)+'</span></div>';
+      h += '</div></div>';
+      h += '<div class="detail-tree-section"><div class="detail-tree-header" onclick="this.parentElement.classList.toggle(\'collapsed\')"><span class="detail-tree-arrow">▶</span>물리 스펙</div><div class="detail-tree-body">';
+      h += '<div class="spec-row"><span class="spec-label">최고속도</span><span class="spec-value">'+esc(item.topSpeed)+'</span></div>';
+      h += '<div class="spec-row"><span class="spec-label">무게</span><span class="spec-value">'+esc(item.weight)+'</span></div>';
+      h += '<div class="spec-row"><span class="spec-label">길이</span><span class="spec-value">'+esc(item.length)+'</span></div>';
+      h += '</div></div>';
+      h += '<div class="detail-tree-section"><div class="detail-tree-header" onclick="this.parentElement.classList.toggle(\'collapsed\')"><span class="detail-tree-arrow">▶</span>설명 & 특징</div><div class="detail-tree-body">';
+      h += '<p style="margin:0 0 8px 0;">'+esc(item.description)+'</p><strong>주요 특징:</strong><ul style="margin-top:4px;">';
+      item.features.forEach(function(f){ h += '<li>'+esc(f)+'</li>'; });
+      h += '</ul><div class="spec-row"><span class="spec-label">추천 대상</span><span class="spec-value">'+esc(item.recommended)+'</span></div></div></div>';
+      h += '</div></div>';
+      if (item.variants && item.variants.length > 0) {
+        h += '<div class="detail-tree-section"><div class="detail-tree-header" onclick="this.parentElement.classList.toggle(\'collapsed\')"><span class="detail-tree-arrow">▶</span>바리에이션 ('+item.variants.length+'종)</div><div class="detail-tree-body">';
+        item.variants.forEach(function(v){ h += '<div class="variant-item"><span class="variant-name">'+esc(v.name)+'</span><span class="variant-pn">'+esc(v.partNumber)+'</span><span class="variant-body">'+esc(v.body)+'</span></div>'; });
+        h += '</div></div>';
+      }
+      return h;
+    }
+
+    function showModal(item) {
+      var existing = document.querySelector('.detail-modal-overlay');
+      if (existing) existing.remove();
+      var overlay = document.createElement('div');
+      overlay.className = 'detail-modal-overlay';
+      var modal = document.createElement('div');
+      modal.className = 'detail-modal-content';
+      var html = '<button class="detail-modal-close" title="닫기">&times;</button>';
+      html += '<div class="detail-top-bar-title">' + esc(item.name) + '</div>';
+      html += buildHTML(item);
+      modal.innerHTML = html;
+      overlay.appendChild(modal);
+      document.body.appendChild(overlay);
+      overlay.addEventListener('click', function(e) { if (e.target === overlay) overlay.remove(); });
+      modal.querySelector('.detail-modal-close').addEventListener('click', function() { overlay.remove(); });
+      document.addEventListener('keydown', function onEsc(e) { if (e.key === 'Escape') { overlay.remove(); document.removeEventListener('keydown', onEsc); } });
+    }
+
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[href*="models.html?search="]');
+      if (!link) return;
+      var match = link.href.match(/[?&]search=([^&]+)/);
+      if (!match) return;
+      var query = decodeURIComponent(match[1]).toLowerCase();
+      var found = null;
+      for (var i = 0; i < MODELS_DATA.length; i++) {
+        var m = MODELS_DATA[i];
+        if (m.partNumber.toLowerCase() === query || m.name.toLowerCase().indexOf(query) !== -1) { found = m; break; }
+      }
+      if (found) {
+        e.preventDefault();
+        showModal(found);
+      }
+    });
+  })();
+  </script>

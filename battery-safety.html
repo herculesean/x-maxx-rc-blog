@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배터리 안전 가이드 — X-Maxx RC Blog</title>
+  <meta name="description" content="LiPo 배터리를 안전하게 충전, 보관, 폐기하는 방법. 반드시 읽어야 할 필수 안전 수칙입니다.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Mobile Menu Toggle -->
+  <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
+  <div class="sidebar-overlay"></div>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <span>🏎️</span> X-Maxx RC Blog
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <!-- Home -->
+        <a href="index.html" class="sidebar-link sidebar-link--top">🏠 홈</a>
+
+        <!-- 기초 학습 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="basics">
+            <span class="arrow">▼</span> 📚 기초 학습
+          </button>
+          <div class="sidebar-section-items" data-section-items="basics">
+            <a href="how-it-works.html" class="sidebar-link">RC카 작동 원리</a>
+            <a href="parts-map.html" class="sidebar-link">핵심 부품 맵</a>
+            <a href="power-system.html" class="sidebar-link">파워 시스템</a>
+          </div>
+        </div>
+
+        <!-- 세팅 & 관리 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="setup">
+            <span class="arrow">▼</span> 🔧 세팅 &amp; 관리
+          </button>
+          <div class="sidebar-section-items" data-section-items="setup">
+            <a href="tuning.html" class="sidebar-link">셋업 &amp; 튜닝</a>
+            <a href="maintenance.html" class="sidebar-link">유지보수</a>
+          </div>
+        </div>
+
+        <!-- Traxxas -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="traxxas">
+            <span class="arrow">▼</span> 🔴 Traxxas
+          </button>
+          <div class="sidebar-section-items" data-section-items="traxxas">
+            <a href="traxxas-ecosystem.html" class="sidebar-link">Traxxas 생태계</a>
+            <a href="traxxas-models.html" class="sidebar-link">Traxxas 모델</a>
+          </div>
+        </div>
+
+        <!-- FMS -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="fms">
+            <span class="arrow">▼</span> 🟢 FMS
+          </button>
+          <div class="sidebar-section-items" data-section-items="fms">
+            <a href="fms-models.html" class="sidebar-link">FMS 모델</a>
+          </div>
+        </div>
+
+        <!-- 구매 & 커뮤니티 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="community">
+            <span class="arrow">▼</span> 🛒 구매 &amp; 커뮤니티
+          </button>
+          <div class="sidebar-section-items" data-section-items="community">
+            <a href="selection-checklist.html" class="sidebar-link">RC카 선택 체크리스트</a>
+            <a href="community.html" class="sidebar-link">커뮤니티 용어</a>
+          </div>
+        </div>
+
+        <!-- 안전 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="safety">
+            <span class="arrow">▼</span> ⚡ 안전
+          </button>
+          <div class="sidebar-section-items" data-section-items="safety">
+            <a href="battery-safety.html" class="sidebar-link">배터리 안전</a>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- 데이터베이스 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="database">
+            <span class="arrow">▼</span> 📊 데이터베이스
+          </button>
+          <div class="sidebar-section-items" data-section-items="database">
+            <a href="glossary.html" class="sidebar-link">용어 사전</a>
+            <a href="models.html" class="sidebar-link">모델 DB</a>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- Q&A -->
+        <a href="qa.html" class="sidebar-link sidebar-link--top">🔍 Q&amp;A / 검색</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="theme-toggle">🌙 다크 모드</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="content">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+          <a href="index.html">홈</a> &gt;
+          <span>안전</span> &gt;
+          <span>배터리 안전</span>
+        </nav>
+
+        <!-- Page Header -->
+        <div class="page-icon">⚡</div>
+        <h1 class="page-title">배터리 안전 가이드</h1>
+        <p class="page-description">LiPo 배터리를 안전하게 충전, 보관, 폐기하는 방법. 반드시 읽어야 할 필수 안전 수칙입니다.</p>
+
+        <!-- ===== 면책 고지 ===== -->
+        <div class="callout danger">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content">
+            <p><strong>면책 고지:</strong> 이 글은 일반적인 안전 가이드라인을 제공합니다. 반드시 배터리 및 충전기 제조사의 공식 매뉴얼을 따르세요. 부적절한 취급으로 인한 사고에 대해 이 블로그는 책임지지 않습니다.</p>
+          </div>
+        </div>
+
+        <!-- ===== 한 줄 요약 ===== -->
+        <h2 id="overview">한 줄 요약</h2>
+        <div class="callout danger">
+          <div class="callout-icon">🔥</div>
+          <div class="callout-content">
+            <p><strong>LiPo 배터리는 강력하지만, 잘못 다루면 화재·폭발 위험이 있습니다. 안전 수칙을 반드시 지키세요.</strong></p>
+          </div>
+        </div>
+        <p>LiPo 배터리는 RC카에 가장 널리 사용되는 고성능 배터리입니다. 가볍고 강력한 만큼, 올바른 취급 방법을 반드시 알고 있어야 합니다. 이 가이드는 충전부터 보관, 사용, 폐기까지 배터리 안전의 모든 것을 다룹니다.</p>
+
+        <!-- ===== LiPo 배터리 기본 이해 ===== -->
+        <h2 id="lipo-basics">LiPo 배터리 기본 이해</h2>
+        <p>안전 수칙을 이해하려면 먼저 LiPo 배터리의 기본 구조와 특성을 알아야 합니다.</p>
+
+        <h3>리튬 폴리머 구조</h3>
+        <p>LiPo(Lithium Polymer) 배터리는 리튬 이온을 폴리머(고분자) 전해질에 담은 구조입니다. 얇은 시트 형태의 셀을 여러 장 겹쳐서 만들며, 부드러운 파우치 형태의 외피로 감싸져 있습니다. 이 구조 덕분에 가볍고 다양한 형태로 만들 수 있지만, 외피가 금속 캔이 아니라 물리적 충격에 취약합니다.</p>
+
+        <h3>셀 전압</h3>
+        <ul>
+          <li><strong>정격 전압:</strong> 셀당 <strong>3.7V</strong> (공칭 전압)</li>
+          <li><strong>만충 전압:</strong> 셀당 <strong>4.2V</strong> (이 이상 충전하면 위험!)</li>
+          <li><strong>방전 한계:</strong> 셀당 <strong>3.0V</strong> (이 이하로 방전하면 배터리 손상)</li>
+          <li><strong>스토리지 전압:</strong> 셀당 <strong>3.8V</strong> (장기 보관 시 최적 전압)</li>
+        </ul>
+
+        <h3>셀 수에 따른 전압</h3>
+        <p>LiPo 배터리는 셀을 직렬로 연결하여 전압을 높입니다. "S"는 Series(직렬)를 의미합니다.</p>
+
+        <div class="spec-block">
+          <div class="spec-block-title">📋 LiPo 전압 범위표</div>
+          <div class="spec-row">
+            <span class="spec-label">셀 수</span>
+            <span class="spec-value">정격 / 만충 / 방전한계 / 스토리지</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">2S (2셀)</span>
+            <span class="spec-value">7.4V / 8.4V / 6.0V / 7.6V</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">3S (3셀)</span>
+            <span class="spec-value">11.1V / 12.6V / 9.0V / 11.4V</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">4S (4셀)</span>
+            <span class="spec-value">14.8V / 16.8V / 12.0V / 15.2V</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">6S (6셀)</span>
+            <span class="spec-value">22.2V / 25.2V / 18.0V / 22.8V</span>
+          </div>
+        </div>
+
+        <h3>C레이팅의 의미</h3>
+        <p><strong>C레이팅</strong>은 배터리가 안전하게 방전할 수 있는 최대 전류의 배율입니다. 계산법은 간단합니다:</p>
+        <p><strong>최대 연속 방전 전류 = 용량(Ah) x C레이팅</strong></p>
+        <p>예: 5000mAh(5Ah) 배터리, 25C → 5 x 25 = <strong>125A</strong>까지 연속 방전 가능</p>
+        <p>C레이팅이 높을수록 더 많은 전류를 순간적으로 공급할 수 있어 가속 성능이 좋아집니다. 충전 시에는 보통 <strong>1C</strong>(배터리 용량과 같은 전류)로 충전하는 것이 안전합니다.</p>
+
+        <div class="callout warning">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content">
+            <p><strong>제조사가 표기하는 C레이팅은 과장된 경우가 많습니다.</strong> 저렴한 배터리의 "100C" 표기를 액면 그대로 믿지 마세요. 신뢰할 수 있는 브랜드 제품을 선택하는 것이 안전합니다.</p>
+          </div>
+        </div>
+
+        <!-- ===== 충전 안전 수칙 ===== -->
+        <h2 id="charging">충전 안전 수칙</h2>
+        <p>LiPo 배터리 사고의 대부분은 <strong>충전 중</strong>에 발생합니다. 아래 수칙을 반드시 지키세요.</p>
+
+        <div class="do-dont">
+          <div class="do-box">
+            <div class="do-box-title">✅ DO — 반드시 지키세요</div>
+            <ul>
+              <li><strong>LiPo 전용 충전기 사용</strong> (밸런스 충전 필수)</li>
+              <li><strong>충전 중 항상 감시</strong> — 절대 자리를 비우지 마세요</li>
+              <li><strong>LiPo 세이프 백</strong> 안에서 충전하세요</li>
+              <li><strong>실온(20~25°C)</strong>에서 충전하세요</li>
+              <li><strong>1C 이하로 충전</strong> (5000mAh → 5A 이하)</li>
+            </ul>
+          </div>
+          <div class="dont-box">
+            <div class="dont-box-title">🚫 DON'T — 절대 하지 마세요</div>
+            <ul>
+              <li><strong>NiMH 충전기로 LiPo 충전 절대 금지</strong></li>
+              <li><strong>충전 중 자리 비우기 금지</strong></li>
+              <li><strong>침대/소파 위에서 충전 금지</strong></li>
+              <li><strong>직사광선/고온 환경에서 충전 금지</strong></li>
+              <li><strong>손상된 배터리 충전 금지</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout danger">
+          <div class="callout-icon">🔥</div>
+          <div class="callout-content">
+            <p><strong>충전 중 배터리가 부풀어 오르면 즉시 충전을 중단하고, 안전한 곳으로 옮기세요!</strong> 부풀어 오른 배터리는 내부에 가스가 발생한 것으로, 화재·폭발로 이어질 수 있습니다. 절대 다시 사용하지 마세요.</p>
+          </div>
+        </div>
+
+        <h3>Traxxas iD + EZ-Peak 시스템의 안전 기능</h3>
+        <p>Traxxas의 <strong>iD 커넥터 배터리</strong>와 <strong>EZ-Peak 시리즈 충전기</strong>를 함께 사용하면, 충전 안전성이 크게 높아집니다.</p>
+        <ul>
+          <li><strong>배터리 자동 인식:</strong> iD 칩이 배터리 종류(NiMH/LiPo), 셀 수, 용량을 충전기에 자동 전달합니다.</li>
+          <li><strong>최적 충전 설정:</strong> 충전기가 배터리에 맞는 모드와 전류를 자동으로 설정합니다.</li>
+          <li><strong>과충전 방지:</strong> 만충 시 자동으로 충전을 중단합니다.</li>
+          <li><strong>밸런스 충전:</strong> 각 셀의 전압을 균일하게 맞춰 셀 불균형을 방지합니다.</li>
+          <li><strong>스토리지 모드:</strong> EZ-Peak Live 이상 모델은 보관 전압(3.8V/셀)으로 자동 조정하는 기능을 제공합니다.</li>
+        </ul>
+
+        <div class="callout tip">
+          <div class="callout-icon">✅</div>
+          <div class="callout-content">
+            <p><strong>초보자라면 Traxxas iD 배터리 + EZ-Peak 충전기 조합을 강력 추천합니다.</strong> 충전 모드 선택 실수를 원천 차단하여, NiMH 충전기로 LiPo를 충전하는 치명적 실수를 방지할 수 있습니다.</p>
+          </div>
+        </div>
+
+        <!-- ===== 보관 안전 수칙 ===== -->
+        <h2 id="storage">보관 안전 수칙</h2>
+        <p>LiPo 배터리는 사용하지 않을 때도 올바른 방법으로 보관해야 합니다. 잘못된 보관은 배터리 수명 단축은 물론, 화재의 원인이 됩니다.</p>
+
+        <h3>스토리지 모드 (3.8V/셀)</h3>
+        <p>LiPo 배터리를 장기간 보관할 때는 반드시 <strong>스토리지 전압(3.8V/셀)</strong>으로 맞춰야 합니다. 이 전압은 배터리의 화학적 안정성이 가장 높은 상태입니다.</p>
+        <ul>
+          <li><strong>만충(4.2V/셀) 상태로 장기 보관 금지</strong> — 내부 스트레스가 누적되어 배터리 수명이 급격히 줄어들고, 부풀어 오를 수 있습니다.</li>
+          <li><strong>완방(3.0V 이하/셀) 상태로 장기 보관 금지</strong> — 셀이 과방전되어 영구적으로 손상될 수 있습니다.</li>
+          <li>대부분의 LiPo 충전기에 <strong>"Storage" 모드</strong>가 있으며, 이 모드를 선택하면 자동으로 3.8V/셀에 맞춰줍니다.</li>
+        </ul>
+
+        <h3>보관 환경</h3>
+        <ul>
+          <li><strong>LiPo 세이프 백</strong> 또는 <strong>내화 금고</strong>에 넣어 보관하세요.</li>
+          <li><strong>서늘하고 건조한 곳</strong>에 보관하세요 (15~25°C 권장).</li>
+          <li>직사광선, 난방기, 라디에이터 근처에 두지 마세요.</li>
+          <li>금속 물체와 함께 보관하지 마세요 (쇼트 위험).</li>
+          <li>어린이나 반려동물의 손이 닿지 않는 곳에 보관하세요.</li>
+        </ul>
+
+        <div class="callout warning">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content">
+            <p><strong>2주 이상 사용하지 않을 때는 반드시 스토리지 모드(3.8V/셀)로 보관하세요.</strong> 만충 또는 완방 상태로 오래 방치하면 배터리가 영구적으로 손상되거나, 최악의 경우 발화할 수 있습니다.</p>
+          </div>
+        </div>
+
+        <div class="callout danger">
+          <div class="callout-icon">🚨</div>
+          <div class="callout-content">
+            <p><strong>자동차 트렁크나 밀폐된 공간에 LiPo를 보관하지 마세요!</strong> 여름철 차량 내부 온도는 60°C 이상 올라갈 수 있으며, 이는 LiPo 발화 온도에 근접합니다.</p>
+          </div>
+        </div>
+
+        <!-- ===== 사용 중 안전 ===== -->
+        <h2 id="during-use">사용 중 안전</h2>
+        <p>주행 중에도 배터리 상태를 수시로 확인해야 합니다. 작은 주의가 큰 사고를 예방합니다.</p>
+
+        <h3>과방전 방지: LVC 설정 확인</h3>
+        <p><strong>LVC(Low Voltage Cutoff, 저전압 차단)</strong>는 배터리 전압이 위험 수준까지 떨어지면 ESC가 자동으로 출력을 차단하는 기능입니다. LiPo 배터리 사용 시 반드시 LVC가 활성화되어 있는지 확인하세요.</p>
+        <ul>
+          <li>일반적으로 셀당 3.0~3.3V에서 차단되도록 설정합니다.</li>
+          <li>Traxxas ESC는 iD 배터리를 자동 인식하여 LVC를 자동 설정합니다.</li>
+          <li>LVC가 작동하면 출력이 급격히 줄어들거나 모터가 멈춥니다 — 이때 즉시 주행을 중단하세요.</li>
+        </ul>
+
+        <div class="callout danger">
+          <div class="callout-icon">🔥</div>
+          <div class="callout-content">
+            <p><strong>LVC를 비활성화하거나, LVC 작동 후에도 계속 주행하면 배터리가 과방전되어 영구 손상됩니다.</strong> 과방전된 LiPo는 충전 시 발화 위험이 매우 높아지므로 절대 다시 사용하지 마세요.</p>
+          </div>
+        </div>
+
+        <h3>배터리 온도 체크</h3>
+        <ul>
+          <li>주행 후 배터리를 손으로 만져보세요. <strong>따뜻한 정도(40~50°C)는 정상</strong>입니다.</li>
+          <li><strong>60°C 이상</strong>이면 과열 상태입니다 — 즉시 사용을 중단하고 완전히 식힌 후 점검하세요.</li>
+          <li>뜨거워서 손으로 잡을 수 없는 수준이면 안전한 곳에 놓고 멀리 떨어져 관찰하세요.</li>
+        </ul>
+
+        <h3>물리적 충격 후 배터리 점검</h3>
+        <ul>
+          <li>큰 충돌이나 전복 후에는 반드시 배터리 외관을 확인하세요.</li>
+          <li>찌그러짐, 찢어짐, 부풀어 오름이 있으면 사용을 중단하세요.</li>
+          <li>외관이 정상이더라도 셀 전압을 체크하여 불균형이 없는지 확인하세요.</li>
+        </ul>
+
+        <h3>커넥터 상태 확인</h3>
+        <ul>
+          <li>커넥터가 녹슬거나 변색되었으면 즉시 교체하세요.</li>
+          <li>커넥터가 느슨하면 접촉 불량으로 발열이 발생할 수 있습니다.</li>
+          <li>배터리를 연결/분리할 때 케이블이 아닌 커넥터 본체를 잡으세요.</li>
+        </ul>
+
+        <div class="callout warning">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content">
+            <p><strong>커넥터에서 스파크(불꽃)가 튀거나 냄새가 나면 즉시 사용을 중단하세요.</strong> 이는 접촉 불량 또는 쇼트의 징후입니다.</p>
+          </div>
+        </div>
+
+        <!-- ===== 위험 신호 TOP 10 ===== -->
+        <h2 id="danger-signs">위험 신호 TOP 10</h2>
+        <p>아래 증상 중 하나라도 발견되면 해당 배터리의 사용을 즉시 중단해야 합니다.</p>
+
+        <ol>
+          <li><strong>배터리 부풀어 오름 (퍼핑/스웰링)</strong> — 내부에 가스가 발생한 상태입니다. 가장 흔하고 가장 위험한 신호입니다. 부풀어 오른 배터리는 절대 충전하거나 사용하지 마세요.</li>
+          <li><strong>이상한 냄새</strong> — 달콤하거나 화학적인 냄새가 나면 전해질이 누출된 것입니다. 즉시 환기하고 배터리에서 멀리 떨어지세요.</li>
+          <li><strong>외피 손상/찢어짐</strong> — 파우치가 손상되면 내부 셀이 공기와 수분에 노출되어 위험합니다.</li>
+          <li><strong>커넥터 과열/변색</strong> — 커넥터 부분이 비정상적으로 뜨겁거나 갈변/흑변되었다면 접촉 불량 또는 과전류가 흐르고 있다는 신호입니다.</li>
+          <li><strong>충전 중 비정상적 발열</strong> — 충전 중 배터리가 뜨겁게 느껴지면 즉시 충전을 중단하세요. 정상적인 충전 중에는 미지근한 정도입니다.</li>
+          <li><strong>셀 전압 불균형 (0.1V 이상 차이)</strong> — 밸런스 충전 후에도 셀 간 전압 차이가 0.1V 이상이면 해당 셀에 문제가 있을 수 있습니다.</li>
+          <li><strong>충전이 안 됨</strong> — 충전기가 에러를 표시하거나 충전을 거부하면, 내부 셀이 손상되었을 가능성이 높습니다.</li>
+          <li><strong>용량이 급격히 줄어듦</strong> — 예전에 15분 달리던 배터리가 5분밖에 안 간다면 셀 열화가 진행된 것입니다.</li>
+          <li><strong>충격/물 침수 후</strong> — 큰 충돌이나 물에 빠진 후에는 외관이 멀쩡해 보여도 내부 손상이 있을 수 있습니다. 48시간 안전한 곳에서 관찰 후 판단하세요.</li>
+          <li><strong>2년 이상 된 배터리</strong> — LiPo 배터리는 사용 여부와 관계없이 화학적으로 열화됩니다. 2년 이상 된 배터리는 성능과 안전성을 꼼꼼히 점검하세요.</li>
+        </ol>
+
+        <div class="callout danger">
+          <div class="callout-icon">🚨</div>
+          <div class="callout-content">
+            <p><strong>위 증상이 하나라도 있으면 해당 배터리 사용을 즉시 중단하세요!</strong> "조금만 더 쓰자"는 생각이 화재 사고로 이어질 수 있습니다. 의심스러우면 무조건 폐기하는 것이 안전합니다.</p>
+          </div>
+        </div>
+
+        <!-- ===== 폐기 방법 ===== -->
+        <h2 id="disposal">폐기 방법</h2>
+        <p>수명이 다했거나 손상된 LiPo 배터리는 올바른 방법으로 폐기해야 합니다. LiPo는 일반 쓰레기가 아닙니다.</p>
+
+        <h3>전용 폐기 업체/수거함 이용 (권장)</h3>
+        <p>가장 안전한 방법은 <strong>전자 폐기물 수거함</strong>이나 <strong>배터리 전용 수거 업체</strong>를 이용하는 것입니다.</p>
+        <ul>
+          <li>지역 주민센터, 마트, 전자제품 판매점에 배터리 수거함이 설치되어 있는 경우가 많습니다.</li>
+          <li>RC 취미 매장에서도 수거를 대행하는 곳이 있습니다.</li>
+          <li>폐기 전 배터리 단자를 테이프로 절연 처리하세요.</li>
+        </ul>
+
+        <h3>소금물 방전법 (주의 필요)</h3>
+        <p>인터넷에서 자주 소개되는 방법이지만, <strong>논란이 있으며 주의가 필요합니다.</strong></p>
+        <ul>
+          <li>소금물(물 1L + 소금 30~50g)에 배터리 커넥터 부분을 담가 완전 방전시키는 방법입니다.</li>
+          <li>방전 완료까지 수일이 걸릴 수 있으며, 이 과정에서 유해 물질이 발생할 수 있습니다.</li>
+          <li>환기가 잘 되는 실외에서 진행하세요.</li>
+          <li>금속 용기를 사용하지 마세요 (플라스틱 용기 사용).</li>
+          <li>어린이와 반려동물이 접근할 수 없는 곳에서 진행하세요.</li>
+        </ul>
+
+        <div class="callout danger">
+          <div class="callout-icon">🚨</div>
+          <div class="callout-content">
+            <p><strong>손상되었거나 부풀어 오른 배터리는 소금물 방전법을 사용하지 마세요!</strong> 손상된 배터리를 물에 넣으면 예측 불가능한 반응이 일어날 수 있습니다. 이 경우 반드시 전문 폐기 업체에 맡기세요.</p>
+          </div>
+        </div>
+
+        <h3>일반 쓰레기통 절대 금지</h3>
+        <p>LiPo 배터리를 일반 쓰레기통에 버리면 수거 과정에서 물리적 충격이나 압축에 의해 발화할 수 있습니다. 쓰레기 수거차나 매립지에서 화재가 발생하는 원인 중 하나가 바로 잘못 폐기된 리튬 배터리입니다.</p>
+
+        <div class="callout warning">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content">
+            <p><strong>LiPo를 일반 쓰레기로 버리면 화재 위험이 있습니다. 반드시 전용 수거함을 이용하세요.</strong> 이는 본인뿐 아니라 환경미화원과 주변 시설의 안전을 위한 것입니다.</p>
+          </div>
+        </div>
+
+        <!-- ===== 화재 발생 시 대응 ===== -->
+        <h2 id="fire-response">화재 발생 시 대응</h2>
+        <p>LiPo 화재는 일반 화재와 대응 방법이 다릅니다. 미리 숙지해 두세요.</p>
+
+        <div class="callout danger">
+          <div class="callout-icon">🔥</div>
+          <div class="callout-content">
+            <p><strong>LiPo 화재는 일반 화재와 다릅니다. 절대 물을 뿌리지 마세요!</strong> 리튬은 물과 격렬하게 반응하여 상황을 악화시킬 수 있습니다.</p>
+          </div>
+        </div>
+
+        <h3>대응 순서</h3>
+        <ol>
+          <li><strong>대피:</strong> 가장 먼저 사람과 동물을 안전한 곳으로 대피시키세요.</li>
+          <li><strong>환기:</strong> LiPo가 타면서 유독 가스(불화수소 등)가 발생합니다. 창문과 문을 열어 환기하고, 연기를 직접 들이마시지 마세요.</li>
+          <li><strong>소화:</strong> <strong>모래</strong>를 뿌리거나 <strong>ABC형 소화기</strong>를 사용하세요. 물은 절대 사용하지 마세요.</li>
+          <li><strong>119 신고:</strong> 화재가 확산되거나 통제가 어려우면 즉시 119에 신고하세요. 신고 시 "리튬 배터리 화재"임을 알려주세요.</li>
+        </ol>
+
+        <div class="callout danger">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content">
+            <p><strong>LiPo 화재에서 발생하는 연기는 유독합니다.</strong> 절대 연기를 들이마시지 마세요. 밀폐된 공간에서 화재가 발생하면 먼저 대피하고 119에 신고하세요.</p>
+          </div>
+        </div>
+
+        <div class="callout warning">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content">
+            <p><strong>사전 대비:</strong> LiPo 배터리를 사용한다면, 충전 장소 근처에 <strong>모래 양동이</strong>나 <strong>ABC형 소화기</strong>를 비치해 두는 것이 좋습니다.</p>
+          </div>
+        </div>
+
+        <!-- ===== NiMH 배터리 안전 ===== -->
+        <h2 id="nimh-safety">NiMH 배터리 안전</h2>
+        <p>NiMH(니켈수소) 배터리는 LiPo에 비해 훨씬 안전하지만, 기본적인 안전 수칙은 지켜야 합니다.</p>
+
+        <ul>
+          <li><strong>NiMH 전용 충전기 사용:</strong> NiMH도 전용 충전기를 사용해야 합니다. LiPo 모드로 NiMH를 충전하면 과충전 위험이 있습니다.</li>
+          <li><strong>과충전 주의:</strong> NiMH는 LiPo보다 과충전에 관대하지만, 지속적인 과충전은 배터리 수명을 줄이고 발열을 유발합니다. 완충 감지 기능이 있는 충전기를 사용하세요.</li>
+          <li><strong>장기 보관:</strong> NiMH는 자연 방전이 있으므로, 오래 보관한 배터리는 사용 전 충전하세요.</li>
+          <li><strong>폐기:</strong> NiMH도 일반 쓰레기가 아닙니다. 배터리 수거함을 이용하세요.</li>
+        </ul>
+
+        <div class="callout tip">
+          <div class="callout-icon">✅</div>
+          <div class="callout-content">
+            <p><strong>NiMH는 LiPo보다 훨씬 안전합니다. 배터리 관리가 걱정된다면 NiMH로 시작하세요.</strong> LiPo처럼 발화 위험이 거의 없고, 보관 전압 관리도 필요 없어 초보자에게 최적의 선택입니다. 성능이 아쉬워질 때 LiPo로 넘어가도 늦지 않습니다.</p>
+          </div>
+        </div>
+
+        <!-- ===== Traxxas 안전 시스템 ===== -->
+        <h2 id="traxxas-safety">Traxxas 안전 시스템</h2>
+        <p>Traxxas는 배터리 안전을 위한 통합 시스템을 제공합니다. 특히 초보자에게 유용한 기능들입니다.</p>
+
+        <h3>iD 배터리 자동 인식</h3>
+        <p>Traxxas iD 배터리에는 배터리 정보를 담은 칩이 내장되어 있습니다. iD 배터리를 EZ-Peak 충전기에 연결하면:</p>
+        <ul>
+          <li>배터리 종류(NiMH/LiPo)를 자동으로 인식합니다.</li>
+          <li>셀 수와 용량에 맞는 충전 설정이 자동으로 적용됩니다.</li>
+          <li>잘못된 충전 모드 선택에 의한 사고를 원천 차단합니다.</li>
+        </ul>
+
+        <h3>EZ-Peak 충전기의 안전 기능</h3>
+        <ul>
+          <li><strong>자동 배터리 감지:</strong> iD 배터리의 정보를 읽어 최적의 충전 프로파일을 설정합니다.</li>
+          <li><strong>밸런스 충전:</strong> LiPo의 각 셀을 균일하게 충전하여 셀 불균형을 방지합니다.</li>
+          <li><strong>과충전/과열 보호:</strong> 비정상 상태 감지 시 자동으로 충전을 중단합니다.</li>
+          <li><strong>스토리지 모드:</strong> 장기 보관 시 배터리를 최적 전압(3.8V/셀)으로 자동 조정합니다.</li>
+        </ul>
+
+        <h3>LVC 자동 설정</h3>
+        <p>Traxxas ESC는 iD 배터리를 인식하면 <strong>저전압 차단(LVC)</strong>을 자동으로 활성화합니다. LiPo 배터리가 과방전되는 것을 자동으로 방지하므로, 주행 중 배터리 전압을 수동으로 확인할 필요가 줄어듭니다.</p>
+
+        <div class="callout info">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content">
+            <p><strong>Traxxas 시스템은 "어렵고 위험한 LiPo 관리"를 최대한 자동화한 것이 특징입니다.</strong> 그러나 자동 시스템을 맹신하지 말고, 이 페이지의 안전 수칙은 항상 숙지하고 계세요.</p>
+          </div>
+        </div>
+
+        <!-- ===== 자주 묻는 질문 ===== -->
+        <h2 id="faq">자주 묻는 질문</h2>
+
+        <details class="toggle">
+          <summary>LiPo가 정말 그렇게 위험한가요?</summary>
+          <div class="toggle-content">
+            <p><strong>올바르게 사용하면 안전합니다.</strong> LiPo 배터리는 스마트폰, 노트북, 전기차 등 우리 일상 곳곳에서 사용되고 있습니다. 문제는 잘못된 취급에서 발생합니다.</p>
+            <p>RC카용 LiPo는 스마트폰 배터리보다 용량이 훨씬 크고, 외피가 부드러운 파우치 형태라 물리적 충격에 더 취약합니다. 또한 충전 전류도 높기 때문에 잘못 다루면 위험할 수 있습니다.</p>
+            <p>핵심은 <strong>"정해진 규칙을 지키면 안전하고, 규칙을 무시하면 위험하다"</strong>는 것입니다. 이 가이드의 안전 수칙만 지키면 안심하고 사용할 수 있습니다.</p>
+          </div>
+        </details>
+
+        <details class="toggle">
+          <summary>배터리가 부풀었는데 계속 써도 되나요?</summary>
+          <div class="toggle-content">
+            <p><strong>절대 안 됩니다.</strong> 배터리가 부풀어 오르는 것(퍼핑/스웰링)은 내부에서 가스가 발생했다는 명확한 위험 신호입니다.</p>
+            <p>부풀어 오른 배터리를 계속 사용하거나 충전하면:</p>
+            <ul>
+              <li>내부 압력 증가로 외피가 파열될 수 있습니다.</li>
+              <li>파열 시 내부 화학 물질이 공기와 반응하여 발화합니다.</li>
+              <li>심한 경우 폭발할 수 있습니다.</li>
+            </ul>
+            <p>부풀어 오른 배터리는 LiPo 세이프 백에 넣어 안전한 곳에 보관한 후, 가능한 빨리 전용 수거함에 폐기하세요. <strong>"약간만 부풀었으니 괜찮겠지"라는 생각은 매우 위험합니다.</strong></p>
+          </div>
+        </details>
+
+        <details class="toggle">
+          <summary>비행기 기내에 LiPo를 가져갈 수 있나요?</summary>
+          <div class="toggle-content">
+            <p><strong>조건부로 가능합니다.</strong> 항공사와 각국 규정에 따라 다르지만, 일반적인 규칙은 다음과 같습니다:</p>
+            <ul>
+              <li><strong>기내 반입은 가능</strong>하지만, <strong>위탁 수하물(화물칸)은 금지</strong>입니다.</li>
+              <li>배터리 용량이 <strong>100Wh 이하</strong>면 별도 승인 없이 기내 반입이 가능합니다.</li>
+              <li><strong>100~160Wh</strong>는 항공사 사전 승인이 필요하며, 1인당 2개까지 허용됩니다.</li>
+              <li><strong>160Wh 초과</strong>는 기내/위탁 모두 불가합니다.</li>
+              <li>단자 부분을 반드시 절연 처리(테이프 등)해야 합니다.</li>
+              <li>개별 보호 케이스나 LiPo 백에 넣어야 합니다.</li>
+            </ul>
+            <p><strong>Wh 계산법:</strong> 전압(V) x 용량(Ah) = Wh<br>
+            예: 11.1V x 5Ah(5000mAh) = 55.5Wh → 100Wh 이하이므로 기내 반입 가능</p>
+            <p>출국 전 반드시 해당 항공사의 최신 규정을 직접 확인하세요.</p>
+          </div>
+        </details>
+
+        <!-- ===== 관련 용어 ===== -->
+        <h2 id="glossary-links">관련 용어</h2>
+        <p>이 페이지에서 다룬 핵심 용어들을 용어 사전에서 더 자세히 확인할 수 있습니다.</p>
+        <div class="quick-links">
+          <a href="glossary.html#lipo" class="quick-link">🔋 LiPo</a>
+          <a href="glossary.html#c-rating" class="quick-link">⚡ C레이팅</a>
+          <a href="glossary.html#lvc" class="quick-link">🛡️ LVC</a>
+          <a href="glossary.html#id-connector" class="quick-link">🔌 iD 커넥터</a>
+          <a href="glossary.html#nimh" class="quick-link">🔋 NiMH</a>
+        </div>
+
+        <!-- ===== 다음 읽기 ===== -->
+        <div class="next-read">
+          <div class="next-read-title">다음 읽기</div>
+          <div class="next-read-grid">
+            <a href="power-system.html" class="next-read-card">
+              <div class="next-read-card-icon">⚡</div>
+              <div class="next-read-card-title">파워 시스템</div>
+              <div class="next-read-card-desc">모터와 배터리의 종류, KV 값, C 레이팅 등 파워트레인의 핵심 개념을 깊이 있게 다룹니다.</div>
+            </a>
+            <a href="maintenance.html" class="next-read-card">
+              <div class="next-read-card-icon">🛠️</div>
+              <div class="next-read-card-title">유지보수</div>
+              <div class="next-read-card-desc">주행 전후 체크리스트, 청소 루틴, 부품 교체 주기 가이드입니다.</div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- TOC -->
+    <aside class="toc">
+      <div class="toc-title">목차</div>
+      <ul class="toc-list"></ul>
+    </aside>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

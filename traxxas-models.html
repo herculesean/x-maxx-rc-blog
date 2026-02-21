@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traxxas 모델 라인업 — X-Maxx RC Blog</title>
+  <meta name="description" content="5개 카테고리, 24개 상위모델, 76개 개별 모델 — Traxxas 전체 라인업을 상위모델 기준으로 정리합니다.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .model-card-img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: contain;
+      border-radius: var(--radius-md);
+      margin-bottom: 12px;
+      background: var(--bg-tertiary);
+    }
+    .model-section-img {
+      float: right;
+      max-width: 300px;
+      margin: 0 0 16px 24px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+    }
+    .model-gallery {
+      display: flex;
+      gap: 8px;
+      margin: 12px 0 16px;
+    }
+    .model-gallery figure {
+      flex: 1;
+      min-width: 0;
+      margin: 0;
+      text-align: center;
+    }
+    .model-gallery img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: contain;
+      border-radius: var(--radius-md);
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
+    }
+    .model-gallery figcaption {
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+    @media (max-width: 768px) {
+      .model-section-img {
+        float: none;
+        max-width: 100%;
+        margin: 0 0 16px 0;
+      }
+      .model-gallery {
+        flex-direction: column;
+      }
+      .model-gallery img {
+        max-height: 200px;
+      }
+    }
+  </style></head>
+<body>
+  <!-- Mobile Menu Toggle -->
+  <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
+  <div class="sidebar-overlay"></div>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <span>🏎️</span> X-Maxx RC Blog
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <!-- Home -->
+        <a href="index.html" class="sidebar-link sidebar-link--top">🏠 홈</a>
+
+        <!-- 기초 학습 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="basics">
+            <span class="arrow">▼</span> 📚 기초 학습
+          </button>
+          <div class="sidebar-section-items" data-section-items="basics">
+            <a href="how-it-works.html" class="sidebar-link">RC카 작동 원리</a>
+            <a href="parts-map.html" class="sidebar-link">핵심 부품 맵</a>
+            <a href="power-system.html" class="sidebar-link">파워 시스템</a>
+          </div>
+        </div>
+
+        <!-- 세팅 & 관리 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="setup">
+            <span class="arrow">▼</span> 🔧 세팅 &amp; 관리
+          </button>
+          <div class="sidebar-section-items" data-section-items="setup">
+            <a href="tuning.html" class="sidebar-link">셋업 &amp; 튜닝</a>
+            <a href="maintenance.html" class="sidebar-link">유지보수</a>
+          </div>
+        </div>
+
+        <!-- Traxxas -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="traxxas">
+            <span class="arrow">▼</span> 🔴 Traxxas
+          </button>
+          <div class="sidebar-section-items" data-section-items="traxxas">
+            <a href="traxxas-ecosystem.html" class="sidebar-link">Traxxas 생태계</a>
+            <a href="traxxas-models.html" class="sidebar-link active">Traxxas 모델</a>
+          </div>
+        </div>
+
+        <!-- FMS -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="fms">
+            <span class="arrow">▼</span> 🟢 FMS
+          </button>
+          <div class="sidebar-section-items" data-section-items="fms">
+            <a href="fms-models.html" class="sidebar-link">FMS 모델</a>
+          </div>
+        </div>
+
+        <!-- 구매 & 커뮤니티 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="community">
+            <span class="arrow">▼</span> 🛒 구매 &amp; 커뮤니티
+          </button>
+          <div class="sidebar-section-items" data-section-items="community">
+            <a href="selection-checklist.html" class="sidebar-link">RC카 선택 체크리스트</a>
+            <a href="community.html" class="sidebar-link">커뮤니티 용어</a>
+          </div>
+        </div>
+
+        <!-- 안전 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="safety">
+            <span class="arrow">▼</span> ⚡ 안전
+          </button>
+          <div class="sidebar-section-items" data-section-items="safety">
+            <a href="battery-safety.html" class="sidebar-link">배터리 안전</a>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- 데이터베이스 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="database">
+            <span class="arrow">▼</span> 📊 데이터베이스
+          </button>
+          <div class="sidebar-section-items" data-section-items="database">
+            <a href="glossary.html" class="sidebar-link">용어 사전</a>
+            <a href="models.html" class="sidebar-link">모델 DB</a>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- Q&A -->
+        <a href="qa.html" class="sidebar-link sidebar-link--top">🔍 Q&amp;A / 검색</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="theme-toggle">🌙 다크 모드</button>
+      </div>
+    </aside>
+    <!-- Main Content -->
+    <main class="main">
+      <div class="content">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+          <a href="index.html">홈</a>
+          <span class="breadcrumb-sep">›</span>
+          <a href="traxxas-ecosystem.html">Traxxas</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>Traxxas 모델</span>
+        </div>
+
+        <!-- Page Header -->
+        <div class="page-icon">🚗</div>
+        <h1 class="page-title">Traxxas 모델 라인업</h1>
+        <p class="page-description">5개 카테고리, 24개 상위모델, 76개 개별 모델 — Traxxas 전체 라인업을 상위모델 기준으로 정리합니다.</p>
+
+        <!-- ===== 한 줄 요약 ===== -->
+        <h2 id="overview">한 줄 요약</h2>
+        <div class="callout info">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content">
+            <p><strong>Traxxas 76개 모델을 5개 카테고리 × 24개 상위모델로 정리했습니다. 각 상위모델의 하위 모델은 모델 DB에서 상세 스펙을 확인할 수 있습니다.</strong></p>
+          </div>
+        </div>
+        <p>Traxxas는 RC카 시장에서 가장 폭넓은 모델 라인업을 자랑하는 브랜드입니다. 이 글에서는 Traxxas의 전체 76개 모델을 상위모델 기준으로 정리하고, 각 모델의 특징과 스펙을 비교합니다.</p>
+
+        <!-- ===== 카테고리 소개 ===== -->
+        <h2 id="categories">카테고리 소개</h2>
+        <p>Traxxas 라인업은 5개 카테고리로 나뉩니다. 몬스터트럭부터 크롤러까지, 각 카테고리의 특징을 빠르게 살펴보세요.</p>
+
+        <div class="dashboard-grid">          <div class="dashboard-card">
+            <div class="dashboard-card-header-inline"><div class="dashboard-card-icon">🦖</div><div class="dashboard-card-title">몬스터트럭</div></div>
+            <div class="dashboard-card-desc">거대한 타이어와 높은 서스펜션 트래블. 점프, 배싱, 거친 지형 주행에 최적화. X-Maxx, Maxx, Stampede 등 23개 모델.</div>
+          </div>          <div class="dashboard-card">
+            <div class="dashboard-card-header-inline"><div class="dashboard-card-icon">🏁</div><div class="dashboard-card-title">숏코스 트럭</div></div>
+            <div class="dashboard-card-desc">실제 숏코스 레이싱 트럭을 모델로 한 카테고리. Slash, Ford Raptor, UDR 등 17개 모델.</div>
+          </div>          <div class="dashboard-card">
+            <div class="dashboard-card-header-inline"><div class="dashboard-card-icon">🐛</div><div class="dashboard-card-title">스타디움 & 버기</div></div>
+            <div class="dashboard-card-desc">가볍고 민첩한 오프로드 레이서. Rustler, Bandit, Sledge, Jato 등 12개 모델.</div>
+          </div>          <div class="dashboard-card">
+            <div class="dashboard-card-header-inline"><div class="dashboard-card-icon">🏎️</div><div class="dashboard-card-title">온로드 & 랠리</div></div>
+            <div class="dashboard-card-desc">포장도로 위의 속도와 드리프트. XO-1, 4-Tec, Fiesta Rally, Drag Slash 등 8개 모델.</div>
+          </div>          <div class="dashboard-card">
+            <div class="dashboard-card-header-inline"><div class="dashboard-card-icon">🪨</div><div class="dashboard-card-title">크롤러 & 트레일</div></div>
+            <div class="dashboard-card-desc">바위, 경사면 등 극한 지형을 정복. TRX-6, TRX-4, TRX-4 Sport, TRX-4M 등 16개 모델.</div>
+          </div>        </div>
+
+        <!-- ===== 카테고리별 모델 ===== -->
+        <!-- ===== 몬스터트럭 ===== -->
+        <h2 id="monster">🦖 몬스터트럭 (23개 모델)</h2>
+        <p>몬스터트럭은 Traxxas의 가장 상징적인 카테고리입니다. 거대한 타이어, 긴 서스펜션 트래블, 압도적인 파워로 어디서든 달릴 수 있는 배싱 머신입니다. 8개의 상위모델 아래 23개 개별 모델이 있습니다.</p>
+        <!-- === X-Maxx === -->
+        <h3 id="parent-x-maxx">X-Maxx <span class="tag tag-red">1/5 플래그십</span></h3>
+        <p>Traxxas의 최상위 몬스터트럭이자 브랜드의 플래그십 모델입니다. 1/5 스케일의 압도적인 크기와 8S LiPo의 강력한 파워, 셀프라이팅 기능을 갖추고 있습니다.</p>        <div class="model-gallery">          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/7/7/77097-4-X-Maxx-Ultimate-3Qtr-Front-BLUEX_17837273.jpg" alt="X-Maxx Ultimate"><figcaption>X-Maxx Ultimate</figcaption></figure>          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/7/7/77086-4-x-maxx-rnr-3qtr-front_2_3.jpg" alt="X-Maxx 8S"><figcaption>X-Maxx 8S</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 X-Maxx 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/5</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">8S LiPo (4S x 2)</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">Velineon 1200XL 브러시리스</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">80+ km/h</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$1,199 ~ $1,599</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>X-Maxx Ultimate</strong> — (77097-4) — 와이드바디, 벨티드 타이어, 알루미늄 부품 기본 장착 $1,599.95</li>          <li><strong>X-Maxx 8S</strong> — (77086-4) — 기본 8S 버전, 셀프라이팅, 클립리스 바디 $1,199.95</li>        </ul>
+        <!-- === X-Monster === -->
+        <h3 id="parent-x-monster">X-Monster</h3>
+        <p>X-Maxx 플랫폼 기반의 신규 대형 몬스터트럭 라인입니다. BIGFOOT 50주년 기념 한정판이 대표 모델입니다.</p>        <div class="model-gallery">          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/7/7/77136-4-X-Maxx-Limited-Bigfoot-50th-3QTR-FRONT-2_50761589.jpg" alt="X-Monster BIGFOOT 50th"><figcaption>X-Monster BIGFOOT 50th</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 X-Monster 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/5</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">8S LiPo (4S x 2)</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">Velineon 1200XL 브러시리스</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">80+ km/h</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$1,099 ~ $1,599</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>X-Monster BIGFOOT 50th</strong> — (77136-4) — 50주년 기념 한정판 $1,599.95</li>          <li><strong>X-Monster</strong> — (77036-4) — 기본 섀시 버전 $1,099.95</li>        </ul>
+        <!-- === XRT === -->
+        <h3 id="parent-xrt">XRT <span class="tag tag-red">1/5 레이싱</span></h3>
+        <p>X-Maxx와 같은 1/5 스케일이지만 레이싱에 초점을 맞춘 모델입니다. 낮은 무게중심과 공기역학적 바디로 고속 주행에 최적화되어 있습니다.</p>        <div class="model-gallery">          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/7/8/78097-4-XRT-Ultimate-2025-3qtr-Front-GRNX_17837136.jpg" alt="XRT Ultimate"><figcaption>XRT Ultimate</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 XRT 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/5</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">8S LiPo (4S x 2)</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">Velineon 1200XL 브러시리스</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">80+ km/h</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$349 ~ $1,599</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>XRT Ultimate</strong> — (78097-4) — 풀 업그레이드 에디션 $1,599.95</li>          <li><strong>XRT 8S</strong> — (78086-4) — 기본 8S 버전 $1,099.95</li>          <li><strong>Mini XRT</strong> — (108076-1) — 1/18 미니 버전 $349.95</li>        </ul>
+        <!-- === Sledge === -->
+        <h3 id="parent-sledge">Sledge</h3>
+        <p>1/8 스케일 6S 브러시리스 몬스터트럭/트러기. 벨트 드라이브 시스템을 채택하여 기어 소음이 적고 효율이 높습니다.</p>        <div class="model-gallery">          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/9/5/95076-4-sledge-3qtr-front-orng_1_2_1.jpg" alt="Sledge"><figcaption>Sledge</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 Sledge 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/8</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">6S LiPo (3S x 2)</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">Velineon 2200 브러시리스</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">100+ km/h</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$799</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>Sledge</strong> — (95076-4) — 6S 벨트드라이브 $799.95</li>        </ul>
+        <!-- === Maxx === -->
+        <h3 id="parent-maxx">Maxx</h3>
+        <p>X-Maxx의 동생 격인 1/10 스케일 몬스터트럭입니다. 와이드맥스(WideMaxx) 서스펜션으로 안정성을 높일 수 있으며, 미니 버전도 있습니다.</p>        <div class="model-gallery">          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/8/9/89087-4-Maxx-Ultimate-3Qtr-Front-BLUE_47229340.jpg" alt="Maxx Ultimate"><figcaption>Maxx Ultimate</figcaption></figure>          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/8/9/89086-4-Maxx-3qtr-front-RNR_54126300.jpg" alt="Maxx V2"><figcaption>Maxx V2</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 Maxx 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/10</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">4S LiPo</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">Velineon 490XL 브러시리스</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">72+ km/h</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$269 ~ $899</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>Maxx Ultimate</strong> — (89087-4) — 풀 업그레이드 에디션 $899.95</li>          <li><strong>Maxx V2</strong> — (89086-4) — V2 업데이트, WideMaxx 지원 $599.95</li>          <li><strong>Mini Maxx</strong> — (107154-1) — 1/16 미니 버전 $269.95</li>        </ul>
+        <!-- === Revo === -->
+        <h3 id="parent-revo">Revo</h3>
+        <p>Traxxas의 클래식 몬스터트럭/트러기 라인입니다. 니트로 엔진 모델도 포함되어 있습니다.</p>        <div class="model-gallery">          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/8/6/86086-4-E-REVO2-3qtr-front-Orange_57419538.jpg" alt="E-Revo VXL"><figcaption>E-Revo VXL</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 Revo 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/10</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">6S LiPo (3S x 2)</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">Velineon 2200 브러시리스</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">110+ km/h</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$549 ~ $699</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>E-Revo VXL</strong> — (86086-4) — 1/10 브러시리스 몬스터트럭 $699.95</li>          <li><strong>Revo 3.3</strong> — (53097-3) — 니트로 엔진 몬스터트럭 $599.95</li>          <li><strong>T-Maxx 3.3</strong> — (49077-3) — 니트로 클래식 몬스터트럭 $549.95</li>        </ul>
+        <!-- === Stampede === -->
+        <h3 id="parent-stampede">Stampede <span class="tag tag-blue">입문추천</span></h3>
+        <p>몬스터트럭 입문에 가장 적합한 시리즈입니다. 4WD/2WD, 브러시리스/브러시드 다양한 조합으로 6개 모델이 있습니다.</p>        <div class="model-gallery">          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/6/7/67086-467086-4-red_3qtrfrontlow_1.jpg" alt="Stampede 4X4 VXL"><figcaption>Stampede 4X4 VXL</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 Stampede 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/10</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD / 2WD</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">3S LiPo</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">Velineon 3500 브러시리스</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">105+ km/h</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$219 ~ $399</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>Stampede 4X4 VXL</strong> — (67086-4) — 4WD 브러시리스 $399.95</li>          <li><strong>Stampede 4X4 BL-2s</strong> — (67154-4) — 4WD BL-2s $329.95</li>          <li><strong>Stampede 4X4 XL-5</strong> — (67054-1) — 4WD 브러시드 $259.95</li>          <li><strong>Stampede 2WD VXL</strong> — (36076-74) — 2WD 브러시리스 $349.95</li>          <li><strong>Stampede 2WD BL-2s</strong> — (36354-4) — 2WD BL-2s $249.95</li>          <li><strong>Stampede 2WD XL-5</strong> — (36054-8) — 2WD 브러시드 $219.95</li>        </ul>
+        <!-- === BIGFOOT === -->
+        <h3 id="parent-bigfoot">BIGFOOT</h3>
+        <p>전설적인 몬스터트럭 BIGFOOT의 공식 라이선스 RC카 라인입니다.</p>        <div class="model-gallery">          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/6/7/67134-4-bigfoot-no8-3qtr-front_56949378.jpg" alt="BIGFOOT 4X4"><figcaption>BIGFOOT 4X4</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 BIGFOOT 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/10</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD / 2WD</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">2S LiPo</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">BL-2s 브러시리스</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">55+ km/h</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$219 ~ $329</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>BIGFOOT 4X4 BL-2s</strong> — (67134-4) — 4WD BL-2s $329.95</li>          <li><strong>BIGFOOT No.1 BL-2s</strong> — (36334-4) — 2WD BL-2s $249.95</li>          <li><strong>BIGFOOT No.1 XL-5</strong> — (36034-61) — 2WD 브러시드 $219.95</li>        </ul>
+        <!-- ===== 숏코스 트럭 ===== -->
+        <h2 id="short-course">🏁 숏코스 트럭 (17개 모델)</h2>
+        <p>숏코스 트럭은 실제 숏코스 오프로드 레이싱을 모델로 한 카테고리입니다. 실차 같은 바디 디자인, 온/오프로드 겸용 성능, 뛰어난 내구성으로 Traxxas에서 가장 인기 있는 카테고리이기도 합니다. 4개의 상위모델 아래 17개 개별 모델이 있습니다.</p>
+        <!-- === Slash === -->
+        <h3 id="parent-slash">Slash <span class="tag tag-green">베스트셀러</span></h3>
+        <p>Traxxas에서 가장 많이 팔린 모델이자, RC카 입문자에게 가장 많이 추천되는 시리즈입니다. 4WD/2WD, 브러시리스/브러시드, 니트로까지 12개 바리에이션으로 모든 레벨을 커버합니다.</p>        <div class="model-gallery">          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/6/8/68077-4-Slash-4x4-ultimate-ORANGE-3qtr-front_57401946.jpg" alt="Slash 4X4 Ultimate"><figcaption>Slash 4X4 Ultimate</figcaption></figure>          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/6/8/68086-468086-4_vision-blue-3qtr-front_1.jpg" alt="Slash 4X4 VXL"><figcaption>Slash 4X4 VXL</figcaption></figure>          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/1/0/102076-4-maxxslash-3qtr-front-red_1_1_10073302.jpg" alt="Maxx Slash"><figcaption>Maxx Slash</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 Slash 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/10</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD / 2WD</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">100+ km/h (3S LiPo)</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$239 ~ $699</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>Maxx Slash</strong> — (102076-4) — 6S 대형 숏코스 $699.95</li>          <li><strong>Slash 4X4 VXL Ultimate</strong> — (68077-4) — 풀 업그레이드 에디션 $479.95</li>          <li><strong>Slash 4X4 VXL</strong> — (68086-4) — 4WD 브러시리스 베스트셀러 $399.95</li>          <li><strong>Slash 4X4 BL-2s</strong> — (68154-4) — 4WD BL-2s $329.95</li>          <li><strong>Slash 4X4 XL-5</strong> — (68054-61) — 4WD 브러시드 $299.95</li>          <li><strong>Slash 2WD VXL</strong> — (58076-74) — 2WD 브러시리스 $349.95</li>          <li><strong>Slash 2WD BL-2s</strong> — (58334-4) — 2WD BL-2s $269.95</li>          <li><strong>Slash 2WD XL-5</strong> — (58034-8) — 2WD 브러시드, 최저가 입문 $239.95</li>          <li><strong>Mini Slash 4X4</strong> — (108164-1) — 1/16 미니 4WD BL-2s $249.95</li>          <li><strong>Nitro Slash</strong> — (44056-3) — 니트로 엔진 $429.95</li>          <li><strong>Slash Modified BL-2s</strong> — (104354-74) — 오벌 레이싱 Modified $399.95</li>          <li><strong>Late Model BL-2s</strong> — (104364-74) — 오벌 트랙 레이싱 $419.95</li>        </ul>
+        <!-- === Ford F-150 Raptor === -->
+        <h3 id="parent-raptor">Ford F-150 Raptor</h3>
+        <p>Ford F-150 Raptor 공식 라이선스 바디를 장착한 숏코스 트럭 시리즈입니다.</p>        <div class="model-gallery">          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/1/0/101076-4-raptor-r-3qtr-front-fox_2.jpg" alt="Ford F-150 Raptor R"><figcaption>Ford F-150 Raptor R</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 Ford F-150 Raptor 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/10</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD / 2WD</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">3S LiPo</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">Velineon 3500 브러시리스</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">100+ km/h</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$249 ~ $499</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>Ford F-150 Raptor R 4X4 VXL</strong> — (101076-4) — 4WD 브러시리스 $499.95</li>          <li><strong>Ford F-150 Raptor 2WD BL-2s</strong> — (58394-4) — 2WD BL-2s $289.95</li>          <li><strong>Ford F-150 Raptor 2WD XL-5</strong> — (58094-1) — 2WD 브러시드 $249.95</li>        </ul>
+        <!-- === UDR (Unlimited Desert Racer) === -->
+        <h3 id="parent-udr">UDR (Unlimited Desert Racer)</h3>
+        <p>1/7 스케일 사막 레이싱 트럭. 4WD, 독립 서스펜션, 실차 같은 디테일이 특징입니다.</p>        <div class="model-gallery">          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/8/5/85086-4-udr-3qtr-front-rigid-grn_53983065.jpg" alt="Unlimited Desert Racer"><figcaption>Unlimited Desert Racer</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 UDR (Unlimited Desert Racer) 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/7</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">4S LiPo x 2</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">Velineon 540XL 브러시리스</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">80~100+ km/h</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$799</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>Unlimited Desert Racer</strong> — (85086-4) — 6S 4WD 사막 트럭 $799.95</li>        </ul>
+        <!-- === Slayer Pro === -->
+        <h3 id="parent-slayer">Slayer Pro</h3>
+        <p>니트로 엔진 4WD 숏코스 트럭입니다.</p>        <div class="model-gallery">          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/5/9/59076-3-Slayer-2019-3qtr-Front-Red_54127790.jpg" alt="Slayer Pro 4X4"><figcaption>Slayer Pro 4X4</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 Slayer Pro 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/10</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">연료</span><span class="spec-value">니트로 (TRX 3.3)</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">72+ km/h</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$549</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>Slayer Pro 4X4</strong> — (59076-3) — 니트로 4WD 숏코스 $549.95</li>        </ul>
+        <!-- ===== 스타디움 & 버기 ===== -->
+        <h2 id="stadium-buggy">🐛 스타디움 & 버기 (12개 모델)</h2>
+        <p>스타디움 트럭과 버기를 아우르는 카테고리입니다. 가볍고 민첩한 오프로드 레이서로, 몬스터트럭보다 낮은 무게중심과 공기역학적 디자인이 특징입니다. 4개의 상위모델 아래 12개 개별 모델이 있습니다.</p>
+        <!-- === Rustler === -->
+        <h3 id="parent-rustler">Rustler</h3>
+        <p>Traxxas의 대표 스타디움 트럭 시리즈입니다. 4WD/2WD, 다양한 파워트레인으로 7개 바리에이션이 있습니다.</p>        <div class="model-gallery">          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/6/7/67076-4-rustler-4x4-vxl-3qtr-frnt-slrf_1.jpg" alt="Rustler 4X4 VXL"><figcaption>Rustler 4X4 VXL</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 Rustler 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/10</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD / 2WD</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">3S LiPo</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">Velineon 3500 브러시리스</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">100+ km/h</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$229 ~ $549</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>Rustler 4X4 VXL Ultimate</strong> — (67097-4) — 풀 업그레이드 에디션 $549.95</li>          <li><strong>Rustler 4X4 VXL</strong> — (67076-4) — 4WD 브러시리스 $429.95</li>          <li><strong>Rustler 4X4 BL-2s</strong> — (67164-4) — 4WD BL-2s $329.95</li>          <li><strong>Rustler 4X4 XL-5</strong> — (67064-1) — 4WD 브러시드 $299.95</li>          <li><strong>Rustler 2WD VXL</strong> — (37076-74) — 2WD 브러시리스 $329.95</li>          <li><strong>Rustler 2WD BL-2s</strong> — (37354-4) — 2WD BL-2s $249.95</li>          <li><strong>Rustler 2WD XL-5</strong> — (37054-8) — 2WD 브러시드 $229.95</li>        </ul>
+        <!-- === Bandit === -->
+        <h3 id="parent-bandit">Bandit</h3>
+        <p>1/10 스케일의 가볍고 빠른 2WD 버기 시리즈입니다. 단순한 구조 덕분에 유지보수가 쉽습니다.</p>        <div class="model-gallery">          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/2/4/24076-74-Bandit-VXL-3Qtr-Front-BLU_57371557.jpg" alt="Bandit VXL"><figcaption>Bandit VXL</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 Bandit 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/10</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">2WD</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">3S LiPo</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">Velineon 3500 브러시리스</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">105+ km/h</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$199 ~ $329</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>Bandit VXL</strong> — (24076-74) — 브러시리스 $329.95</li>          <li><strong>Bandit BL-2s</strong> — (24354-4) — BL-2s $229.95</li>          <li><strong>Bandit XL-5</strong> — (24054-8) — 브러시드 $199.95</li>        </ul>
+        <!-- === Jato === -->
+        <h3 id="parent-jato">Jato</h3>
+        <p>니트로 엔진 2WD 스타디움 트럭입니다.</p>        <div class="spec-block">
+          <div class="spec-block-title">📋 Jato 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/10</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">2WD</span></div>          <div class="spec-row"><span class="spec-label">연료</span><span class="spec-value">니트로 (TRX 3.3)</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">105+ km/h</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$499</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>Jato 3.3</strong> — (55077-3) — 니트로 2WD $499.95</li>        </ul>
+        <!-- === Funco Pro === -->
+        <h3 id="parent-funco">Funco Pro</h3>
+        <p>1/6 스케일 대형 버기입니다.</p>        <div class="model-gallery">          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/1/0/109076-4-pro-scale-sand-car-3qtr-front-right-red_3_11128252.jpg" alt="Funco Pro Scale"><figcaption>Funco Pro Scale</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 Funco Pro 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/7</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">8S LiPo (4S x 2)</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">Velineon 1200XL 브러시리스</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">80+ km/h</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$1,299</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>Funco Pro Scale</strong> — (109076-4) — 1/6 대형 버기 $1,299.95</li>        </ul>
+        <!-- ===== 크롤러 & 트레일 ===== -->
+        <h2 id="crawler">🪨 크롤러 & 트레일 (16개 모델)</h2>
+        <p>크롤러는 속도가 아닌 지형 정복 능력이 핵심인 카테고리입니다. 바위, 급경사, 좁은 통로 등 극한 지형을 느리지만 확실하게 넘어가는 것이 목표입니다. Traxxas는 6WD TRX-6부터 4WD TRX-4, 미니 TRX-4M까지 4개의 상위모델로 16개 모델을 전개합니다.</p>
+        <!-- === TRX-6 === -->
+        <h3 id="parent-trx-6">TRX-6 <span class="tag tag-purple">6WD 플래그십</span></h3>
+        <p>Traxxas가 만든 세계 유일의 6륜구동(6WD) RTR 크롤러입니다. 포탈 액슬 x 3, 로킹 디퍼렌셜 x 3, 2단 변속기를 탑재하여 어떤 지형도 정복할 수 있습니다.</p>        <div class="model-gallery">          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/8/8/88296-4-TRX-6-Mercedes-6x6-3qtr-front-left-SLVR_54126188.jpg" alt="TRX-6 G63 6x6"><figcaption>TRX-6 G63 6x6</figcaption></figure>          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/8/8/88086-4-TRX-6-Flatbed-Hauler-3qtr-Front-Low_54002962.jpg" alt="TRX-6 Hauler"><figcaption>TRX-6 Hauler</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 TRX-6 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/10</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">6WD</span></div>          <div class="spec-row"><span class="spec-label">액슬</span><span class="spec-value">포탈 액슬 x 3</span></div>          <div class="spec-row"><span class="spec-label">변속</span><span class="spec-value">2단 (하이/로우)</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$649 ~ $749</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>TRX-6 Mercedes G63 AMG 6x6</strong> — (88096-4) — Mercedes-Benz 공식 라이선스 $649.95</li>          <li><strong>TRX-6 Ultimate RC Hauler</strong> — (88086-84) — 플랫베드 + 윈치 $749.95</li>        </ul>
+        <!-- === TRX-4 === -->
+        <h3 id="parent-trx-4">TRX-4 <span class="tag tag-purple">크롤링 아이콘</span></h3>
+        <p>포탈 액슬, 2단 변속기, 전/후 디퍼렌셜 잠금을 갖춘 Traxxas의 대표 4WD 크롤러 시리즈입니다. 다양한 라이선스 바디(Defender, Bronco, Blazer 등)와 High Trail 버전으로 7개 모델이 있습니다.</p>        <div class="model-gallery">          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/h/t/httpswww.traxxasdirect.comsupportmagento-products82056-4trx-4-defender-red-3qtr-front_2.jpg" alt="TRX-4 Defender"><figcaption>TRX-4 Defender</figcaption></figure>          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/9/2/92076-4-2021-Bronco-3qtr-Front-ORNG_54126920.jpg" alt="TRX-4 Bronco"><figcaption>TRX-4 Bronco</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 TRX-4 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/10</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">2S~3S LiPo</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">Titan 21T 550 브러시드</span></div>          <div class="spec-row"><span class="spec-label">액슬</span><span class="spec-value">포탈 액슬</span></div>          <div class="spec-row"><span class="spec-label">변속</span><span class="spec-value">2단 (하이/로우)</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$549 ~ $599</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>TRX-4 Land Rover Defender</strong> — (82256-4) — 크롤링의 아이콘 $549.95</li>          <li><strong>TRX-4 2021 Ford Bronco</strong> — (92076-4) — 현대적 Bronco 디자인 $549.95</li>          <li><strong>TRX-4 K5 Blazer</strong> — (82276-4) — 1979년형 레트로 감성 $549.95</li>          <li><strong>TRX-4 F-150 High Trail</strong> — (92046-4) — Ford F-150 High Trail 에디션 $599.95</li>          <li><strong>TRX-4 K10 High Trail</strong> — (92056-4) — Chevy K10 High Trail 에디션 $599.95</li>          <li><strong>TRX-4 Blazer High Trail</strong> — (92086-4) — Blazer High Trail 에디션 $599.95</li>          <li><strong>TRX-4 Nissan Pathfinder</strong> — (110056-4) — Nissan Pathfinder 바디 $549.95</li>        </ul>
+        <!-- === TRX-4 Sport === -->
+        <h3 id="parent-trx-4-sport">TRX-4 Sport <span class="tag tag-blue">입문 크롤러</span></h3>
+        <p>TRX-4 플랫폼의 엔트리 레벨 시리즈입니다. 포탈 액슬 대신 일반 액슬, 디퍼 잠금 미탑재로 가격이 저렴하면서도 2단 변속기는 유지합니다.</p>        <div class="model-gallery">          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/8/2/82024-4-trx-4-sport-tan-3qtr-front_2_1.jpg" alt="TRX-4 Sport"><figcaption>TRX-4 Sport</figcaption></figure>          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/8/2/82044-4-Sport-High-Trail-3qtr-Front-BLUE_54280283.jpg" alt="TRX-4 Sport High Trail"><figcaption>TRX-4 Sport High Trail</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 TRX-4 Sport 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/10</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">NiMH / 2S LiPo</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">Titan 12T 550 브러시드</span></div>          <div class="spec-row"><span class="spec-label">변속</span><span class="spec-value">2단 (하이/로우)</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$349 ~ $529</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>TRX-4 Sport</strong> — (82224-4) — 기본 크롤러 입문 (클립리스) $349.95</li>          <li><strong>TRX-4 Sport High Trail</strong> — (82044-4) — High Trail 에디션 $389.99</li>          <li><strong>TRX-4 Sport w/Traxx</strong> — (82234-4) — 무한궤도 키트 포함 $529.95</li>        </ul>
+        <!-- === TRX-4M === -->
+        <h3 id="parent-trx-4m">TRX-4M</h3>
+        <p>TRX-4의 미니 버전입니다. 1/18 스케일로 작지만 TRX-4의 핵심 기능을 축소한 모델입니다. 실내에서도 크롤링을 즐길 수 있습니다.</p>        <div class="model-gallery">          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/9/7/97054-1-TRX-4m-Defender-3qtr-Front-XBLU_53399739.jpg" alt="TRX-4M Defender"><figcaption>TRX-4M Defender</figcaption></figure>          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/9/7/97074-1-TRX-4M-Bronco-3qtr-Front-A51_56952557_1.jpg" alt="TRX-4M Bronco"><figcaption>TRX-4M Bronco</figcaption></figure>          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/9/7/97044-1-TRX4m-F-150-3qtr-Front-BROWN_56951856.jpg" alt="TRX-4M F-150"><figcaption>TRX-4M F-150</figcaption></figure>          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/9/7/97064-1-TRX4m-K10-3qtr-Front-RED_56951958.jpg" alt="TRX-4M K10 High Trail"><figcaption>TRX-4M K10 High Trail</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 TRX-4M 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/18</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">2S 750mAh LiPo</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">050 브러시드</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">~10 km/h</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$179 ~ $199</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>TRX-4M Defender</strong> — (97054-1) — Land Rover Defender 바디 $179.95</li>          <li><strong>TRX-4M Ford Bronco</strong> — (97074-1) — Ford Bronco 바디 $179.95</li>          <li><strong>TRX-4M F-150 High Trail</strong> — (97044-1) — F-150 High Trail $199.95</li>          <li><strong>TRX-4M K10 High Trail</strong> — (97064-1) — K10 High Trail $189.95</li>        </ul>
+        <!-- ===== 온로드 & 랠리 ===== -->
+        <h2 id="onroad">🏎️ 온로드 & 랠리 (8개 모델)</h2>
+        <p>포장도로 위에서 속도, 드리프트, 랠리를 즐기는 카테고리입니다. 낮은 차체와 공기역학적 디자인으로 직선 속도와 고속 안정성에 최적화되어 있습니다. 4개의 상위모델 아래 8개 개별 모델이 있습니다.</p>
+        <!-- === Ford === -->
+        <h3 id="parent-ford-onroad">Ford</h3>
+        <p>Ford 공식 라이선스 바디를 활용한 드래그, 랠리, 드리프트 모델입니다.</p>        <div class="model-gallery">          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/9/4/94076-4-drag-slash-3qtr-front-low-prpl_1.jpg" alt="Drag Slash Mustang"><figcaption>Drag Slash Mustang</figcaption></figure>          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/7/4/74276-4-Fiesta-Rally-3Qtr-Front-GRN_54131540.jpg" alt="Ford Fiesta Rally"><figcaption>Ford Fiesta Rally</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 Ford 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/10 ~ 1/16</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD / 2WD</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">3S LiPo</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">Velineon 3500 브러시리스</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">100+ km/h</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$329 ~ $429</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>Drag Slash Mustang</strong> — (94046-4) — 드래그 레이싱 특화 $399.95</li>          <li><strong>Ford Fiesta Rally VXL</strong> — (74276-4) — 1/10 랠리 브러시리스 $429.95</li>          <li><strong>Ford Fiesta Rally BL-2s</strong> — (74154-4) — 1/10 랠리 BL-2s $329.95</li>          <li><strong>Mini Rally VXL RS200</strong> — (108046-1) — 1/16 미니 랠리 $389.95</li>          <li><strong>4-Tec Drift Mustang</strong> — (105237-4) — 드리프트 전용 $329.95</li>        </ul>
+        <!-- === Nissan === -->
+        <h3 id="parent-nissan">Nissan</h3>
+        <p></p>        <div class="spec-block">
+          <div class="spec-block-title">📋 Nissan 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/10</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">3S LiPo</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">Velineon 3500 브러시리스</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">82+ km/h</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$329</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>4-Tec Drift 240SX</strong> — (105247-4) — Nissan 240SX 드리프트 $329.95</li>        </ul>
+        <!-- === Chevrolet === -->
+        <h3 id="parent-chevrolet-onroad">Chevrolet</h3>
+        <p></p>        <div class="spec-block">
+          <div class="spec-block-title">📋 Chevrolet 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/10</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">3S LiPo</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">Velineon 3500 브러시리스</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">82+ km/h</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$299</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>4-Tec 3.0 Corvette</strong> — (93054-4) — 온로드 투어링카 $299.95</li>        </ul>
+        <!-- === XO-1 === -->
+        <h3 id="parent-xo1">XO-1 <span class="tag tag-red">160km/h+</span></h3>
+        <p>세계 최초로 100mph(약 160km/h)를 달성한 RTR RC카입니다. 1/7 스케일, 6S LiPo, 속도 잠금 시스템으로 안전하게 속도를 높여갈 수 있습니다.</p>        <div class="model-gallery">          <figure><img src="https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/6/4/64077-3-xo-1-2022-3qtr-front-grn_53983217.jpg" alt="XO-1 Supercar"><figcaption>XO-1 Supercar</figcaption></figure>        </div>        <div class="spec-block">
+          <div class="spec-block-title">📋 XO-1 대표 사양</div>          <div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">1/7</span></div>          <div class="spec-row"><span class="spec-label">구동</span><span class="spec-value">4WD</span></div>          <div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">6S LiPo</span></div>          <div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">Velineon 1600XL 브러시리스</span></div>          <div class="spec-row"><span class="spec-label">최고 속도</span><span class="spec-value">160+ km/h</span></div>          <div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value">$799</span></div>        </div>        <p><strong>하위 모델:</strong></p>
+        <ul>          <li><strong>XO-1</strong> — (64077-3) — 160+ km/h 슈퍼카 $799.95</li>        </ul>
+        <!-- ===== 상위모델 비교표 ===== -->
+        <h2 id="comparison">상위모델 비교표</h2>
+
+        <div class="comparison-table">
+          <table>
+            <thead>
+              <tr>                <th>상위모델</th>                <th>모델 수</th>                <th>스케일</th>                <th>구동</th>                <th>모터 타입</th>                <th>최고속도</th>                <th>가격대</th>                <th>추천 대상</th>              </tr>
+            </thead>
+            <tbody>              <!-- 🦖 몬스터트럭 (8개 상위모델, 23개 모델) -->
+              <tr class="category-row"><td colspan="8" style="background:var(--bg-tertiary);font-weight:700;font-size:13px;color:var(--text-secondary);">🦖 몬스터트럭 (8개 상위모델, 23개 모델)</td></tr>              <tr>                <td><strong>X-Maxx</strong></td>                <td>2</td>                <td>1/5</td>                <td>4WD</td>                <td>브러시리스</td>                <td>80+ km/h</td>                <td>$1,199~$1,599</td>                <td>파워 배싱 플래그십</td>              </tr>              <tr>                <td><strong>X-Monster</strong></td>                <td>2</td>                <td>1/5</td>                <td>4WD</td>                <td>브러시리스</td>                <td>80+ km/h</td>                <td>$1,099~$1,599</td>                <td>대형 몬스터, BIGFOOT 팬</td>              </tr>              <tr>                <td><strong>XRT</strong></td>                <td>3</td>                <td>1/5~1/18</td>                <td>4WD</td>                <td>브러시리스</td>                <td>80+ km/h</td>                <td>$349~$1,599</td>                <td>대형 레이싱</td>              </tr>              <tr>                <td><strong>Sledge</strong></td>                <td>1</td>                <td>1/8</td>                <td>4WD</td>                <td>브러시리스</td>                <td>100+ km/h</td>                <td>$799</td>                <td>버기/트러기 레이싱</td>              </tr>              <tr>                <td><strong>Maxx</strong></td>                <td>3</td>                <td>1/10~1/16</td>                <td>4WD</td>                <td>브러시리스</td>                <td>60+ km/h</td>                <td>$269~$899</td>                <td>중급 배싱</td>              </tr>              <tr>                <td><strong>Revo</strong></td>                <td>3</td>                <td>1/10</td>                <td>4WD</td>                <td>브러시리스/니트로</td>                <td>50~70 km/h</td>                <td>$549~$699</td>                <td>클래식, 니트로</td>              </tr>              <tr>                <td><strong>Stampede</strong></td>                <td>6</td>                <td>1/10</td>                <td>4WD/2WD</td>                <td>브러시리스/브러시드</td>                <td>30~65 km/h</td>                <td>$219~$399</td>                <td>입문 몬스터</td>              </tr>              <tr>                <td><strong>BIGFOOT</strong></td>                <td>3</td>                <td>1/10</td>                <td>4WD/2WD</td>                <td>브러시리스/브러시드</td>                <td>30~50 km/h</td>                <td>$219~$329</td>                <td>클래식 BIGFOOT</td>              </tr>              <!-- 🏁 숏코스 트럭 (4개 상위모델, 17개 모델) -->
+              <tr class="category-row"><td colspan="8" style="background:var(--bg-tertiary);font-weight:700;font-size:13px;color:var(--text-secondary);">🏁 숏코스 트럭 (4개 상위모델, 17개 모델)</td></tr>              <tr>                <td><strong>Slash</strong></td>                <td>12</td>                <td>1/10~1/16</td>                <td>4WD/2WD</td>                <td>브러시리스/브러시드/니트로</td>                <td>30~100+ km/h</td>                <td>$239~$699</td>                <td>올라운더, 입문~상급</td>              </tr>              <tr>                <td><strong>Ford Raptor</strong></td>                <td>3</td>                <td>1/10</td>                <td>4WD/2WD</td>                <td>브러시리스/브러시드</td>                <td>30~70 km/h</td>                <td>$249~$499</td>                <td>라이선스 트럭</td>              </tr>              <tr>                <td><strong>UDR</strong></td>                <td>1</td>                <td>1/7</td>                <td>4WD</td>                <td>브러시리스</td>                <td>80+ km/h</td>                <td>$799</td>                <td>사막 레이싱</td>              </tr>              <tr>                <td><strong>Slayer Pro</strong></td>                <td>1</td>                <td>1/10</td>                <td>4WD</td>                <td>니트로</td>                <td>50+ km/h</td>                <td>$549</td>                <td>니트로 숏코스</td>              </tr>              <!-- 🐛 스타디움 & 버기 (4개 상위모델, 12개 모델) -->
+              <tr class="category-row"><td colspan="8" style="background:var(--bg-tertiary);font-weight:700;font-size:13px;color:var(--text-secondary);">🐛 스타디움 & 버기 (4개 상위모델, 12개 모델)</td></tr>              <tr>                <td><strong>Rustler</strong></td>                <td>7</td>                <td>1/10</td>                <td>4WD/2WD</td>                <td>브러시리스/브러시드</td>                <td>30~65 km/h</td>                <td>$229~$549</td>                <td>스타디움 트럭</td>              </tr>              <tr>                <td><strong>Bandit</strong></td>                <td>3</td>                <td>1/10</td>                <td>2WD</td>                <td>브러시리스/브러시드</td>                <td>30~70 km/h</td>                <td>$199~$329</td>                <td>2WD 버기</td>              </tr>              <tr>                <td><strong>Jato</strong></td>                <td>1</td>                <td>1/10</td>                <td>2WD</td>                <td>니트로</td>                <td>50+ km/h</td>                <td>$499</td>                <td>니트로 스타디움</td>              </tr>              <tr>                <td><strong>Funco Pro</strong></td>                <td>1</td>                <td>1/6</td>                <td>4WD</td>                <td>브러시리스</td>                <td>80+ km/h</td>                <td>$1,299</td>                <td>대형 버기</td>              </tr>              <!-- 🏎️ 온로드 & 랠리 (4개 상위모델, 8개 모델) -->
+              <tr class="category-row"><td colspan="8" style="background:var(--bg-tertiary);font-weight:700;font-size:13px;color:var(--text-secondary);">🏎️ 온로드 & 랠리 (4개 상위모델, 8개 모델)</td></tr>              <tr>                <td><strong>Ford (온로드)</strong></td>                <td>5</td>                <td>1/10~1/16</td>                <td>4WD/2WD</td>                <td>브러시리스/브러시드</td>                <td>40~160 km/h</td>                <td>$329~$429</td>                <td>드래그/랠리/드리프트</td>              </tr>              <tr>                <td><strong>Nissan</strong></td>                <td>1</td>                <td>1/10</td>                <td>4WD</td>                <td>브러시리스</td>                <td>50+ km/h</td>                <td>$329</td>                <td>드리프트</td>              </tr>              <tr>                <td><strong>Chevrolet</strong></td>                <td>1</td>                <td>1/10</td>                <td>4WD</td>                <td>브러시리스</td>                <td>70+ km/h</td>                <td>$299</td>                <td>온로드 투어링</td>              </tr>              <tr>                <td><strong>XO-1</strong></td>                <td>1</td>                <td>1/7</td>                <td>4WD</td>                <td>브러시리스</td>                <td>160+ km/h</td>                <td>$799</td>                <td>스피드 마니아</td>              </tr>              <!-- 🪨 크롤러 & 트레일 (4개 상위모델, 16개 모델) -->
+              <tr class="category-row"><td colspan="8" style="background:var(--bg-tertiary);font-weight:700;font-size:13px;color:var(--text-secondary);">🪨 크롤러 & 트레일 (4개 상위모델, 16개 모델)</td></tr>              <tr>                <td><strong>TRX-6</strong></td>                <td>2</td>                <td>1/10</td>                <td>6WD</td>                <td>브러시드</td>                <td>Trail ~16 km/h</td>                <td>$649~$749</td>                <td>궁극의 크롤러</td>              </tr>              <tr>                <td><strong>TRX-4</strong></td>                <td>7</td>                <td>1/10</td>                <td>4WD</td>                <td>브러시드</td>                <td>Trail ~16 km/h</td>                <td>$549~$599</td>                <td>풀옵션 크롤러</td>              </tr>              <tr>                <td><strong>TRX-4 Sport</strong></td>                <td>3</td>                <td>1/10</td>                <td>4WD</td>                <td>브러시드</td>                <td>Trail ~16 km/h</td>                <td>$349~$529</td>                <td>입문 크롤러</td>              </tr>              <tr>                <td><strong>TRX-4M</strong></td>                <td>4</td>                <td>1/18</td>                <td>4WD</td>                <td>브러시드</td>                <td>Trail ~10 km/h</td>                <td>$179~$199</td>                <td>미니 크롤러</td>              </tr>            </tbody>
+          </table>
+        </div>
+
+        <div class="callout info">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content">
+            <p>가격은 Traxxas 미국 공식 RTR 기준 USD입니다. 실제 판매 가격은 판매처에 따라 다를 수 있습니다. 니트로 모델은 연료와 시동 도구가 별도로 필요합니다.</p>
+          </div>
+        </div>
+
+        <!-- ===== 첫 번째 모델 추천 ===== -->
+        <h2 id="first-model">첫 번째 모델 추천</h2>
+        <p>Traxxas 라인업에서 첫 번째 모델을 선택하는 방법을 예산별, 크롤러 레벨별, 용도별로 안내합니다.</p>
+        <h3>💰 예산별 추천</h3>        <div class="dashboard-grid">          <div class="dashboard-card">
+            <div class="dashboard-card-icon">💵</div>
+            <div class="dashboard-card-title">$250 이하</div>
+            <div class="dashboard-card-desc"><strong>Slash 2WD XL-5</strong> $239 — 베스트셀러 입문<br><strong>Stampede 2WD XL-5</strong> $219 — 몬스터 입문<br><strong>TRX-4M Defender</strong> $179 — 미니 크롤러<br><strong>Rustler 2WD XL-5</strong> $229 — 스타디움 입문</div>
+          </div>          <div class="dashboard-card">
+            <div class="dashboard-card-icon">💰</div>
+            <div class="dashboard-card-title">$300 ~ $450</div>
+            <div class="dashboard-card-desc"><strong>Slash 4X4 VXL</strong> $399 — 4WD 브러시리스 베스트<br><strong>TRX-4 Sport</strong> $349 — 크롤러 입문<br><strong>Rustler 4X4 VXL</strong> $429 — 브러시리스 스타디움</div>
+          </div>          <div class="dashboard-card">
+            <div class="dashboard-card-icon">💎</div>
+            <div class="dashboard-card-title">$500 이상</div>
+            <div class="dashboard-card-desc"><strong>X-Maxx 8S</strong> $1,199 — 1/5 플래그십<br><strong>Maxx Ultimate</strong> $899 — 1/10 풀업그레이드<br><strong>TRX-4 Defender</strong> $549 — 풀옵션 크롤러<br><strong>TRX-6 G63</strong> $649 — 6WD 궁극 크롤러</div>
+          </div>        </div>
+        <h3>🪨 크롤러 레벨별 추천</h3>        <p>크롤러는 경험 레벨에 따라 단계적으로 선택하는 것이 좋습니다.</p>        <ul>          <li><strong>크롤러 입문</strong> — TRX-4M (Defender, Bronco, F-150, K10) — $179~$199</li>          <li><strong>크롤러 중급</strong> — TRX-4 Sport (Sport, High Trail, w/Traxx) — $349~$529</li>          <li><strong>크롤러 프리미엄</strong> — TRX-4 (Defender, Bronco, K5 Blazer, High Trail 등) — $549~$599</li>          <li><strong>크롤러 궁극</strong> — TRX-6 (G63 6x6, Ultimate RC Hauler) — $649~$749</li>        </ul>
+        <h3>🎯 용도별 추천</h3>        <ul>          <li><strong>배싱 (거친 주행, 점프)</strong> — Slash 4X4 VXL, Maxx V2/Ultimate, X-Maxx 8S</li>          <li><strong>레이싱 (트랙 주행)</strong> — Slash 4X4 VXL, Sledge, XRT</li>          <li><strong>크롤링</strong> — TRX-4M → TRX-4 Sport → TRX-4 → TRX-6 (단계별 업그레이드)</li>          <li><strong>스피드 (최고 속도 도전)</strong> — XO-1 (160+ km/h), UDR (80~100+ km/h)</li>          <li><strong>드리프트/랠리</strong> — Ford Fiesta Rally, Drag Slash, 4-Tec Drift (Mustang, 240SX)</li>          <li><strong>니트로 엔진</strong> — Revo 3.3, T-Maxx 3.3, Slayer Pro, Jato 3.3</li>        </ul>
+        <div class="callout info">
+          <div class="callout-icon">🏆</div>
+          <div class="callout-content">
+            <p>첫 Traxxas로 가장 많이 추천되는 모델은 <strong>Slash 4X4 VXL</strong>입니다. 가격, 성능, 부품 호환성 모두 뛰어나며 4WD 브러시리스의 강력한 성능을 즐길 수 있습니다. 크롤러를 원한다면 <strong>TRX-4M Defender</strong>가 최고의 입문 선택입니다.</p>
+          </div>
+        </div>
+
+        <!-- ===== 관련 용어 ===== -->
+        <h2 id="glossary-links">관련 용어</h2>
+        <p>이 글에서 다룬 핵심 용어들을 용어 사전에서 더 자세히 확인해 보세요.</p>
+        <div class="quick-links">          <a href="glossary.html#rtr" class="quick-link">📦 RTR</a>          <a href="glossary.html#brushless" class="quick-link">🔄 브러시리스</a>          <a href="glossary.html#lipo" class="quick-link">🔋 LiPo</a>          <a href="glossary.html#tsm" class="quick-link">🛡️ TSM</a>          <a href="glossary.html#portal-axle" class="quick-link">🪨 포탈 액슬</a>        </div>
+
+        <!-- ===== Next Read ===== -->
+        <div class="next-read">
+          <div class="next-read-title">다음 읽기</div>
+          <div class="next-read-grid">            <a href="traxxas-ecosystem.html" class="next-read-card">
+              <div class="next-read-card-icon">🔴</div>
+              <div class="next-read-card-title">Traxxas 생태계</div>
+              <div class="next-read-card-desc">TSM, TQi, iD 커넥터 등 Traxxas만의 기술 생태계를 알아봅니다.</div>
+            </a>            <a href="selection-checklist.html" class="next-read-card">
+              <div class="next-read-card-icon">🛒</div>
+              <div class="next-read-card-title">RC카 선택 체크리스트</div>
+              <div class="next-read-card-desc">예산, 목적, 주행 환경별 체크리스트로 나에게 맞는 RC카를 찾아보세요.</div>
+            </a>          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- TOC -->
+    <aside class="toc">
+      <div class="toc-title">목차</div>
+      <ul class="toc-list"></ul>
+    </aside>
+  </div>
+
+  <script src="js/db-models.js"></script>
+  <script src="js/app.js"></script>
+  <style>
+    /* Modal overlay for traxxas-models */
+    .detail-modal-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+    .detail-modal-content {
+      background: #1e1e1e;
+      color: #e0e0e0;
+      border-radius: 8px;
+      max-width: 860px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .detail-modal-close {
+      position: absolute;
+      top: 12px; right: 14px;
+      background: none; border: none;
+      font-size: 22px; cursor: pointer;
+      color: #aaa; line-height: 1;
+      padding: 4px 8px; border-radius: 4px;
+    }
+    .detail-modal-close:hover { background: #333; color: #fff; }
+    .detail-modal-content .detail-top-bar-title { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .detail-modal-content .detail-grid { display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap; }
+    .detail-modal-content .detail-grid-image { flex: 0 0 auto; }
+    .detail-modal-content .detail-grid-specs { flex: 1 1 300px; }
+    .detail-modal-content .detail-product-image { max-width: 300px; max-height: 220px; object-fit: contain; border-radius: 4px; background: #2a2a2a; border: 1px solid #444; display: block; margin-bottom: 12px; }
+    .detail-modal-content .product-link-btn { display: inline-block; margin-top: 10px; padding: 6px 14px; background: #2383e2; color: #fff; border-radius: 4px; text-decoration: none; font-size: 13px; font-weight: 600; }
+    .detail-modal-content .product-link-btn:hover { background: #1b6ec2; }
+    .detail-modal-content .detail-tree-section { border: 1px solid #444; border-radius: 4px; margin-bottom: 8px; overflow: hidden; }
+    .detail-modal-content .detail-tree-header { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: #2a2a2a; cursor: pointer; user-select: none; font-weight: 700; font-size: 14px; color: #e0e0e0; }
+    .detail-modal-content .detail-tree-header:hover { background: #333; }
+    .detail-modal-content .detail-tree-arrow { display: inline-block; width: 16px; font-size: 12px; color: #888; transition: transform 0.2s; }
+    .detail-modal-content .detail-tree-section.collapsed .detail-tree-arrow { transform: rotate(0deg); }
+    .detail-modal-content .detail-tree-section:not(.collapsed) .detail-tree-arrow { transform: rotate(90deg); }
+    .detail-modal-content .detail-tree-body { padding: 8px 14px 12px; border-top: 1px solid #444; }
+    .detail-modal-content .detail-tree-section.collapsed .detail-tree-body { display: none; }
+    .detail-modal-content .spec-row { display: flex; padding: 4px 0; border-bottom: 1px solid #333; font-size: 13px; }
+    .detail-modal-content .spec-label { min-width: 100px; font-weight: 600; color: #aaa; }
+    .detail-modal-content .spec-value { color: #e0e0e0; }
+    .detail-modal-content .tag { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 11px; font-weight: 600; }
+    .detail-modal-content .tag-red { background: #5c2020; color: #f88; }
+    .detail-modal-content .tag-blue { background: #1e3a5f; color: #7cb9f5; }
+    .detail-modal-content .tag-green { background: #1e4620; color: #7cf58a; }
+    .detail-modal-content .tag-orange { background: #5f3a1e; color: #f5b97c; }
+    .detail-modal-content .tag-pink { background: #5c2040; color: #f5a0c0; }
+    .detail-modal-content .tag-purple { background: #3a1e5f; color: #b97cf5; }
+    .detail-modal-content .tag-gray { background: #3a3a3a; color: #bbb; }
+    .detail-modal-content .variant-item { display: flex; gap: 12px; padding: 6px 0; border-bottom: 1px solid #333; font-size: 13px; align-items: center; }
+    .detail-modal-content .variant-item:last-child { border-bottom: none; }
+    .detail-modal-content .variant-name { font-weight: 600; color: #e0e0e0; min-width: 180px; }
+    .detail-modal-content .variant-pn { color: #aaa; font-family: monospace; font-size: 12px; min-width: 120px; }
+    .detail-modal-content .variant-body { color: #aaa; }
+    @media (max-width: 600px) {
+      .detail-modal-overlay { padding: 12px; }
+      .detail-modal-content { max-height: 90vh; padding: 16px; }
+      .detail-modal-content .detail-grid { flex-direction: column; }
+      .detail-modal-content .detail-product-image { max-width: 100%; }
+      .detail-modal-content .variant-item { flex-direction: column; gap: 2px; }
+      .detail-modal-content .variant-name, .detail-modal-content .variant-pn { min-width: unset; }
+    }
+  </style>
+  <script>
+  (function() {
+    'use strict';
+    var CATEGORY_COLORS = { '몬스터트럭':'red','숏코스 트럭':'blue','스타디움&버기':'green','온로드&랠리':'pink','크롤러&트레일':'orange' };
+    var DRIVETRAIN_COLORS = { '4WD':'blue','2WD':'orange','6WD':'red' };
+    var MOTOR_TYPE_COLORS = { '브러시리스':'green','브러시드':'gray','니트로':'purple' };
+
+    function esc(t) { if (!t) return ''; var d = document.createElement('div'); d.appendChild(document.createTextNode(t)); return d.innerHTML; }
+
+    function buildHTML(item) {
+      var cc = CATEGORY_COLORS[item.category]||'gray', dc = DRIVETRAIN_COLORS[item.drivetrain]||'gray', mc = MOTOR_TYPE_COLORS[item.motorType]||'gray';
+      var h = '<div class="detail-grid"><div class="detail-grid-image">';
+      if (item.imageUrl) h += '<img src="'+esc(item.imageUrl)+'" alt="'+esc(item.name)+'" class="detail-product-image" onerror="this.style.display=\'none\'">';
+      if (item.productUrl) h += '<a href="'+esc(item.productUrl)+'" target="_blank" rel="noopener" class="product-link-btn">Traxxas 공식 페이지 &rarr;</a>';
+      h += '</div><div class="detail-grid-specs">';
+      h += '<div class="detail-tree-section"><div class="detail-tree-header" onclick="this.parentElement.classList.toggle(\'collapsed\')"><span class="detail-tree-arrow">▶</span>기본 정보</div><div class="detail-tree-body">';
+      h += '<div class="spec-row"><span class="spec-label">품번</span><span class="spec-value">'+esc(item.partNumber)+'</span></div>';
+      h += '<div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">'+esc(item.scale)+'</span></div>';
+      h += '<div class="spec-row"><span class="spec-label">카테고리</span><span class="spec-value"><span class="tag tag-'+cc+'">'+esc(item.category)+'</span></span></div>';
+      h += '<div class="spec-row"><span class="spec-label">상위모델</span><span class="spec-value">'+esc(item.parentModel||'-')+'</span></div>';
+      h += '<div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value"><strong>'+esc(item.priceRange)+'</strong></span></div>';
+      h += '</div></div>';
+      h += '<div class="detail-tree-section"><div class="detail-tree-header" onclick="this.parentElement.classList.toggle(\'collapsed\')"><span class="detail-tree-arrow">▶</span>파워트레인</div><div class="detail-tree-body">';
+      h += '<div class="spec-row"><span class="spec-label">구동</span><span class="spec-value"><span class="tag tag-'+dc+'">'+esc(item.drivetrain)+'</span></span></div>';
+      h += '<div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">'+esc(item.motor)+' <span class="tag tag-'+mc+'">'+esc(item.motorType)+'</span></span></div>';
+      h += '<div class="spec-row"><span class="spec-label">ESC</span><span class="spec-value">'+esc(item.esc)+'</span></div>';
+      h += '<div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">'+esc(item.battery)+'</span></div>';
+      h += '</div></div>';
+      h += '<div class="detail-tree-section"><div class="detail-tree-header" onclick="this.parentElement.classList.toggle(\'collapsed\')"><span class="detail-tree-arrow">▶</span>물리 스펙</div><div class="detail-tree-body">';
+      h += '<div class="spec-row"><span class="spec-label">최고속도</span><span class="spec-value">'+esc(item.topSpeed)+'</span></div>';
+      h += '<div class="spec-row"><span class="spec-label">무게</span><span class="spec-value">'+esc(item.weight)+'</span></div>';
+      h += '<div class="spec-row"><span class="spec-label">길이</span><span class="spec-value">'+esc(item.length)+'</span></div>';
+      h += '</div></div>';
+      h += '<div class="detail-tree-section"><div class="detail-tree-header" onclick="this.parentElement.classList.toggle(\'collapsed\')"><span class="detail-tree-arrow">▶</span>설명 & 특징</div><div class="detail-tree-body">';
+      h += '<p style="margin:0 0 8px 0;">'+esc(item.description)+'</p><strong>주요 특징:</strong><ul style="margin-top:4px;">';
+      item.features.forEach(function(f){ h += '<li>'+esc(f)+'</li>'; });
+      h += '</ul><div class="spec-row"><span class="spec-label">추천 대상</span><span class="spec-value">'+esc(item.recommended)+'</span></div></div></div>';
+      h += '</div></div>';
+      if (item.variants && item.variants.length > 0) {
+        h += '<div class="detail-tree-section"><div class="detail-tree-header" onclick="this.parentElement.classList.toggle(\'collapsed\')"><span class="detail-tree-arrow">▶</span>바리에이션 ('+item.variants.length+'종)</div><div class="detail-tree-body">';
+        item.variants.forEach(function(v){ h += '<div class="variant-item"><span class="variant-name">'+esc(v.name)+'</span><span class="variant-pn">'+esc(v.partNumber)+'</span><span class="variant-body">'+esc(v.body)+'</span></div>'; });
+        h += '</div></div>';
+      }
+      return h;
+    }
+
+    function showModal(item) {
+      var existing = document.querySelector('.detail-modal-overlay');
+      if (existing) existing.remove();
+      var overlay = document.createElement('div');
+      overlay.className = 'detail-modal-overlay';
+      var modal = document.createElement('div');
+      modal.className = 'detail-modal-content';
+      var html = '<button class="detail-modal-close" title="닫기">&times;</button>';
+      html += '<div class="detail-top-bar-title">' + esc(item.name) + '</div>';
+      html += buildHTML(item);
+      modal.innerHTML = html;
+      overlay.appendChild(modal);
+      document.body.appendChild(overlay);
+      overlay.addEventListener('click', function(e) { if (e.target === overlay) overlay.remove(); });
+      modal.querySelector('.detail-modal-close').addEventListener('click', function() { overlay.remove(); });
+      document.addEventListener('keydown', function onEsc(e) { if (e.key === 'Escape') { overlay.remove(); document.removeEventListener('keydown', onEsc); } });
+    }
+
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[href*="models.html?search="]');
+      if (!link) return;
+      var match = link.href.match(/[?&]search=([^&]+)/);
+      if (!match) return;
+      var query = decodeURIComponent(match[1]).toLowerCase();
+      var found = null;
+      for (var i = 0; i < MODELS_DATA.length; i++) {
+        var m = MODELS_DATA[i];
+        if (m.partNumber.toLowerCase() === query || m.name.toLowerCase().indexOf(query) !== -1) { found = m; break; }
+      }
+      if (found) {
+        e.preventDefault();
+        showModal(found);
+      }
+    });
+  })();
+  </script></body>
+</html>

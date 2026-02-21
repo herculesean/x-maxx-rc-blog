@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>유지보수 — X-Maxx RC Car Blog</title>
+  <meta name="description" content="RC카를 오래, 안전하게 즐기기 위한 정비 루틴과 체크리스트를 정리합니다.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Mobile Menu Toggle -->
+  <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
+  <div class="sidebar-overlay"></div>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <span>🏎️</span> X-Maxx RC Blog
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <!-- Home -->
+        <a href="index.html" class="sidebar-link sidebar-link--top">🏠 홈</a>
+
+        <!-- 기초 학습 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="basics">
+            <span class="arrow">▼</span> 📚 기초 학습
+          </button>
+          <div class="sidebar-section-items" data-section-items="basics">
+            <a href="how-it-works.html" class="sidebar-link">RC카 작동 원리</a>
+            <a href="parts-map.html" class="sidebar-link">핵심 부품 맵</a>
+            <a href="power-system.html" class="sidebar-link">파워 시스템</a>
+          </div>
+        </div>
+
+        <!-- 세팅 & 관리 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="setup">
+            <span class="arrow">▼</span> 🔧 세팅 &amp; 관리
+          </button>
+          <div class="sidebar-section-items" data-section-items="setup">
+            <a href="tuning.html" class="sidebar-link">셋업 &amp; 튜닝</a>
+            <a href="maintenance.html" class="sidebar-link active">유지보수</a>
+          </div>
+        </div>
+
+        <!-- Traxxas -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="traxxas">
+            <span class="arrow">▼</span> 🔴 Traxxas
+          </button>
+          <div class="sidebar-section-items" data-section-items="traxxas">
+            <a href="traxxas-ecosystem.html" class="sidebar-link">Traxxas 생태계</a>
+            <a href="traxxas-models.html" class="sidebar-link">Traxxas 모델</a>
+          </div>
+        </div>
+
+        <!-- FMS -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="fms">
+            <span class="arrow">▼</span> 🟢 FMS
+          </button>
+          <div class="sidebar-section-items" data-section-items="fms">
+            <a href="fms-models.html" class="sidebar-link">FMS 모델</a>
+          </div>
+        </div>
+
+        <!-- 구매 & 커뮤니티 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="community">
+            <span class="arrow">▼</span> 🛒 구매 &amp; 커뮤니티
+          </button>
+          <div class="sidebar-section-items" data-section-items="community">
+            <a href="selection-checklist.html" class="sidebar-link">RC카 선택 체크리스트</a>
+            <a href="community.html" class="sidebar-link">커뮤니티 용어</a>
+          </div>
+        </div>
+
+        <!-- 안전 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="safety">
+            <span class="arrow">▼</span> ⚡ 안전
+          </button>
+          <div class="sidebar-section-items" data-section-items="safety">
+            <a href="battery-safety.html" class="sidebar-link">배터리 안전</a>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- 데이터베이스 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="database">
+            <span class="arrow">▼</span> 📊 데이터베이스
+          </button>
+          <div class="sidebar-section-items" data-section-items="database">
+            <a href="glossary.html" class="sidebar-link">용어 사전</a>
+            <a href="models.html" class="sidebar-link">모델 DB</a>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- Q&A -->
+        <a href="qa.html" class="sidebar-link sidebar-link--top">🔍 Q&amp;A / 검색</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="theme-toggle">🌙 다크 모드</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="content">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+          <a href="index.html">홈</a> &gt;
+          <span>세팅 &amp; 관리</span> &gt;
+          <span>유지보수</span>
+        </nav>
+
+        <!-- Page Header -->
+        <div class="page-icon">🛠️</div>
+        <h1 class="page-title">유지보수</h1>
+        <p class="page-description">RC카를 오래, 안전하게 즐기기 위한 정비 루틴과 체크리스트를 정리합니다.</p>
+
+        <!-- ===== 한 줄 요약 ===== -->
+        <h2 id="overview">한 줄 요약</h2>
+        <div class="callout info">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content">
+            <p><strong>주행 전후 점검 + 정기 정비 = RC카 수명 연장의 핵심입니다.</strong></p>
+          </div>
+        </div>
+        <p>RC카는 실제 자동차처럼 주기적인 관리가 필요합니다. 주행 전후에 간단한 점검만 해도 갑작스러운 고장을 예방할 수 있고, 정기적으로 소모품을 교체하면 성능을 오래 유지할 수 있습니다. 이 페이지에서는 초보자도 쉽게 따라 할 수 있는 정비 루틴과 체크리스트를 소개합니다.</p>
+
+        <!-- ===== 주행 전 체크리스트 ===== -->
+        <h2 id="pre-run">✅ 주행 전 체크리스트</h2>
+        <p>RC카를 꺼내기 전에 아래 항목을 하나씩 확인하세요. 습관이 되면 1~2분이면 충분합니다.</p>
+
+        <ul class="checklist">
+          <li class="checklist-item">
+            <input type="checkbox" class="checklist-checkbox" id="pre-1">
+            <label class="checklist-label" for="pre-1">배터리 충전 상태 확인</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" class="checklist-checkbox" id="pre-2">
+            <label class="checklist-label" for="pre-2">타이어/휠 너트 조임 확인</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" class="checklist-checkbox" id="pre-3">
+            <label class="checklist-label" for="pre-3">서스펜션 암 흔들림 점검</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" class="checklist-checkbox" id="pre-4">
+            <label class="checklist-label" for="pre-4">바디 클립/마운트 확인</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" class="checklist-checkbox" id="pre-5">
+            <label class="checklist-label" for="pre-5">조종기 배터리 확인</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" class="checklist-checkbox" id="pre-6">
+            <label class="checklist-label" for="pre-6">ESC 스위치 OFF 상태에서 배터리 연결</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" class="checklist-checkbox" id="pre-7">
+            <label class="checklist-label" for="pre-7">조종기 먼저 ON → 차량 ON 순서</label>
+          </li>
+        </ul>
+
+        <div class="callout tip">
+          <div class="callout-icon">✅</div>
+          <div class="callout-content">
+            <p><strong>조종기를 먼저 켜고, 차량을 나중에 켜세요. 끌 때는 반대로!</strong> 이 순서를 지키지 않으면 차량이 수신기 신호를 잡지 못해 예상치 못한 동작이 발생할 수 있습니다. 끌 때는 차량 먼저 OFF, 그다음 조종기 OFF입니다.</p>
+          </div>
+        </div>
+
+        <!-- ===== 주행 후 체크리스트 ===== -->
+        <h2 id="post-run">🔚 주행 후 체크리스트</h2>
+        <p>주행을 끝낸 뒤에는 아래 항목을 체크하세요. 이 루틴 하나로 다음 주행을 안전하게 준비할 수 있습니다.</p>
+
+        <ul class="checklist">
+          <li class="checklist-item">
+            <input type="checkbox" class="checklist-checkbox" id="post-1">
+            <label class="checklist-label" for="post-1">배터리 분리 (차량 먼저 OFF)</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" class="checklist-checkbox" id="post-2">
+            <label class="checklist-label" for="post-2">먼지/흙 제거 (에어건 또는 브러시)</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" class="checklist-checkbox" id="post-3">
+            <label class="checklist-label" for="post-3">베어링 점검 (돌려보기)</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" class="checklist-checkbox" id="post-4">
+            <label class="checklist-label" for="post-4">나사 풀림 확인</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" class="checklist-checkbox" id="post-5">
+            <label class="checklist-label" for="post-5">쇼크 오일 누유 확인</label>
+          </li>
+          <li class="checklist-item">
+            <input type="checkbox" class="checklist-checkbox" id="post-6">
+            <label class="checklist-label" for="post-6">배터리 스토리지 모드로 충전</label>
+          </li>
+        </ul>
+
+        <!-- ===== 청소 루틴 ===== -->
+        <h2 id="cleaning">🧹 청소 루틴</h2>
+        <p>RC카는 주행 환경 특성상 먼지, 모래, 흙이 많이 쌓입니다. 정기적인 청소는 부품 수명을 크게 늘려줍니다.</p>
+
+        <h3>🔄 3단계 청소 프로세스</h3>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>단계</th>
+                <th>도구</th>
+                <th>대상 부위</th>
+                <th>주의사항</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1️⃣ 에어건</strong><br>먼지 날리기</td>
+                <td>🌬️ 컴프레셔 / 캔 에어</td>
+                <td>섀시 틈새, 쇼크 주변, 기어박스 외부, 수신기 박스</td>
+                <td>15~20cm 거리 유지, 너무 가까이 대면 부품 손상</td>
+              </tr>
+              <tr>
+                <td><strong>2️⃣ 브러시</strong><br>굳은 흙 제거</td>
+                <td>🪥 칫솔 / 나일론 브러시</td>
+                <td>서스펜션 암 관절, 기어 주변, 베어링 하우징</td>
+                <td>금속 부품에만 WD-40 소량 사용</td>
+              </tr>
+              <tr>
+                <td><strong>3️⃣ 닦기</strong><br>마무리</td>
+                <td>🧻 마이크로파이버 천</td>
+                <td>바디, 전자부품 외부, 커넥터</td>
+                <td>전자부품은 마른 천으로만!</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout danger">
+          <div class="callout-icon">🚫</div>
+          <div class="callout-content">
+            <p><strong>WD-40 절대 금지 구역:</strong> ESC, 수신기, 서보 등 전자부품에는 절대 WD-40을 뿌리지 마세요! 접점 부식과 오작동의 원인이 됩니다.</p>
+          </div>
+        </div>
+
+        <h3>💧 물 주행 후 관리 (방수 모델)</h3>
+
+        <div class="callout warning">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content">
+            <p><strong>방수(Waterproof) ≠ 청소 불필요!</strong> 모래가 베어링·쇼크 씰에 끼면 방수 기능이 급격히 저하됩니다.</p>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>순서</th>
+                <th>작업</th>
+                <th>포인트</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1️⃣</td>
+                <td><strong>수돗물 헹굼</strong></td>
+                <td>모래·염분 제거 — 특히 해변/진흙 주행 후 필수</td>
+              </tr>
+              <tr>
+                <td>2️⃣</td>
+                <td><strong>에어건 건조</strong></td>
+                <td>바디를 벗기고 내부까지 물기 제거</td>
+              </tr>
+              <tr>
+                <td>3️⃣</td>
+                <td><strong>자연 건조</strong></td>
+                <td>그늘에서 완전 건조 (직사광선 X)</td>
+              </tr>
+              <tr>
+                <td>4️⃣</td>
+                <td><strong>🫧 베어링 오일</strong></td>
+                <td>각 베어링에 RC용 오일 1방울 → 녹 방지</td>
+              </tr>
+              <tr>
+                <td>5️⃣</td>
+                <td><strong>🔌 커넥터 확인</strong></td>
+                <td>배터리·ESC 커넥터에 물기 없는지 확인</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ===== 정기 정비 항목 ===== -->
+        <h2 id="periodic">📅 정기 정비 항목</h2>
+        <p>아래 표는 주기적으로 점검/교체해야 하는 항목입니다. 환경(먼지, 물, 점프)에 따라 주기가 앞당겨질 수 있습니다.</p>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>항목</th>
+                <th>주기</th>
+                <th>확인 방법</th>
+                <th>교체 신호 🚨</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>🔩 <strong>베어링</strong></td>
+                <td>5~10회 주행</td>
+                <td>손으로 돌려보기</td>
+                <td>걸림, 끼끽 소리, 회전 불량</td>
+              </tr>
+              <tr>
+                <td>🫧 <strong>쇼크 오일</strong></td>
+                <td>20~30회 주행</td>
+                <td>쇼크 분해 후 확인</td>
+                <td>오일 변색, 반응 느려짐, 누유</td>
+              </tr>
+              <tr>
+                <td>⚙️ <strong>디퍼 오일</strong></td>
+                <td>30회 주행</td>
+                <td>디퍼렌셜 열어 확인</td>
+                <td>오일 변색, 금속가루, 코너링 이상</td>
+              </tr>
+              <tr>
+                <td>🦷 <strong>기어 마모</strong></td>
+                <td>10회 주행</td>
+                <td>스퍼/피니언 이빨 육안 확인</td>
+                <td>이빨이 뾰족하게 닳음, 이상 소음</td>
+              </tr>
+              <tr>
+                <td>🎯 <strong>서보</strong></td>
+                <td>이상 시</td>
+                <td>조향 반응 테스트</td>
+                <td>지직거림, 떨림, 반응 지연</td>
+              </tr>
+              <tr>
+                <td>🔧 <strong>전체 분해</strong></td>
+                <td>3~6개월</td>
+                <td>전체 분리·세척·윤활</td>
+                <td>성능 전반 저하, 시즌 종료</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ===== 윤활(기름) 포인트 가이드 ===== -->
+        <h2 id="lube-points">🛢️ 윤활(기름) 포인트 가이드</h2>
+        <p>RC카에서 <strong>"어디에 기름이 들어가는지"</strong> 한눈에 정리한 표입니다. 각 포인트별로 사용 오일과 적용 방법이 다르니 꼭 확인하세요!</p>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>위치</th>
+                <th>오일 종류</th>
+                <th>적용 방법</th>
+                <th>주기</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>🔩 <strong>베어링</strong><br><small>(휠, 모터, 드라이브샤프트)</small></td>
+                <td>RC 베어링 오일<br><small>(얇은 점도)</small></td>
+                <td>베어링 한쪽 면에 <strong>1~2방울</strong> 떨어뜨리고 손으로 돌려 침투시킴</td>
+                <td>5~10회 주행마다</td>
+              </tr>
+              <tr>
+                <td>🫧 <strong>쇼크 업소버</strong><br><small>(댐퍼 4개)</small></td>
+                <td>실리콘 쇼크 오일<br><small>(20wt~50wt)</small></td>
+                <td>쇼크 분해 → 오래된 오일 빼기 → 새 오일 채움 → 기포 제거 → 조립</td>
+                <td>20~30회 주행마다</td>
+              </tr>
+              <tr>
+                <td>⚙️ <strong>디퍼렌셜</strong><br><small>(앞/뒤/중앙)</small></td>
+                <td>실리콘 디퍼 오일<br><small>(10K~100K cSt)</small></td>
+                <td>디퍼 케이스 열기 → 기어 세척 → 새 오일 채움 → 밀봉</td>
+                <td>30회 주행마다</td>
+              </tr>
+              <tr>
+                <td>🔗 <strong>턴버클/링크 관절</strong><br><small>(타이로드, 서스펜션 링크)</small></td>
+                <td>RC 관절 그리스<br><small>(실리콘 그리스)</small></td>
+                <td>볼 조인트에 소량 도포 후 손으로 움직여 침투시킴</td>
+                <td>10~20회 주행마다</td>
+              </tr>
+              <tr>
+                <td>🦷 <strong>스퍼/피니언 기어</strong></td>
+                <td>기어 그리스<br><small>(전용 기어 루브)</small></td>
+                <td>이빨 면에 얇게 도포 (과도하면 흙 달라붙음!)</td>
+                <td>10회 주행마다</td>
+              </tr>
+              <tr>
+                <td>🎯 <strong>서보 기어</strong></td>
+                <td>실리콘 그리스</td>
+                <td>서보 분해 → 기어에 그리스 얇게 도포 → 재조립</td>
+                <td>이상 소리 발생 시</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout danger">
+          <div class="callout-icon">🚨</div>
+          <div class="callout-content">
+            <p><strong>WD-40, CRC 등 일반 윤활제는 RC카에 사용하지 마세요!</strong> 플라스틱을 약화시키고 고무 씰을 손상시킵니다. 반드시 <strong>RC 전용 실리콘 오일/그리스</strong>를 사용하세요. Traxxas는 순정 쇼크 오일(#1761), 디퍼 오일(#5137), 그리스(#1647)를 판매합니다.</p>
+          </div>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-icon">🔗</div>
+          <div class="callout-content">
+            <p><strong>참고:</strong> 정비 전 반드시 자신의 모델 <a href="https://traxxas.com" target="_blank">Traxxas 공식 분해도(Exploded View)</a>를 확인하세요. 모든 부품의 위치와 번호가 표시되어 있어, 어디를 열고 어떤 부품을 확인해야 하는지 정확히 알 수 있습니다.</p>
+          </div>
+        </div>
+
+        <!-- ===== 흔한 고장과 대처 ===== -->
+        <h2 id="common-issues">🔥 흔한 고장과 대처</h2>
+        <p>RC카를 타다 보면 누구나 한 번쯤 겪는 증상들입니다. 아래 항목을 펼쳐 원인과 해결 방법을 확인하세요.</p>
+
+        <details class="toggle">
+          <summary>🎯 서보가 떨린다 (서보 글리치)</summary>
+          <div class="toggle-content">
+            <p><strong>증상</strong>: 정지 상태에서 서보가 미세하게 떨리거나 "지직" 소리를 내며 진동합니다.</p>
+            <p><strong>원인</strong>:</p>
+            <ul>
+              <li><strong>전원 부족</strong>: BEC(ESC 내장 전원) 출력이 서보 요구량에 비해 부족할 때 발생합니다.</li>
+              <li><strong>서보 기어 마모</strong>: 내부 기어가 닳으면 정확한 위치를 유지하지 못해 떨림이 발생합니다.</li>
+              <li><strong>신호 간섭</strong>: 수신기 안테나 위치가 모터나 ESC에 너무 가까울 때 전자 간섭이 발생할 수 있습니다.</li>
+              <li><strong>트림 문제</strong>: 조종기 트림이 끝에 걸려있으면 서보가 계속 힘을 주며 떨릴 수 있습니다.</li>
+            </ul>
+            <p><strong>해결</strong>:</p>
+            <ul>
+              <li>조종기 트림을 중앙으로 초기화합니다.</li>
+              <li>수신기 안테나를 모터/ESC에서 최대한 먼 곳에 배치합니다.</li>
+              <li>서보 기어를 점검하고 마모되었으면 교체합니다.</li>
+              <li>증상이 계속되면 별도의 BEC(외장 수신기 전원)를 추가하거나 서보를 교체합니다.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="toggle">
+          <summary>↗️ 한쪽으로 쏠린다</summary>
+          <div class="toggle-content">
+            <p><strong>증상</strong>: 직진 시 차량이 좌우 한쪽으로 치우쳐 달립니다.</p>
+            <p><strong>원인</strong>:</p>
+            <ul>
+              <li><strong>트림 미조정</strong>: 조종기의 스티어링 트림이 중앙에서 벗어나 있습니다.</li>
+              <li><strong>서보 링크 길이 차이</strong>: 좌우 타이로드(서보 링크)의 길이가 다르면 한쪽으로 쏠립니다.</li>
+              <li><strong>서스펜션 비대칭</strong>: 한쪽 쇼크의 오일이 빠졌거나, 스프링이 약해졌을 수 있습니다.</li>
+              <li><strong>타이어 마모 불균형</strong>: 한쪽 타이어가 더 많이 닳으면 직진성이 떨어집니다.</li>
+            </ul>
+            <p><strong>해결</strong>:</p>
+            <ul>
+              <li>조종기 스티어링 트림을 미세 조정하여 직진성을 맞춥니다.</li>
+              <li>좌우 타이로드 길이를 동일하게 맞춥니다.</li>
+              <li>쇼크 오일량과 스프링 상태를 좌우 동일하게 셋팅합니다.</li>
+              <li>타이어 마모 상태를 확인하고 필요하면 교체합니다.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="toggle">
+          <summary>🔊 이상한 소리가 난다</summary>
+          <div class="toggle-content">
+            <p><strong>증상</strong>: 주행 중 "딸칵", "틱틱", "갈리는 소리" 등 비정상적인 소음이 발생합니다.</p>
+            <p><strong>원인</strong>:</p>
+            <ul>
+              <li><strong>베어링 불량</strong>: 녹슬거나 이물질이 끼인 베어링은 "쉭쉭" 또는 "끼끽" 소리를 냅니다.</li>
+              <li><strong>기어 마모</strong>: 스퍼기어나 피니언기어의 이빨이 닳으면 "딸칵딸칵" 소리가 납니다.</li>
+              <li><strong>기어 메시 불량</strong>: 피니언과 스퍼기어 간격이 너무 넓거나 좁으면 소음이 발생합니다.</li>
+              <li><strong>드라이브샤프트/CVD 마모</strong>: 도그본이나 CVD 조인트가 닳으면 "틱틱" 소리를 냅니다.</li>
+            </ul>
+            <p><strong>해결</strong>:</p>
+            <ul>
+              <li>소리가 나는 위치를 특정합니다 (앞/뒤/중앙).</li>
+              <li>베어링을 하나씩 손으로 돌려보며 불량 베어링을 교체합니다.</li>
+              <li>기어 메시를 재조정합니다 (종이 한 장 간격).</li>
+              <li>마모된 기어나 드라이브샤프트를 교체합니다.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="toggle">
+          <summary>🐢 속도가 안 나온다</summary>
+          <div class="toggle-content">
+            <p><strong>증상</strong>: 예전보다 최고 속도가 떨어지거나, 가속이 느려졌습니다.</p>
+            <p><strong>원인</strong>:</p>
+            <ul>
+              <li><strong>배터리 노화</strong>: LiPo 배터리의 내부 저항이 증가하면 출력이 줄어듭니다. 충전 후에도 전압이 빨리 떨어지면 배터리 교체 시기입니다.</li>
+              <li><strong>ESC 설정</strong>: Training 모드가 켜져 있으면 출력이 50%로 제한됩니다.</li>
+              <li><strong>모터 문제</strong>: 브러시드 모터의 경우 브러시 마모로 성능이 저하될 수 있습니다. 브러시리스 모터도 베어링이 나가면 효율이 떨어집니다.</li>
+              <li><strong>기계적 저항</strong>: 더러운 베어링, 끈적해진 디퍼 오일, 타이트한 기어 메시 등이 저항을 만들어 속도를 떨어뜨립니다.</li>
+            </ul>
+            <p><strong>해결</strong>:</p>
+            <ul>
+              <li>배터리를 완충 후 테스트하고, 전압 강하가 심하면 새 배터리로 교체합니다.</li>
+              <li>ESC 주행 모드를 Sport 또는 Race로 변경합니다.</li>
+              <li>모터 베어링을 점검하고 필요시 교체합니다.</li>
+              <li>전체 구동계를 청소하고 베어링에 윤활유를 넣어줍니다.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="toggle">
+          <summary>📡 조종이 안 된다</summary>
+          <div class="toggle-content">
+            <p><strong>증상</strong>: 조종기를 조작해도 차량이 반응하지 않거나, 간헐적으로만 반응합니다.</p>
+            <p><strong>원인</strong>:</p>
+            <ul>
+              <li><strong>바인딩 해제</strong>: 조종기와 수신기의 페어링이 풀렸을 수 있습니다.</li>
+              <li><strong>배터리 문제</strong>: 조종기 배터리가 방전되었거나, 차량 배터리가 부족하여 수신기에 전원이 공급되지 않을 수 있습니다.</li>
+              <li><strong>전파 간섭</strong>: 주변에 강한 전파원(Wi-Fi 공유기, 고압선 등)이 있으면 간섭이 발생할 수 있습니다.</li>
+              <li><strong>수신기 안테나 손상</strong>: 안테나가 끊어지거나 내부에 묻혀 있으면 수신 감도가 떨어집니다.</li>
+              <li><strong>커넥터 접촉 불량</strong>: ESC와 수신기 사이의 신호 케이블이 빠져 있을 수 있습니다.</li>
+            </ul>
+            <p><strong>해결</strong>:</p>
+            <ul>
+              <li>조종기와 차량 배터리를 모두 확인하고 충전합니다.</li>
+              <li>수신기와 조종기를 재바인딩합니다 (Traxxas는 SET 버튼 사용).</li>
+              <li>간섭이 의심되면 장소를 옮겨 테스트합니다.</li>
+              <li>수신기 안테나가 외부로 노출되어 있는지 확인합니다.</li>
+              <li>ESC-수신기 간 모든 커넥터를 뽑았다가 다시 꽂아봅니다.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- ===== 필수 공구 ===== -->
+        <h2 id="tools">🧰 필수 공구</h2>
+        <p>RC카 정비에 필요한 기본 공구 목록입니다. 이 정도만 갖추면 대부분의 일상 정비를 직접 할 수 있습니다.</p>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>분류</th>
+                <th>공구</th>
+                <th>용도</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="3">🔧 <strong>육각렌치</strong><br><small>(Metric!)</small></td>
+                <td>1.5mm</td>
+                <td>셋스크류, 그럽스크류</td>
+              </tr>
+              <tr>
+                <td>2.0mm</td>
+                <td>소형 나사, 링크 볼트</td>
+              </tr>
+              <tr>
+                <td>2.5mm</td>
+                <td>섀시/서스펜션 — 가장 많이 사용!</td>
+              </tr>
+              <tr>
+                <td rowspan="3">🔩 <strong>너트드라이버</strong></td>
+                <td>5.5mm</td>
+                <td>소형 너트</td>
+              </tr>
+              <tr>
+                <td>7mm</td>
+                <td>휠 너트 (1/10 스케일)</td>
+              </tr>
+              <tr>
+                <td>8mm</td>
+                <td>대형 너트 (X-Maxx 등)</td>
+              </tr>
+              <tr>
+                <td>🪛 <strong>드라이버</strong></td>
+                <td>십자(Phillips)</td>
+                <td>바디 마운트, 일부 커버 나사</td>
+              </tr>
+              <tr>
+                <td>✂️ <strong>절단</strong></td>
+                <td>니퍼</td>
+                <td>케이블 타이, 바디 트리밍</td>
+              </tr>
+              <tr>
+                <td rowspan="4">🧴 <strong>소모품</strong></td>
+                <td>순간접착제 (CA)</td>
+                <td>타이어-휠 접착</td>
+              </tr>
+              <tr>
+                <td>나사고정제 (파란색)</td>
+                <td>진동 풀림 방지 (중강도)</td>
+              </tr>
+              <tr>
+                <td>쇼크 오일 (다양한 점도)</td>
+                <td>댐퍼 오일 교체</td>
+              </tr>
+              <tr>
+                <td>디퍼 오일</td>
+                <td>디퍼렌셜 보충/교체</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout info">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content">
+            <p><strong>Traxxas는 자사 공구 세트를 판매합니다.</strong> 하지만 일반 육각렌치 세트로도 충분합니다. 중요한 것은 공구의 브랜드가 아니라 정확한 사이즈를 사용하는 것입니다. 미리/인치(Imperial) 규격이 아닌 <strong>밀리미터(Metric)</strong> 규격 공구를 사용하세요. Traxxas 차량은 모두 밀리미터 나사를 사용합니다.</p>
+          </div>
+        </div>
+
+        <!-- ===== Traxxas 정비 팁 ===== -->
+        <h2 id="traxxas-tips">🔴 Traxxas 정비 팁</h2>
+        <p>Traxxas는 다른 브랜드에 비해 부품 구매와 정비 정보 접근이 매우 편리합니다.</p>
+
+        <h3>📋 부품 주문 3단계</h3>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>단계</th>
+                <th>작업</th>
+                <th>설명</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1️⃣</strong></td>
+                <td><a href="https://www.traxxas.com" target="_blank">Traxxas.com</a> 접속</td>
+                <td>자신의 모델 검색 → "Support" → "Parts List / Exploded View"</td>
+              </tr>
+              <tr>
+                <td><strong>2️⃣</strong></td>
+                <td>분해도에서 부품 번호 확인</td>
+                <td>예: "3941X" = X-Maxx 프론트 서스펜션 암</td>
+              </tr>
+              <tr>
+                <td><strong>3️⃣</strong></td>
+                <td>부품 번호로 구매</td>
+                <td>국내 RC쇼핑몰, Amazon, Amain Hobbies 등에서 검색</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>📐 분해도(Exploded View) 활용</h3>
+        <p>Traxxas는 모든 모델의 분해도를 공식 웹사이트에서 <strong>무료 PDF</strong>로 제공합니다.</p>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>활용 시점</th>
+                <th>참고 내용</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>🔧 <strong>정비 시</strong></td>
+                <td>분해 순서, 부품 위치, 나사 종류 확인</td>
+              </tr>
+              <tr>
+                <td>🛒 <strong>부품 주문 시</strong></td>
+                <td>정확한 부품 번호로 주문 실수 방지</td>
+              </tr>
+              <tr>
+                <td>🔩 <strong>조립 시</strong></td>
+                <td>나사 크기·길이·위치 확인하여 올바르게 조립</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>🎬 Traxxas 정비 영상 추천</h3>
+        <p>영어이지만 영상을 보면서 따라 하면 충분히 이해할 수 있습니다.</p>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>정비 항목</th>
+                <th>YouTube 검색어</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>🫧 쇼크 리빌드</td>
+                <td><code>Traxxas [모델명] shock rebuild</code></td>
+              </tr>
+              <tr>
+                <td>⚙️ 디퍼렌셜 분해</td>
+                <td><code>Traxxas [모델명] differential rebuild</code></td>
+              </tr>
+              <tr>
+                <td>🎯 서보 교체</td>
+                <td><code>Traxxas [모델명] servo replacement</code></td>
+              </tr>
+              <tr>
+                <td>🦷 기어 메시 조정</td>
+                <td><code>Traxxas gear mesh adjustment</code></td>
+              </tr>
+              <tr>
+                <td>🔩 베어링 교체</td>
+                <td><code>Traxxas [모델명] bearing replacement</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ===== 자주 묻는 질문 ===== -->
+        <h2 id="faq">자주 묻는 질문</h2>
+
+        <details class="toggle">
+          <summary>RC카도 엔진오일 같은 게 필요한가요?</summary>
+          <div class="toggle-content">
+            <p>전기 RC카에는 자동차처럼 엔진오일이 필요하지 않습니다. 하지만 <strong>다른 종류의 오일</strong>이 필요합니다:</p>
+            <ul>
+              <li><strong>쇼크 오일(Shock Oil)</strong>: 쇼크 업소버(댐퍼)에 들어가는 실리콘 오일입니다. 점도(무게)에 따라 20wt, 30wt, 40wt 등으로 나뉘며, 점도가 높을수록 서스펜션이 딱딱해집니다.</li>
+              <li><strong>디퍼 오일(Diff Oil)</strong>: 디퍼렌셜 기어를 윤활하는 실리콘 오일입니다. 점도를 조절하면 좌우 바퀴의 연동 정도를 변경할 수 있습니다.</li>
+              <li><strong>베어링 오일</strong>: 볼베어링에 소량 적용하여 회전을 부드럽게 유지합니다.</li>
+            </ul>
+            <p>즉, 엔진오일은 아니지만 RC카만의 전용 오일이 있으며, 정기적으로 교체해 주면 성능을 오래 유지할 수 있습니다.</p>
+          </div>
+        </details>
+
+        <details class="toggle">
+          <summary>부품이 부러지면 직접 고칠 수 있나요?</summary>
+          <div class="toggle-content">
+            <p><strong>네, 대부분 직접 교체할 수 있습니다!</strong> 사실 이것이 취미용 RC카의 가장 큰 장점 중 하나입니다.</p>
+            <ul>
+              <li><strong>서스펜션 암, 타이로드, 바디 클립</strong> 등은 기본 공구(육각렌치)만 있으면 10~15분 내에 교체할 수 있습니다.</li>
+              <li><strong>쇼크 리빌드, 디퍼 오일 교체</strong>는 조금 더 시간이 걸리지만, Traxxas 공식 영상을 따라 하면 초보자도 충분히 가능합니다.</li>
+              <li><strong>서보, ESC, 모터 교체</strong>는 커넥터를 분리하고 나사를 풀면 되므로 어렵지 않습니다.</li>
+            </ul>
+            <p>RC카 정비를 직접 하다 보면 차량 구조에 대한 이해가 깊어지고, 이것이 또 하나의 큰 재미가 됩니다. 부러진 부품은 접착제로 붙이기보다 새 부품으로 교체하는 것을 권장합니다.</p>
+          </div>
+        </details>
+
+        <details class="toggle">
+          <summary>Traxxas 부품은 어디서 사나요?</summary>
+          <div class="toggle-content">
+            <p>Traxxas 부품을 구매할 수 있는 곳은 여러 가지입니다:</p>
+            <ul>
+              <li><strong>국내 RC 전문 쇼핑몰</strong>: 국내 Traxxas 정식 수입 대리점 및 온라인 RC 쇼핑몰에서 주요 소모품과 인기 부품을 구매할 수 있습니다.</li>
+              <li><strong>해외 직구</strong>: 미국 Amazon, Amain Hobbies, Tower Hobbies 등에서 직접 주문할 수 있습니다. 부품 번호를 알면 검색이 매우 쉽습니다.</li>
+              <li><strong>Traxxas 공식 웹사이트</strong>: <a href="https://www.traxxas.com" target="_blank">traxxas.com</a>에서 직접 주문도 가능합니다 (미국 내 배송 기준).</li>
+              <li><strong>중고 거래</strong>: 국내 RC 커뮤니티(네이버 카페 등)에서 중고 부품을 합리적인 가격에 구할 수 있습니다.</li>
+            </ul>
+            <p>부품을 주문할 때는 반드시 <strong>정확한 부품 번호</strong>를 확인하세요. 같은 이름의 부품이라도 모델별로 규격이 다를 수 있습니다.</p>
+          </div>
+        </details>
+
+        <!-- ===== 관련 용어 ===== -->
+        <h2 id="glossary-links">관련 용어</h2>
+        <p>이 글에서 다룬 핵심 용어들을 용어 사전에서 더 자세히 확인해 보세요.</p>
+        <div class="quick-links">
+          <a href="glossary.html#bearing" class="quick-link">🔩 베어링</a>
+          <a href="glossary.html#shock-absorber" class="quick-link">🔧 쇼크 업소버</a>
+          <a href="glossary.html#differential" class="quick-link">⚙️ 디퍼렌셜</a>
+          <a href="glossary.html#servo" class="quick-link">🎯 서보</a>
+          <a href="glossary.html#esc" class="quick-link">⚡ ESC</a>
+        </div>
+
+        <!-- ===== Next Read ===== -->
+        <div class="next-read">
+          <div class="next-read-title">다음 읽기</div>
+          <div class="next-read-grid">
+            <a href="tuning.html" class="next-read-card">
+              <div class="next-read-card-icon">🔧</div>
+              <div class="next-read-card-title">셋업 &amp; 튜닝</div>
+              <div class="next-read-card-desc">유지보수를 넘어, 기어비/서스펜션/타이어 등 세팅을 최적화하여 성능을 끌어올려 봅시다.</div>
+            </a>
+            <a href="battery-safety.html" class="next-read-card">
+              <div class="next-read-card-icon">⚡</div>
+              <div class="next-read-card-title">배터리 안전</div>
+              <div class="next-read-card-desc">LiPo 배터리를 안전하게 충전, 보관, 폐기하는 방법과 필수 안전 수칙을 정리합니다.</div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- TOC -->
+    <aside class="toc">
+      <div class="toc-title">목차</div>
+      <ul class="toc-list"></ul>
+    </aside>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,707 @@
+{
+  "brand": "Traxxas",
+  "pageTitle": "Traxxas 모델 라인업",
+  "pageDescription": "5개 카테고리, 24개 상위모델, 76개 개별 모델 — Traxxas 전체 라인업을 상위모델 기준으로 정리합니다.",
+  "overviewCallout": "Traxxas 76개 모델을 5개 카테고리 × 24개 상위모델로 정리했습니다. 각 상위모델의 하위 모델은 모델 DB에서 상세 스펙을 확인할 수 있습니다.",
+  "overviewText": "Traxxas는 RC카 시장에서 가장 폭넓은 모델 라인업을 자랑하는 브랜드입니다. 이 글에서는 Traxxas의 전체 76개 모델을 상위모델 기준으로 정리하고, 각 모델의 특징과 스펙을 비교합니다.",
+  "categoryIntro": "Traxxas 라인업은 5개 카테고리로 나뉩니다. 몬스터트럭부터 크롤러까지, 각 카테고리의 특징을 빠르게 살펴보세요.",
+  "categoryCards": [
+    {"icon": "🦖", "title": "몬스터트럭", "desc": "거대한 타이어와 높은 서스펜션 트래블. 점프, 배싱, 거친 지형 주행에 최적화. X-Maxx, Maxx, Stampede 등 23개 모델."},
+    {"icon": "🏁", "title": "숏코스 트럭", "desc": "실제 숏코스 레이싱 트럭을 모델로 한 카테고리. Slash, Ford Raptor, UDR 등 17개 모델."},
+    {"icon": "🐛", "title": "스타디움 & 버기", "desc": "가볍고 민첩한 오프로드 레이서. Rustler, Bandit, Sledge, Jato 등 12개 모델."},
+    {"icon": "🏎️", "title": "온로드 & 랠리", "desc": "포장도로 위의 속도와 드리프트. XO-1, 4-Tec, Fiesta Rally, Drag Slash 등 8개 모델."},
+    {"icon": "🪨", "title": "크롤러 & 트레일", "desc": "바위, 경사면 등 극한 지형을 정복. TRX-6, TRX-4, TRX-4 Sport, TRX-4M 등 16개 모델."}
+  ],
+  "categories": [
+    {
+      "id": "monster",
+      "name": "몬스터트럭",
+      "icon": "🦖",
+      "modelCount": 23,
+      "priceRange": "$219~$1,599",
+      "description": "몬스터트럭은 Traxxas의 가장 상징적인 카테고리입니다. 거대한 타이어, 긴 서스펜션 트래블, 압도적인 파워로 어디서든 달릴 수 있는 배싱 머신입니다. 8개의 상위모델 아래 23개 개별 모델이 있습니다.",
+      "parentModels": [
+        {
+          "id": "parent-x-maxx",
+          "name": "X-Maxx",
+          "tags": [{"text": "1/5 플래그십", "color": "red"}],
+          "description": "Traxxas의 최상위 몬스터트럭이자 브랜드의 플래그십 모델입니다. 1/5 스케일의 압도적인 크기와 8S LiPo의 강력한 파워, 셀프라이팅 기능을 갖추고 있습니다.",
+          "images": [
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/7/7/77097-4-X-Maxx-Ultimate-3Qtr-Front-BLUEX_17837273.jpg", "alt": "X-Maxx Ultimate", "caption": "X-Maxx Ultimate"},
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/7/7/77086-4-x-maxx-rnr-3qtr-front_2_3.jpg", "alt": "X-Maxx 8S", "caption": "X-Maxx 8S"}
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/5"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "배터리", "value": "8S LiPo (4S x 2)"},
+            {"label": "모터", "value": "Velineon 1200XL 브러시리스"},
+            {"label": "최고 속도", "value": "80+ km/h"},
+            {"label": "가격대", "value": "$1,199 ~ $1,599"}
+          ],
+          "subModels": [
+            {"name": "X-Maxx Ultimate", "details": "(77097-4) — 와이드바디, 벨티드 타이어, 알루미늄 부품 기본 장착 $1,599.95"},
+            {"name": "X-Maxx 8S", "details": "(77086-4) — 기본 8S 버전, 셀프라이팅, 클립리스 바디 $1,199.95"}
+          ]
+        },
+        {
+          "id": "parent-x-monster",
+          "name": "X-Monster",
+          "tags": [],
+          "description": "X-Maxx 플랫폼 기반의 신규 대형 몬스터트럭 라인입니다. BIGFOOT 50주년 기념 한정판이 대표 모델입니다.",
+          "images": [
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/7/7/77136-4-X-Maxx-Limited-Bigfoot-50th-3QTR-FRONT-2_50761589.jpg", "alt": "X-Monster BIGFOOT 50th", "caption": "X-Monster BIGFOOT 50th"}
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/5"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "배터리", "value": "8S LiPo (4S x 2)"},
+            {"label": "모터", "value": "Velineon 1200XL 브러시리스"},
+            {"label": "최고 속도", "value": "80+ km/h"},
+            {"label": "가격대", "value": "$1,099 ~ $1,599"}
+          ],
+          "subModels": [
+            {"name": "X-Monster BIGFOOT 50th", "details": "(77136-4) — 50주년 기념 한정판 $1,599.95"},
+            {"name": "X-Monster", "details": "(77036-4) — 기본 섀시 버전 $1,099.95"}
+          ]
+        },
+        {
+          "id": "parent-xrt",
+          "name": "XRT",
+          "tags": [{"text": "1/5 레이싱", "color": "red"}],
+          "description": "X-Maxx와 같은 1/5 스케일이지만 레이싱에 초점을 맞춘 모델입니다. 낮은 무게중심과 공기역학적 바디로 고속 주행에 최적화되어 있습니다.",
+          "images": [
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/7/8/78097-4-XRT-Ultimate-2025-3qtr-Front-GRNX_17837136.jpg", "alt": "XRT Ultimate", "caption": "XRT Ultimate"}
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/5"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "배터리", "value": "8S LiPo (4S x 2)"},
+            {"label": "모터", "value": "Velineon 1200XL 브러시리스"},
+            {"label": "최고 속도", "value": "80+ km/h"},
+            {"label": "가격대", "value": "$349 ~ $1,599"}
+          ],
+          "subModels": [
+            {"name": "XRT Ultimate", "details": "(78097-4) — 풀 업그레이드 에디션 $1,599.95"},
+            {"name": "XRT 8S", "details": "(78086-4) — 기본 8S 버전 $1,099.95"},
+            {"name": "Mini XRT", "details": "(108076-1) — 1/18 미니 버전 $349.95"}
+          ]
+        },
+        {
+          "id": "parent-sledge",
+          "name": "Sledge",
+          "tags": [],
+          "description": "1/8 스케일 6S 브러시리스 몬스터트럭/트러기. 벨트 드라이브 시스템을 채택하여 기어 소음이 적고 효율이 높습니다.",
+          "images": [
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/9/5/95076-4-sledge-3qtr-front-orng_1_2_1.jpg", "alt": "Sledge", "caption": "Sledge"}
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/8"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "배터리", "value": "6S LiPo (3S x 2)"},
+            {"label": "모터", "value": "Velineon 2200 브러시리스"},
+            {"label": "최고 속도", "value": "100+ km/h"},
+            {"label": "가격대", "value": "$799"}
+          ],
+          "subModels": [
+            {"name": "Sledge", "details": "(95076-4) — 6S 벨트드라이브 $799.95"}
+          ]
+        },
+        {
+          "id": "parent-maxx",
+          "name": "Maxx",
+          "tags": [],
+          "description": "X-Maxx의 동생 격인 1/10 스케일 몬스터트럭입니다. 와이드맥스(WideMaxx) 서스펜션으로 안정성을 높일 수 있으며, 미니 버전도 있습니다.",
+          "images": [
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/8/9/89087-4-Maxx-Ultimate-3Qtr-Front-BLUE_47229340.jpg", "alt": "Maxx Ultimate", "caption": "Maxx Ultimate"},
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/8/9/89086-4-Maxx-3qtr-front-RNR_54126300.jpg", "alt": "Maxx V2", "caption": "Maxx V2"}
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/10"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "배터리", "value": "4S LiPo"},
+            {"label": "모터", "value": "Velineon 490XL 브러시리스"},
+            {"label": "최고 속도", "value": "72+ km/h"},
+            {"label": "가격대", "value": "$269 ~ $899"}
+          ],
+          "subModels": [
+            {"name": "Maxx Ultimate", "details": "(89087-4) — 풀 업그레이드 에디션 $899.95"},
+            {"name": "Maxx V2", "details": "(89086-4) — V2 업데이트, WideMaxx 지원 $599.95"},
+            {"name": "Mini Maxx", "details": "(107154-1) — 1/16 미니 버전 $269.95"}
+          ]
+        },
+        {
+          "id": "parent-revo",
+          "name": "Revo",
+          "tags": [],
+          "description": "Traxxas의 클래식 몬스터트럭/트러기 라인입니다. 니트로 엔진 모델도 포함되어 있습니다.",
+          "images": [
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/8/6/86086-4-E-REVO2-3qtr-front-Orange_57419538.jpg", "alt": "E-Revo VXL", "caption": "E-Revo VXL"}
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/10"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "배터리", "value": "6S LiPo (3S x 2)"},
+            {"label": "모터", "value": "Velineon 2200 브러시리스"},
+            {"label": "최고 속도", "value": "110+ km/h"},
+            {"label": "가격대", "value": "$549 ~ $699"}
+          ],
+          "subModels": [
+            {"name": "E-Revo VXL", "details": "(86086-4) — 1/10 브러시리스 몬스터트럭 $699.95"},
+            {"name": "Revo 3.3", "details": "(53097-3) — 니트로 엔진 몬스터트럭 $599.95"},
+            {"name": "T-Maxx 3.3", "details": "(49077-3) — 니트로 클래식 몬스터트럭 $549.95"}
+          ]
+        },
+        {
+          "id": "parent-stampede",
+          "name": "Stampede",
+          "tags": [{"text": "입문추천", "color": "blue"}],
+          "description": "몬스터트럭 입문에 가장 적합한 시리즈입니다. 4WD/2WD, 브러시리스/브러시드 다양한 조합으로 6개 모델이 있습니다.",
+          "images": [
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/6/7/67086-467086-4-red_3qtrfrontlow_1.jpg", "alt": "Stampede 4X4 VXL", "caption": "Stampede 4X4 VXL"}
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/10"},
+            {"label": "구동", "value": "4WD / 2WD"},
+            {"label": "배터리", "value": "3S LiPo"},
+            {"label": "모터", "value": "Velineon 3500 브러시리스"},
+            {"label": "최고 속도", "value": "105+ km/h"},
+            {"label": "가격대", "value": "$219 ~ $399"}
+          ],
+          "subModels": [
+            {"name": "Stampede 4X4 VXL", "details": "(67086-4) — 4WD 브러시리스 $399.95"},
+            {"name": "Stampede 4X4 BL-2s", "details": "(67154-4) — 4WD BL-2s $329.95"},
+            {"name": "Stampede 4X4 XL-5", "details": "(67054-1) — 4WD 브러시드 $259.95"},
+            {"name": "Stampede 2WD VXL", "details": "(36076-74) — 2WD 브러시리스 $349.95"},
+            {"name": "Stampede 2WD BL-2s", "details": "(36354-4) — 2WD BL-2s $249.95"},
+            {"name": "Stampede 2WD XL-5", "details": "(36054-8) — 2WD 브러시드 $219.95"}
+          ]
+        },
+        {
+          "id": "parent-bigfoot",
+          "name": "BIGFOOT",
+          "tags": [],
+          "description": "전설적인 몬스터트럭 BIGFOOT의 공식 라이선스 RC카 라인입니다.",
+          "images": [
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/6/7/67134-4-bigfoot-no8-3qtr-front_56949378.jpg", "alt": "BIGFOOT 4X4", "caption": "BIGFOOT 4X4"}
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/10"},
+            {"label": "구동", "value": "4WD / 2WD"},
+            {"label": "배터리", "value": "2S LiPo"},
+            {"label": "모터", "value": "BL-2s 브러시리스"},
+            {"label": "최고 속도", "value": "55+ km/h"},
+            {"label": "가격대", "value": "$219 ~ $329"}
+          ],
+          "subModels": [
+            {"name": "BIGFOOT 4X4 BL-2s", "details": "(67134-4) — 4WD BL-2s $329.95"},
+            {"name": "BIGFOOT No.1 BL-2s", "details": "(36334-4) — 2WD BL-2s $249.95"},
+            {"name": "BIGFOOT No.1 XL-5", "details": "(36034-61) — 2WD 브러시드 $219.95"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "short-course",
+      "name": "숏코스 트럭",
+      "icon": "🏁",
+      "modelCount": 17,
+      "priceRange": "$239~$799",
+      "description": "숏코스 트럭은 실제 숏코스 오프로드 레이싱을 모델로 한 카테고리입니다. 실차 같은 바디 디자인, 온/오프로드 겸용 성능, 뛰어난 내구성으로 Traxxas에서 가장 인기 있는 카테고리이기도 합니다. 4개의 상위모델 아래 17개 개별 모델이 있습니다.",
+      "parentModels": [
+        {
+          "id": "parent-slash",
+          "name": "Slash",
+          "tags": [{"text": "베스트셀러", "color": "green"}],
+          "description": "Traxxas에서 가장 많이 팔린 모델이자, RC카 입문자에게 가장 많이 추천되는 시리즈입니다. 4WD/2WD, 브러시리스/브러시드, 니트로까지 12개 바리에이션으로 모든 레벨을 커버합니다.",
+          "images": [
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/6/8/68077-4-Slash-4x4-ultimate-ORANGE-3qtr-front_57401946.jpg", "alt": "Slash 4X4 Ultimate", "caption": "Slash 4X4 Ultimate"},
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/6/8/68086-468086-4_vision-blue-3qtr-front_1.jpg", "alt": "Slash 4X4 VXL", "caption": "Slash 4X4 VXL"},
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/1/0/102076-4-maxxslash-3qtr-front-red_1_1_10073302.jpg", "alt": "Maxx Slash", "caption": "Maxx Slash"}
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/10"},
+            {"label": "구동", "value": "4WD / 2WD"},
+            {"label": "최고 속도", "value": "100+ km/h (3S LiPo)"},
+            {"label": "가격대", "value": "$239 ~ $699"}
+          ],
+          "subModels": [
+            {"name": "Maxx Slash", "details": "(102076-4) — 6S 대형 숏코스 $699.95"},
+            {"name": "Slash 4X4 VXL Ultimate", "details": "(68077-4) — 풀 업그레이드 에디션 $479.95"},
+            {"name": "Slash 4X4 VXL", "details": "(68086-4) — 4WD 브러시리스 베스트셀러 $399.95"},
+            {"name": "Slash 4X4 BL-2s", "details": "(68154-4) — 4WD BL-2s $329.95"},
+            {"name": "Slash 4X4 XL-5", "details": "(68054-61) — 4WD 브러시드 $299.95"},
+            {"name": "Slash 2WD VXL", "details": "(58076-74) — 2WD 브러시리스 $349.95"},
+            {"name": "Slash 2WD BL-2s", "details": "(58334-4) — 2WD BL-2s $269.95"},
+            {"name": "Slash 2WD XL-5", "details": "(58034-8) — 2WD 브러시드, 최저가 입문 $239.95"},
+            {"name": "Mini Slash 4X4", "details": "(108164-1) — 1/16 미니 4WD BL-2s $249.95"},
+            {"name": "Nitro Slash", "details": "(44056-3) — 니트로 엔진 $429.95"},
+            {"name": "Slash Modified BL-2s", "details": "(104354-74) — 오벌 레이싱 Modified $399.95"},
+            {"name": "Late Model BL-2s", "details": "(104364-74) — 오벌 트랙 레이싱 $419.95"}
+          ]
+        },
+        {
+          "id": "parent-raptor",
+          "name": "Ford F-150 Raptor",
+          "tags": [],
+          "description": "Ford F-150 Raptor 공식 라이선스 바디를 장착한 숏코스 트럭 시리즈입니다.",
+          "images": [
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/1/0/101076-4-raptor-r-3qtr-front-fox_2.jpg", "alt": "Ford F-150 Raptor R", "caption": "Ford F-150 Raptor R"}
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/10"},
+            {"label": "구동", "value": "4WD / 2WD"},
+            {"label": "배터리", "value": "3S LiPo"},
+            {"label": "모터", "value": "Velineon 3500 브러시리스"},
+            {"label": "최고 속도", "value": "100+ km/h"},
+            {"label": "가격대", "value": "$249 ~ $499"}
+          ],
+          "subModels": [
+            {"name": "Ford F-150 Raptor R 4X4 VXL", "details": "(101076-4) — 4WD 브러시리스 $499.95"},
+            {"name": "Ford F-150 Raptor 2WD BL-2s", "details": "(58394-4) — 2WD BL-2s $289.95"},
+            {"name": "Ford F-150 Raptor 2WD XL-5", "details": "(58094-1) — 2WD 브러시드 $249.95"}
+          ]
+        },
+        {
+          "id": "parent-udr",
+          "name": "UDR (Unlimited Desert Racer)",
+          "tags": [],
+          "description": "1/7 스케일 사막 레이싱 트럭. 4WD, 독립 서스펜션, 실차 같은 디테일이 특징입니다.",
+          "images": [
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/8/5/85086-4-udr-3qtr-front-rigid-grn_53983065.jpg", "alt": "Unlimited Desert Racer", "caption": "Unlimited Desert Racer"}
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/7"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "배터리", "value": "4S LiPo x 2"},
+            {"label": "모터", "value": "Velineon 540XL 브러시리스"},
+            {"label": "최고 속도", "value": "80~100+ km/h"},
+            {"label": "가격대", "value": "$799"}
+          ],
+          "subModels": [
+            {"name": "Unlimited Desert Racer", "details": "(85086-4) — 6S 4WD 사막 트럭 $799.95"}
+          ]
+        },
+        {
+          "id": "parent-slayer",
+          "name": "Slayer Pro",
+          "tags": [],
+          "description": "니트로 엔진 4WD 숏코스 트럭입니다.",
+          "images": [
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/5/9/59076-3-Slayer-2019-3qtr-Front-Red_54127790.jpg", "alt": "Slayer Pro 4X4", "caption": "Slayer Pro 4X4"}
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/10"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "연료", "value": "니트로 (TRX 3.3)"},
+            {"label": "최고 속도", "value": "72+ km/h"},
+            {"label": "가격대", "value": "$549"}
+          ],
+          "subModels": [
+            {"name": "Slayer Pro 4X4", "details": "(59076-3) — 니트로 4WD 숏코스 $549.95"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stadium-buggy",
+      "name": "스타디움 & 버기",
+      "icon": "🐛",
+      "modelCount": 12,
+      "priceRange": "$199~$1,299",
+      "description": "스타디움 트럭과 버기를 아우르는 카테고리입니다. 가볍고 민첩한 오프로드 레이서로, 몬스터트럭보다 낮은 무게중심과 공기역학적 디자인이 특징입니다. 4개의 상위모델 아래 12개 개별 모델이 있습니다.",
+      "parentModels": [
+        {
+          "id": "parent-rustler",
+          "name": "Rustler",
+          "tags": [],
+          "description": "Traxxas의 대표 스타디움 트럭 시리즈입니다. 4WD/2WD, 다양한 파워트레인으로 7개 바리에이션이 있습니다.",
+          "images": [
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/6/7/67076-4-rustler-4x4-vxl-3qtr-frnt-slrf_1.jpg", "alt": "Rustler 4X4 VXL", "caption": "Rustler 4X4 VXL"}
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/10"},
+            {"label": "구동", "value": "4WD / 2WD"},
+            {"label": "배터리", "value": "3S LiPo"},
+            {"label": "모터", "value": "Velineon 3500 브러시리스"},
+            {"label": "최고 속도", "value": "100+ km/h"},
+            {"label": "가격대", "value": "$229 ~ $549"}
+          ],
+          "subModels": [
+            {"name": "Rustler 4X4 VXL Ultimate", "details": "(67097-4) — 풀 업그레이드 에디션 $549.95"},
+            {"name": "Rustler 4X4 VXL", "details": "(67076-4) — 4WD 브러시리스 $429.95"},
+            {"name": "Rustler 4X4 BL-2s", "details": "(67164-4) — 4WD BL-2s $329.95"},
+            {"name": "Rustler 4X4 XL-5", "details": "(67064-1) — 4WD 브러시드 $299.95"},
+            {"name": "Rustler 2WD VXL", "details": "(37076-74) — 2WD 브러시리스 $329.95"},
+            {"name": "Rustler 2WD BL-2s", "details": "(37354-4) — 2WD BL-2s $249.95"},
+            {"name": "Rustler 2WD XL-5", "details": "(37054-8) — 2WD 브러시드 $229.95"}
+          ]
+        },
+        {
+          "id": "parent-bandit",
+          "name": "Bandit",
+          "tags": [],
+          "description": "1/10 스케일의 가볍고 빠른 2WD 버기 시리즈입니다. 단순한 구조 덕분에 유지보수가 쉽습니다.",
+          "images": [
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/2/4/24076-74-Bandit-VXL-3Qtr-Front-BLU_57371557.jpg", "alt": "Bandit VXL", "caption": "Bandit VXL"}
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/10"},
+            {"label": "구동", "value": "2WD"},
+            {"label": "배터리", "value": "3S LiPo"},
+            {"label": "모터", "value": "Velineon 3500 브러시리스"},
+            {"label": "최고 속도", "value": "105+ km/h"},
+            {"label": "가격대", "value": "$199 ~ $329"}
+          ],
+          "subModels": [
+            {"name": "Bandit VXL", "details": "(24076-74) — 브러시리스 $329.95"},
+            {"name": "Bandit BL-2s", "details": "(24354-4) — BL-2s $229.95"},
+            {"name": "Bandit XL-5", "details": "(24054-8) — 브러시드 $199.95"}
+          ]
+        },
+        {
+          "id": "parent-jato",
+          "name": "Jato",
+          "tags": [],
+          "description": "니트로 엔진 2WD 스타디움 트럭입니다.",
+          "images": [],
+          "specs": [
+            {"label": "스케일", "value": "1/10"},
+            {"label": "구동", "value": "2WD"},
+            {"label": "연료", "value": "니트로 (TRX 3.3)"},
+            {"label": "최고 속도", "value": "105+ km/h"},
+            {"label": "가격대", "value": "$499"}
+          ],
+          "subModels": [
+            {"name": "Jato 3.3", "details": "(55077-3) — 니트로 2WD $499.95"}
+          ]
+        },
+        {
+          "id": "parent-funco",
+          "name": "Funco Pro",
+          "tags": [],
+          "description": "1/6 스케일 대형 버기입니다.",
+          "images": [
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/1/0/109076-4-pro-scale-sand-car-3qtr-front-right-red_3_11128252.jpg", "alt": "Funco Pro Scale", "caption": "Funco Pro Scale"}
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/7"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "배터리", "value": "8S LiPo (4S x 2)"},
+            {"label": "모터", "value": "Velineon 1200XL 브러시리스"},
+            {"label": "최고 속도", "value": "80+ km/h"},
+            {"label": "가격대", "value": "$1,299"}
+          ],
+          "subModels": [
+            {"name": "Funco Pro Scale", "details": "(109076-4) — 1/6 대형 버기 $1,299.95"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crawler",
+      "name": "크롤러 & 트레일",
+      "icon": "🪨",
+      "modelCount": 16,
+      "priceRange": "$179~$749",
+      "description": "크롤러는 속도가 아닌 지형 정복 능력이 핵심인 카테고리입니다. 바위, 급경사, 좁은 통로 등 극한 지형을 느리지만 확실하게 넘어가는 것이 목표입니다. Traxxas는 6WD TRX-6부터 4WD TRX-4, 미니 TRX-4M까지 4개의 상위모델로 16개 모델을 전개합니다.",
+      "parentModels": [
+        {
+          "id": "parent-trx-6",
+          "name": "TRX-6",
+          "tags": [{"text": "6WD 플래그십", "color": "purple"}],
+          "description": "Traxxas가 만든 세계 유일의 6륜구동(6WD) RTR 크롤러입니다. 포탈 액슬 x 3, 로킹 디퍼렌셜 x 3, 2단 변속기를 탑재하여 어떤 지형도 정복할 수 있습니다.",
+          "images": [
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/8/8/88296-4-TRX-6-Mercedes-6x6-3qtr-front-left-SLVR_54126188.jpg", "alt": "TRX-6 G63 6x6", "caption": "TRX-6 G63 6x6"},
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/8/8/88086-4-TRX-6-Flatbed-Hauler-3qtr-Front-Low_54002962.jpg", "alt": "TRX-6 Hauler", "caption": "TRX-6 Hauler"}
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/10"},
+            {"label": "구동", "value": "6WD"},
+            {"label": "액슬", "value": "포탈 액슬 x 3"},
+            {"label": "변속", "value": "2단 (하이/로우)"},
+            {"label": "가격대", "value": "$649 ~ $749"}
+          ],
+          "subModels": [
+            {"name": "TRX-6 Mercedes G63 AMG 6x6", "details": "(88096-4) — Mercedes-Benz 공식 라이선스 $649.95"},
+            {"name": "TRX-6 Ultimate RC Hauler", "details": "(88086-84) — 플랫베드 + 윈치 $749.95"}
+          ]
+        },
+        {
+          "id": "parent-trx-4",
+          "name": "TRX-4",
+          "tags": [{"text": "크롤링 아이콘", "color": "purple"}],
+          "description": "포탈 액슬, 2단 변속기, 전/후 디퍼렌셜 잠금을 갖춘 Traxxas의 대표 4WD 크롤러 시리즈입니다. 다양한 라이선스 바디(Defender, Bronco, Blazer 등)와 High Trail 버전으로 7개 모델이 있습니다.",
+          "images": [
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/h/t/httpswww.traxxasdirect.comsupportmagento-products82056-4trx-4-defender-red-3qtr-front_2.jpg", "alt": "TRX-4 Defender", "caption": "TRX-4 Defender"},
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/9/2/92076-4-2021-Bronco-3qtr-Front-ORNG_54126920.jpg", "alt": "TRX-4 Bronco", "caption": "TRX-4 Bronco"}
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/10"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "배터리", "value": "2S~3S LiPo"},
+            {"label": "모터", "value": "Titan 21T 550 브러시드"},
+            {"label": "액슬", "value": "포탈 액슬"},
+            {"label": "변속", "value": "2단 (하이/로우)"},
+            {"label": "가격대", "value": "$549 ~ $599"}
+          ],
+          "subModels": [
+            {"name": "TRX-4 Land Rover Defender", "details": "(82256-4) — 크롤링의 아이콘 $549.95"},
+            {"name": "TRX-4 2021 Ford Bronco", "details": "(92076-4) — 현대적 Bronco 디자인 $549.95"},
+            {"name": "TRX-4 K5 Blazer", "details": "(82276-4) — 1979년형 레트로 감성 $549.95"},
+            {"name": "TRX-4 F-150 High Trail", "details": "(92046-4) — Ford F-150 High Trail 에디션 $599.95"},
+            {"name": "TRX-4 K10 High Trail", "details": "(92056-4) — Chevy K10 High Trail 에디션 $599.95"},
+            {"name": "TRX-4 Blazer High Trail", "details": "(92086-4) — Blazer High Trail 에디션 $599.95"},
+            {"name": "TRX-4 Nissan Pathfinder", "details": "(110056-4) — Nissan Pathfinder 바디 $549.95"}
+          ]
+        },
+        {
+          "id": "parent-trx-4-sport",
+          "name": "TRX-4 Sport",
+          "tags": [{"text": "입문 크롤러", "color": "blue"}],
+          "description": "TRX-4 플랫폼의 엔트리 레벨 시리즈입니다. 포탈 액슬 대신 일반 액슬, 디퍼 잠금 미탑재로 가격이 저렴하면서도 2단 변속기는 유지합니다.",
+          "images": [
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/8/2/82024-4-trx-4-sport-tan-3qtr-front_2_1.jpg", "alt": "TRX-4 Sport", "caption": "TRX-4 Sport"},
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/8/2/82044-4-Sport-High-Trail-3qtr-Front-BLUE_54280283.jpg", "alt": "TRX-4 Sport High Trail", "caption": "TRX-4 Sport High Trail"}
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/10"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "배터리", "value": "NiMH / 2S LiPo"},
+            {"label": "모터", "value": "Titan 12T 550 브러시드"},
+            {"label": "변속", "value": "2단 (하이/로우)"},
+            {"label": "가격대", "value": "$349 ~ $529"}
+          ],
+          "subModels": [
+            {"name": "TRX-4 Sport", "details": "(82224-4) — 기본 크롤러 입문 (클립리스) $349.95"},
+            {"name": "TRX-4 Sport High Trail", "details": "(82044-4) — High Trail 에디션 $389.99"},
+            {"name": "TRX-4 Sport w/Traxx", "details": "(82234-4) — 무한궤도 키트 포함 $529.95"}
+          ]
+        },
+        {
+          "id": "parent-trx-4m",
+          "name": "TRX-4M",
+          "tags": [],
+          "description": "TRX-4의 미니 버전입니다. 1/18 스케일로 작지만 TRX-4의 핵심 기능을 축소한 모델입니다. 실내에서도 크롤링을 즐길 수 있습니다.",
+          "images": [
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/9/7/97054-1-TRX-4m-Defender-3qtr-Front-XBLU_53399739.jpg", "alt": "TRX-4M Defender", "caption": "TRX-4M Defender"},
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/9/7/97074-1-TRX-4M-Bronco-3qtr-Front-A51_56952557_1.jpg", "alt": "TRX-4M Bronco", "caption": "TRX-4M Bronco"},
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/9/7/97044-1-TRX4m-F-150-3qtr-Front-BROWN_56951856.jpg", "alt": "TRX-4M F-150", "caption": "TRX-4M F-150"},
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/9/7/97064-1-TRX4m-K10-3qtr-Front-RED_56951958.jpg", "alt": "TRX-4M K10 High Trail", "caption": "TRX-4M K10 High Trail"}
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/18"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "배터리", "value": "2S 750mAh LiPo"},
+            {"label": "모터", "value": "050 브러시드"},
+            {"label": "최고 속도", "value": "~10 km/h"},
+            {"label": "가격대", "value": "$179 ~ $199"}
+          ],
+          "subModels": [
+            {"name": "TRX-4M Defender", "details": "(97054-1) — Land Rover Defender 바디 $179.95"},
+            {"name": "TRX-4M Ford Bronco", "details": "(97074-1) — Ford Bronco 바디 $179.95"},
+            {"name": "TRX-4M F-150 High Trail", "details": "(97044-1) — F-150 High Trail $199.95"},
+            {"name": "TRX-4M K10 High Trail", "details": "(97064-1) — K10 High Trail $189.95"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "onroad",
+      "name": "온로드 & 랠리",
+      "icon": "🏎️",
+      "modelCount": 8,
+      "priceRange": "$299~$799",
+      "description": "포장도로 위에서 속도, 드리프트, 랠리를 즐기는 카테고리입니다. 낮은 차체와 공기역학적 디자인으로 직선 속도와 고속 안정성에 최적화되어 있습니다. 4개의 상위모델 아래 8개 개별 모델이 있습니다.",
+      "parentModels": [
+        {
+          "id": "parent-ford-onroad",
+          "name": "Ford",
+          "tags": [],
+          "description": "Ford 공식 라이선스 바디를 활용한 드래그, 랠리, 드리프트 모델입니다.",
+          "images": [
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/9/4/94076-4-drag-slash-3qtr-front-low-prpl_1.jpg", "alt": "Drag Slash Mustang", "caption": "Drag Slash Mustang"},
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/7/4/74276-4-Fiesta-Rally-3Qtr-Front-GRN_54131540.jpg", "alt": "Ford Fiesta Rally", "caption": "Ford Fiesta Rally"}
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/10 ~ 1/16"},
+            {"label": "구동", "value": "4WD / 2WD"},
+            {"label": "배터리", "value": "3S LiPo"},
+            {"label": "모터", "value": "Velineon 3500 브러시리스"},
+            {"label": "최고 속도", "value": "100+ km/h"},
+            {"label": "가격대", "value": "$329 ~ $429"}
+          ],
+          "subModels": [
+            {"name": "Drag Slash Mustang", "details": "(94046-4) — 드래그 레이싱 특화 $399.95"},
+            {"name": "Ford Fiesta Rally VXL", "details": "(74276-4) — 1/10 랠리 브러시리스 $429.95"},
+            {"name": "Ford Fiesta Rally BL-2s", "details": "(74154-4) — 1/10 랠리 BL-2s $329.95"},
+            {"name": "Mini Rally VXL RS200", "details": "(108046-1) — 1/16 미니 랠리 $389.95"},
+            {"name": "4-Tec Drift Mustang", "details": "(105237-4) — 드리프트 전용 $329.95"}
+          ]
+        },
+        {
+          "id": "parent-nissan",
+          "name": "Nissan",
+          "tags": [],
+          "description": "",
+          "images": [],
+          "specs": [
+            {"label": "스케일", "value": "1/10"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "배터리", "value": "3S LiPo"},
+            {"label": "모터", "value": "Velineon 3500 브러시리스"},
+            {"label": "최고 속도", "value": "82+ km/h"},
+            {"label": "가격대", "value": "$329"}
+          ],
+          "subModels": [
+            {"name": "4-Tec Drift 240SX", "details": "(105247-4) — Nissan 240SX 드리프트 $329.95"}
+          ]
+        },
+        {
+          "id": "parent-chevrolet-onroad",
+          "name": "Chevrolet",
+          "tags": [],
+          "description": "",
+          "images": [],
+          "specs": [
+            {"label": "스케일", "value": "1/10"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "배터리", "value": "3S LiPo"},
+            {"label": "모터", "value": "Velineon 3500 브러시리스"},
+            {"label": "최고 속도", "value": "82+ km/h"},
+            {"label": "가격대", "value": "$299"}
+          ],
+          "subModels": [
+            {"name": "4-Tec 3.0 Corvette", "details": "(93054-4) — 온로드 투어링카 $299.95"}
+          ]
+        },
+        {
+          "id": "parent-xo1",
+          "name": "XO-1",
+          "tags": [{"text": "160km/h+", "color": "red"}],
+          "description": "세계 최초로 100mph(약 160km/h)를 달성한 RTR RC카입니다. 1/7 스케일, 6S LiPo, 속도 잠금 시스템으로 안전하게 속도를 높여갈 수 있습니다.",
+          "images": [
+            {"src": "https://traxxas.com/media/catalog/product/cache/58f5cad53b509b9d36ab8969420a889e/6/4/64077-3-xo-1-2022-3qtr-front-grn_53983217.jpg", "alt": "XO-1 Supercar", "caption": "XO-1 Supercar"}
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/7"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "배터리", "value": "6S LiPo"},
+            {"label": "모터", "value": "Velineon 1600XL 브러시리스"},
+            {"label": "최고 속도", "value": "160+ km/h"},
+            {"label": "가격대", "value": "$799"}
+          ],
+          "subModels": [
+            {"name": "XO-1", "details": "(64077-3) — 160+ km/h 슈퍼카 $799.95"}
+          ]
+        }
+      ]
+    }
+  ],
+  "comparison": {
+    "title": "상위모델 비교표",
+    "columns": ["상위모델", "모델 수", "스케일", "구동", "모터 타입", "최고속도", "가격대", "추천 대상"],
+    "categoryRows": [
+      {
+        "label": "🦖 몬스터트럭 (8개 상위모델, 23개 모델)",
+        "rows": [
+          ["X-Maxx", "2", "1/5", "4WD", "브러시리스", "80+ km/h", "$1,199~$1,599", "파워 배싱 플래그십"],
+          ["X-Monster", "2", "1/5", "4WD", "브러시리스", "80+ km/h", "$1,099~$1,599", "대형 몬스터, BIGFOOT 팬"],
+          ["XRT", "3", "1/5~1/18", "4WD", "브러시리스", "80+ km/h", "$349~$1,599", "대형 레이싱"],
+          ["Sledge", "1", "1/8", "4WD", "브러시리스", "100+ km/h", "$799", "버기/트러기 레이싱"],
+          ["Maxx", "3", "1/10~1/16", "4WD", "브러시리스", "60+ km/h", "$269~$899", "중급 배싱"],
+          ["Revo", "3", "1/10", "4WD", "브러시리스/니트로", "50~70 km/h", "$549~$699", "클래식, 니트로"],
+          ["Stampede", "6", "1/10", "4WD/2WD", "브러시리스/브러시드", "30~65 km/h", "$219~$399", "입문 몬스터"],
+          ["BIGFOOT", "3", "1/10", "4WD/2WD", "브러시리스/브러시드", "30~50 km/h", "$219~$329", "클래식 BIGFOOT"]
+        ]
+      },
+      {
+        "label": "🏁 숏코스 트럭 (4개 상위모델, 17개 모델)",
+        "rows": [
+          ["Slash", "12", "1/10~1/16", "4WD/2WD", "브러시리스/브러시드/니트로", "30~100+ km/h", "$239~$699", "올라운더, 입문~상급"],
+          ["Ford Raptor", "3", "1/10", "4WD/2WD", "브러시리스/브러시드", "30~70 km/h", "$249~$499", "라이선스 트럭"],
+          ["UDR", "1", "1/7", "4WD", "브러시리스", "80+ km/h", "$799", "사막 레이싱"],
+          ["Slayer Pro", "1", "1/10", "4WD", "니트로", "50+ km/h", "$549", "니트로 숏코스"]
+        ]
+      },
+      {
+        "label": "🐛 스타디움 & 버기 (4개 상위모델, 12개 모델)",
+        "rows": [
+          ["Rustler", "7", "1/10", "4WD/2WD", "브러시리스/브러시드", "30~65 km/h", "$229~$549", "스타디움 트럭"],
+          ["Bandit", "3", "1/10", "2WD", "브러시리스/브러시드", "30~70 km/h", "$199~$329", "2WD 버기"],
+          ["Jato", "1", "1/10", "2WD", "니트로", "50+ km/h", "$499", "니트로 스타디움"],
+          ["Funco Pro", "1", "1/6", "4WD", "브러시리스", "80+ km/h", "$1,299", "대형 버기"]
+        ]
+      },
+      {
+        "label": "🏎️ 온로드 & 랠리 (4개 상위모델, 8개 모델)",
+        "rows": [
+          ["Ford (온로드)", "5", "1/10~1/16", "4WD/2WD", "브러시리스/브러시드", "40~160 km/h", "$329~$429", "드래그/랠리/드리프트"],
+          ["Nissan", "1", "1/10", "4WD", "브러시리스", "50+ km/h", "$329", "드리프트"],
+          ["Chevrolet", "1", "1/10", "4WD", "브러시리스", "70+ km/h", "$299", "온로드 투어링"],
+          ["XO-1", "1", "1/7", "4WD", "브러시리스", "160+ km/h", "$799", "스피드 마니아"]
+        ]
+      },
+      {
+        "label": "🪨 크롤러 & 트레일 (4개 상위모델, 16개 모델)",
+        "rows": [
+          ["TRX-6", "2", "1/10", "6WD", "브러시드", "Trail ~16 km/h", "$649~$749", "궁극의 크롤러"],
+          ["TRX-4", "7", "1/10", "4WD", "브러시드", "Trail ~16 km/h", "$549~$599", "풀옵션 크롤러"],
+          ["TRX-4 Sport", "3", "1/10", "4WD", "브러시드", "Trail ~16 km/h", "$349~$529", "입문 크롤러"],
+          ["TRX-4M", "4", "1/18", "4WD", "브러시드", "Trail ~10 km/h", "$179~$199", "미니 크롤러"]
+        ]
+      }
+    ],
+    "callout": "가격은 Traxxas 미국 공식 RTR 기준 USD입니다. 실제 판매 가격은 판매처에 따라 다를 수 있습니다. 니트로 모델은 연료와 시동 도구가 별도로 필요합니다."
+  },
+  "recommendations": {
+    "description": "Traxxas 라인업에서 첫 번째 모델을 선택하는 방법을 예산별, 크롤러 레벨별, 용도별로 안내합니다.",
+    "sections": [
+      {
+        "title": "💰 예산별 추천",
+        "sectionDescription": null,
+        "cards": [
+          {"icon": "💵", "title": "$250 이하", "descHtml": "<strong>Slash 2WD XL-5</strong> $239 — 베스트셀러 입문<br><strong>Stampede 2WD XL-5</strong> $219 — 몬스터 입문<br><strong>TRX-4M Defender</strong> $179 — 미니 크롤러<br><strong>Rustler 2WD XL-5</strong> $229 — 스타디움 입문"},
+          {"icon": "💰", "title": "$300 ~ $450", "descHtml": "<strong>Slash 4X4 VXL</strong> $399 — 4WD 브러시리스 베스트<br><strong>TRX-4 Sport</strong> $349 — 크롤러 입문<br><strong>Rustler 4X4 VXL</strong> $429 — 브러시리스 스타디움"},
+          {"icon": "💎", "title": "$500 이상", "descHtml": "<strong>X-Maxx 8S</strong> $1,199 — 1/5 플래그십<br><strong>Maxx Ultimate</strong> $899 — 1/10 풀업그레이드<br><strong>TRX-4 Defender</strong> $549 — 풀옵션 크롤러<br><strong>TRX-6 G63</strong> $649 — 6WD 궁극 크롤러"}
+        ],
+        "listItems": null
+      },
+      {
+        "title": "🪨 크롤러 레벨별 추천",
+        "sectionDescription": "크롤러는 경험 레벨에 따라 단계적으로 선택하는 것이 좋습니다.",
+        "cards": null,
+        "listItems": [
+          {"target": "크롤러 입문", "model": "TRX-4M (Defender, Bronco, F-150, K10) — $179~$199"},
+          {"target": "크롤러 중급", "model": "TRX-4 Sport (Sport, High Trail, w/Traxx) — $349~$529"},
+          {"target": "크롤러 프리미엄", "model": "TRX-4 (Defender, Bronco, K5 Blazer, High Trail 등) — $549~$599"},
+          {"target": "크롤러 궁극", "model": "TRX-6 (G63 6x6, Ultimate RC Hauler) — $649~$749"}
+        ]
+      },
+      {
+        "title": "🎯 용도별 추천",
+        "sectionDescription": null,
+        "cards": null,
+        "listItems": [
+          {"target": "배싱 (거친 주행, 점프)", "model": "Slash 4X4 VXL, Maxx V2/Ultimate, X-Maxx 8S"},
+          {"target": "레이싱 (트랙 주행)", "model": "Slash 4X4 VXL, Sledge, XRT"},
+          {"target": "크롤링", "model": "TRX-4M → TRX-4 Sport → TRX-4 → TRX-6 (단계별 업그레이드)"},
+          {"target": "스피드 (최고 속도 도전)", "model": "XO-1 (160+ km/h), UDR (80~100+ km/h)"},
+          {"target": "드리프트/랠리", "model": "Ford Fiesta Rally, Drag Slash, 4-Tec Drift (Mustang, 240SX)"},
+          {"target": "니트로 엔진", "model": "Revo 3.3, T-Maxx 3.3, Slayer Pro, Jato 3.3"}
+        ]
+      }
+    ],
+    "callout": "첫 Traxxas로 가장 많이 추천되는 모델은 <strong>Slash 4X4 VXL</strong>입니다. 가격, 성능, 부품 호환성 모두 뛰어나며 4WD 브러시리스의 강력한 성능을 즐길 수 있습니다. 크롤러를 원한다면 <strong>TRX-4M Defender</strong>가 최고의 입문 선택입니다."
+  },
+  "glossaryLinks": [
+    {"href": "glossary.html#rtr", "icon": "📦", "text": "RTR"},
+    {"href": "glossary.html#brushless", "icon": "🔄", "text": "브러시리스"},
+    {"href": "glossary.html#lipo", "icon": "🔋", "text": "LiPo"},
+    {"href": "glossary.html#tsm", "icon": "🛡️", "text": "TSM"},
+    {"href": "glossary.html#portal-axle", "icon": "🪨", "text": "포탈 액슬"}
+  ],
+  "nextReads": [
+    {"href": "traxxas-ecosystem.html", "icon": "🔴", "title": "Traxxas 생태계", "desc": "TSM, TQi, iD 커넥터 등 Traxxas만의 기술 생태계를 알아봅니다."},
+    {"href": "selection-checklist.html", "icon": "🛒", "title": "RC카 선택 체크리스트", "desc": "예산, 목적, 주행 환경별 체크리스트로 나에게 맞는 RC카를 찾아보세요."}
+  ]
+}

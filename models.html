@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X-Maxx RC Car Blog — 모델 DB</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* === Product Image Styles for Model DB === */
+    /* 3-column card layout override */
+    .db-cards {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+    @media (max-width: 900px) {
+      .db-cards { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    @media (max-width: 600px) {
+      .db-cards { grid-template-columns: 1fr !important; }
+    }
+    /* Category group header in card view */
+    .category-group-header {
+      grid-column: 1 / -1;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-primary, #37352f);
+      padding: 16px 0 4px 0;
+      border-bottom: 2px solid var(--border, #e9e9e7);
+      margin-top: 8px;
+    }
+    .category-group-header:first-child {
+      margin-top: 0;
+    }
+    .db-card-image {
+      width: 100%;
+      max-height: 200px;
+      object-fit: contain;
+      border-radius: var(--radius-sm, 4px);
+      background: transparent;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .db-card-image-placeholder {
+      width: 100%;
+      max-height: 200px;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-tertiary, #f1f1ef);
+      border-radius: var(--radius-sm, 4px);
+      color: var(--text-tertiary, #9b9a97);
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    .detail-product-image {
+      max-width: 300px;
+      max-height: 220px;
+      object-fit: contain;
+      border-radius: var(--radius-sm, 4px);
+      background: transparent;
+      border: 1px solid var(--border, #e9e9e7);
+      display: block;
+      margin-bottom: 12px;
+    }
+    .detail-grid {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .detail-grid-image {
+      flex: 0 0 auto;
+    }
+    .detail-grid-specs {
+      flex: 1 1 300px;
+    }
+    /* Variants section */
+    .variants-section {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: var(--bg-secondary, #f7f6f3);
+      border-radius: var(--radius-sm, 4px);
+      border: 1px solid var(--border, #e9e9e7);
+    }
+    .variants-section-title {
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: var(--text-primary, #37352f);
+    }
+    .variant-item {
+      display: flex;
+      gap: 12px;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border, #e9e9e7);
+      font-size: 13px;
+      align-items: center;
+    }
+    .variant-item:last-child {
+      border-bottom: none;
+    }
+    .variant-name {
+      font-weight: 600;
+      color: var(--text-primary, #37352f);
+      min-width: 180px;
+    }
+    .variant-pn {
+      color: var(--text-secondary, #6b6b6b);
+      font-family: monospace;
+      font-size: 12px;
+      min-width: 120px;
+    }
+    .variant-body {
+      color: var(--text-secondary, #6b6b6b);
+    }
+    /* Product link button */
+    .product-link-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 14px;
+      background: var(--accent, #2383e2);
+      color: var(--text-inverse, #fff);
+      border-radius: var(--radius-sm, 4px);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background 0.15s;
+    }
+    .product-link-btn:hover {
+      background: var(--accent-hover, #1b6ec2);
+      color: var(--text-inverse, #fff);
+    }
+    /* Card link area */
+    .db-card-links {
+      margin-top: 10px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .db-card-link {
+      display: inline-block;
+      padding: 4px 10px;
+      background: var(--accent, #2383e2);
+      color: var(--text-inverse, #fff);
+      border-radius: var(--radius-sm, 4px);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      transition: background 0.15s;
+    }
+    .db-card-link:hover {
+      background: var(--accent-hover, #1b6ec2);
+      color: var(--text-inverse, #fff);
+    }
+    /* Card variant mini list */
+    .db-card-variants {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border, #e9e9e7);
+    }
+    .db-card-variants-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-secondary, #6b6b6b);
+      margin-bottom: 4px;
+    }
+    .db-card-variant-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      background: var(--bg-tertiary, #f1f1ef);
+      border-radius: 3px;
+      font-size: 11px;
+      color: var(--text-secondary, #6b6b6b);
+      margin: 2px 2px;
+    }
+    @media (max-width: 600px) {
+      .detail-grid {
+        flex-direction: column;
+      }
+      .detail-product-image {
+        max-width: 100%;
+      }
+      .variant-item {
+        flex-direction: column;
+        gap: 2px;
+      }
+      .variant-name {
+        min-width: unset;
+      }
+      .variant-pn {
+        min-width: unset;
+      }
+    }
+    /* === Collapsible Tree-Style Detail Sections === */
+    .detail-tree-section {
+      border: 1px solid var(--border, #e9e9e7);
+      border-radius: var(--radius-sm, 4px);
+      margin-bottom: 8px;
+      overflow: hidden;
+    }
+    .detail-tree-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      background: var(--bg-secondary, #f7f6f3);
+      cursor: pointer;
+      user-select: none;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--text-primary, #37352f);
+      transition: background 0.15s;
+    }
+    .detail-tree-header:hover {
+      background: var(--bg-tertiary, #f1f1ef);
+    }
+    .detail-tree-arrow {
+      display: inline-block;
+      width: 16px;
+      font-size: 12px;
+      color: var(--text-tertiary, #9b9a97);
+      transition: transform 0.2s;
+    }
+    .detail-tree-section.collapsed .detail-tree-arrow {
+      transform: rotate(0deg);
+    }
+    .detail-tree-section:not(.collapsed) .detail-tree-arrow {
+      transform: rotate(90deg);
+    }
+    .detail-tree-body {
+      padding: 8px 14px 12px;
+      border-top: 1px solid var(--border, #e9e9e7);
+    }
+    .detail-tree-section.collapsed .detail-tree-body {
+      display: none;
+    }
+    /* New window button */
+    .detail-newwin-btn {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 5px 12px;
+      background: var(--text-secondary, #6b6b6b);
+      color: var(--text-inverse, #fff);
+      border: none;
+      border-radius: var(--radius-sm, 4px);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .detail-newwin-btn:hover {
+      background: var(--text-primary, #37352f);
+    }
+    /* Detail top bar */
+    .detail-top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .detail-top-bar-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary, #37352f);
+    }
+    .detail-top-bar-actions {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    /* Modal overlay */
+    .detail-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+    .detail-modal-content {
+      /* Dark theme overrides for all child elements */
+      --bg-primary: #1e1e1e;
+      --bg-secondary: #2a2a2a;
+      --bg-tertiary: #333;
+      --text-primary: #e0e0e0;
+      --text-secondary: #aaa;
+      --text-tertiary: #888;
+      --text-inverse: #fff;
+      --border: #444;
+      --accent: #5b9bd5;
+      --accent-hover: #4a8cc7;
+      background: #1e1e1e;
+      color: #e0e0e0;
+      border-radius: var(--radius-lg, 8px);
+      max-width: 860px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .detail-modal-content a {
+      color: #5b9bd5;
+    }
+    .detail-modal-content a:hover {
+      color: #7cb8e8;
+    }
+    .detail-modal-content .product-link-btn {
+      color: #fff;
+    }
+    .detail-modal-close {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      background: none;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+      color: #aaa;
+      line-height: 1;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+    .detail-modal-close:hover {
+      background: #333;
+      color: #e0e0e0;
+    }
+    @media (max-width: 600px) {
+      .detail-modal-overlay { padding: 12px; }
+      .detail-modal-content { max-height: 90vh; padding: 16px; }
+    }
+    /* Wishlist */
+    .wishlist-toggle-btn {
+      padding: 6px 14px;
+      border: 2px solid #e74c3c;
+      background: transparent;
+      color: #e74c3c;
+      border-radius: var(--radius-sm, 4px);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .wishlist-toggle-btn:hover {
+      background: #fde8e8;
+    }
+    .wishlist-toggle-btn.active {
+      background: #e74c3c;
+      color: #fff;
+    }
+    .wishlist-star {
+      cursor: pointer;
+      font-size: 13px;
+      user-select: none;
+      transition: transform 0.15s;
+      display: inline-block;
+    }
+    .wishlist-star:hover {
+      transform: scale(1.3);
+    }
+    .wishlist-badge {
+      display: inline-block;
+      background: #e74c3c;
+      color: #fff;
+      border-radius: 10px;
+      padding: 1px 7px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <!-- Mobile Menu Toggle -->
+  <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
+  <div class="sidebar-overlay"></div>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <span>🏎️</span> X-Maxx RC Blog
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <!-- Home -->
+        <a href="index.html" class="sidebar-link sidebar-link--top">🏠 홈</a>
+
+        <!-- 기초 학습 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="basics">
+            <span class="arrow">▼</span> 📚 기초 학습
+          </button>
+          <div class="sidebar-section-items" data-section-items="basics">
+            <a href="how-it-works.html" class="sidebar-link">RC카 작동 원리</a>
+            <a href="parts-map.html" class="sidebar-link">핵심 부품 맵</a>
+            <a href="power-system.html" class="sidebar-link">파워 시스템</a>
+          </div>
+        </div>
+
+        <!-- 세팅 & 관리 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="setup">
+            <span class="arrow">▼</span> 🔧 세팅 &amp; 관리
+          </button>
+          <div class="sidebar-section-items" data-section-items="setup">
+            <a href="tuning.html" class="sidebar-link">셋업 &amp; 튜닝</a>
+            <a href="maintenance.html" class="sidebar-link">유지보수</a>
+          </div>
+        </div>
+
+        <!-- Traxxas -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="traxxas">
+            <span class="arrow">▼</span> 🔴 Traxxas
+          </button>
+          <div class="sidebar-section-items" data-section-items="traxxas">
+            <a href="traxxas-ecosystem.html" class="sidebar-link">Traxxas 생태계</a>
+            <a href="traxxas-models.html" class="sidebar-link">Traxxas 모델</a>
+          </div>
+        </div>
+
+        <!-- FMS -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="fms">
+            <span class="arrow">▼</span> 🟢 FMS
+          </button>
+          <div class="sidebar-section-items" data-section-items="fms">
+            <a href="fms-models.html" class="sidebar-link">FMS 모델</a>
+          </div>
+        </div>
+
+        <!-- 구매 & 커뮤니티 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="community">
+            <span class="arrow">▼</span> 🛒 구매 &amp; 커뮤니티
+          </button>
+          <div class="sidebar-section-items" data-section-items="community">
+            <a href="selection-checklist.html" class="sidebar-link">RC카 선택 체크리스트</a>
+            <a href="community.html" class="sidebar-link">커뮤니티 용어</a>
+          </div>
+        </div>
+
+        <!-- 안전 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="safety">
+            <span class="arrow">▼</span> ⚡ 안전
+          </button>
+          <div class="sidebar-section-items" data-section-items="safety">
+            <a href="battery-safety.html" class="sidebar-link">배터리 안전</a>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- 데이터베이스 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="database">
+            <span class="arrow">▼</span> 📊 데이터베이스
+          </button>
+          <div class="sidebar-section-items" data-section-items="database">
+            <a href="glossary.html" class="sidebar-link">용어 사전</a>
+            <a href="models.html" class="sidebar-link active">모델 DB</a>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- Q&A -->
+        <a href="qa.html" class="sidebar-link sidebar-link--top">🔍 Q&amp;A / 검색</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="theme-toggle">🌙 다크 모드</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="content">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+          <a href="index.html">홈</a> &gt; <a href="#">데이터베이스</a> &gt; <span>모델 DB</span>
+        </div>
+
+        <!-- Page Header -->
+        <div class="page-icon">🚗</div>
+        <h1 class="page-title">모델 DB</h1>
+        <p class="page-description">Traxxas RC카 77개 모델의 상세 스펙, 상위모델 분류, 바리에이션을 검색, 필터, 비교할 수 있는 종합 데이터베이스입니다.</p>
+
+        <!-- DB Controls -->
+        <div class="db-controls">
+          <input type="text" id="db-search" class="db-search" placeholder="모델 검색... (예: X-Maxx, TRX-4, 크롤러, 6WD)">
+          <select id="db-filter-category" class="db-filter">
+            <option value="all">전체 카테고리</option>
+            <option value="몬스터트럭">몬스터트럭</option>
+            <option value="숏코스 트럭">숏코스 트럭</option>
+            <option value="스타디움&버기">스타디움&버기</option>
+            <option value="온로드&랠리">온로드&랠리</option>
+            <option value="크롤러&트레일">크롤러&트레일</option>
+          </select>
+          <select id="db-filter-drivetrain" class="db-filter">
+            <option value="all">전체 구동</option>
+            <option value="4WD">4WD</option>
+            <option value="2WD">2WD</option>
+            <option value="6WD">6WD</option>
+          </select>
+          <select id="db-filter-motor" class="db-filter">
+            <option value="all">전체 모터</option>
+            <option value="브러시리스">브러시리스</option>
+            <option value="브러시드">브러시드</option>
+            <option value="니트로">니트로</option>
+          </select>
+          <select id="db-filter-parent" class="db-filter">
+            <option value="all">전체 상위모델</option>
+          </select>
+          <div class="view-toggle">
+            <button class="view-toggle-btn active" data-view="table">📊 테이블</button>
+            <button class="view-toggle-btn" data-view="card">🃏 카드</button>
+          </div>
+          <button class="wishlist-toggle-btn" id="wishlist-toggle" onclick="toggleWishlistFilter()">❤️ 위시리스트 <span class="wishlist-badge" id="wishlist-count" style="display:none;">0</span></button>
+          <div id="db-count" class="db-count"></div>
+        </div>
+
+        <!-- Table View -->
+        <div id="models-table-view">
+          <div class="db-table-wrap">
+            <table class="db-table" id="models-table">
+              <thead>
+                <tr>
+                  <th style="width:36px;text-align:center;">❤️</th>
+                  <th data-sort="parentModel" style="white-space:nowrap;">상위모델 <span class="sort-arrow"></span></th>
+                  <th data-sort="name">모델명 <span class="sort-arrow"></span></th>
+                  <th data-sort="scale">스케일 <span class="sort-arrow"></span></th>
+                  <th data-sort="drivetrain">구동 <span class="sort-arrow"></span></th>
+                  <th data-sort="motorType">모터 타입 <span class="sort-arrow"></span></th>
+                  <th data-sort="topSpeed">최고속도 <span class="sort-arrow"></span></th>
+                  <th data-sort="priceRange">가격대 <span class="sort-arrow"></span></th>
+                </tr>
+              </thead>
+              <tbody id="models-table-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Card View -->
+        <div id="models-card-view" class="hidden">
+          <div class="db-cards" id="models-cards"></div>
+        </div>
+
+        <!-- Detail Modal (expand row) -->
+        <div id="model-detail" class="hidden" style="margin-top:16px;"></div>
+
+        <!-- Callout -->
+        <div class="callout info" style="margin-top:32px;">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content">
+            <p>테이블 헤더를 클릭하면 정렬할 수 있습니다. 행을 클릭하면 제품 이미지, 상세 스펙, 바리에이션 정보가 표시됩니다. 카드 뷰에서는 제품 사진과 주요 정보를 한눈에 볼 수 있습니다. 가격은 환율과 구매처에 따라 달라질 수 있으니 참고용으로만 활용하세요.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- TOC -->
+    <aside class="toc">
+      <div class="toc-title">목차</div>
+      <ul class="toc-list"></ul>
+    </aside>
+  </div>
+
+  <script src="js/db-models.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // =========================================================================
+    // Wishlist — localStorage persistence (global scope for onclick handlers)
+    // =========================================================================
+    var wishlist = JSON.parse(localStorage.getItem('traxxas-wishlist') || '[]');
+    // DB에서 삭제된 모델의 부품번호를 위시리스트에서 정리
+    (function cleanWishlist() {
+      var validParts = MODELS_DATA.map(function(m) { return m.partNumber; });
+      var cleaned = wishlist.filter(function(pn) { return validParts.indexOf(pn) !== -1; });
+      if (cleaned.length !== wishlist.length) {
+        wishlist = cleaned;
+        localStorage.setItem('traxxas-wishlist', JSON.stringify(wishlist));
+      }
+    })();
+    var wishlistFilterActive = false;
+
+    function saveWishlist() {
+      localStorage.setItem('traxxas-wishlist', JSON.stringify(wishlist));
+      updateWishlistBadge();
+    }
+
+    function updateWishlistBadge() {
+      var badge = document.getElementById('wishlist-count');
+      var btn = document.getElementById('wishlist-toggle');
+      if (badge) {
+        if (wishlist.length > 0) {
+          badge.textContent = wishlist.length;
+          badge.style.display = 'inline-block';
+        } else {
+          badge.style.display = 'none';
+        }
+      }
+      if (btn) {
+        btn.classList.toggle('active', wishlistFilterActive);
+      }
+    }
+
+    function toggleWishlist(partNumber) {
+      var idx = wishlist.indexOf(partNumber);
+      if (idx !== -1) {
+        wishlist.splice(idx, 1);
+      } else {
+        wishlist.push(partNumber);
+      }
+      saveWishlist();
+      // Re-render to update star icons
+      if (typeof _dbRender === 'function') _dbRender();
+    }
+
+    function toggleWishlistFilter() {
+      wishlistFilterActive = !wishlistFilterActive;
+      updateWishlistBadge();
+      if (typeof _dbRender === 'function') _dbRender();
+    }
+
+    // Initialize badge on load
+    document.addEventListener('DOMContentLoaded', function() { updateWishlistBadge(); });
+  </script>
+  <script>
+    // =========================================================================
+    // Model DB — Rendering, Filtering, Sorting, View Toggle
+    // With product images, variants, and expanded categories
+    // =========================================================================
+
+    (function () {
+      'use strict';
+
+      // --- DOM references ---
+      var searchInput = document.getElementById('db-search');
+      var filterCategory = document.getElementById('db-filter-category');
+      var filterDrivetrain = document.getElementById('db-filter-drivetrain');
+      var filterMotor = document.getElementById('db-filter-motor');
+      var filterParent = document.getElementById('db-filter-parent');
+      var countDisplay = document.getElementById('db-count');
+      var tableView = document.getElementById('models-table-view');
+      var cardView = document.getElementById('models-card-view');
+      var tableBody = document.getElementById('models-table-body');
+      var cardsContainer = document.getElementById('models-cards');
+      var detailPanel = document.getElementById('model-detail');
+      var viewToggleBtns = document.querySelectorAll('.view-toggle-btn');
+
+      // --- State ---
+      var currentView = 'table'; // 'table' or 'card'
+      var sortColumn = 'name';
+      var sortAsc = true;
+      var expandedIndex = -1; // for table row detail expand
+
+      // --- Category to tag color mapping ---
+      var CATEGORY_COLORS = {
+        '몬스터트럭': 'red',
+        '숏코스 트럭': 'blue',
+        '스타디움&버기': 'green',
+        '온로드&랠리': 'pink',
+        '크롤러&트레일': 'orange'
+      };
+
+      var DRIVETRAIN_COLORS = {
+        '4WD': 'blue',
+        '2WD': 'orange',
+        '6WD': 'red'
+      };
+
+      var MOTOR_TYPE_COLORS = {
+        '브러시리스': 'green',
+        '브러시드': 'gray',
+        '니트로': 'purple'
+      };
+
+      // --- XSS Protection ---
+      function escapeHtml(text) {
+        if (!text) return '';
+        var div = document.createElement('div');
+        div.appendChild(document.createTextNode(text));
+        return div.innerHTML;
+      }
+
+      // --- Extract numeric value for sorting ---
+      function extractNum(str) {
+        if (!str) return 0;
+        var match = str.replace(/[,]/g, '').match(/[\d.]+/);
+        return match ? parseFloat(match[0]) : 0;
+      }
+
+      // Extract speed number for sorting — takes the MAX number before "km/h"
+      function extractSpeed(str) {
+        if (!str) return 0;
+        var nums = str.match(/[\d.]+/g);
+        if (!nums) return 0;
+        // Find the largest number that's a reasonable speed (exclude tiny numbers like "2초")
+        var maxSpeed = 0;
+        for (var i = 0; i < nums.length; i++) {
+          var n = parseFloat(nums[i]);
+          if (n > maxSpeed && n < 500) maxSpeed = n;
+        }
+        return maxSpeed;
+      }
+
+      // --- Extract scale as number for sorting (e.g., "1/5" => 5, "1/10" => 10) ---
+      function extractScale(str) {
+        if (!str) return 999;
+        var match = str.match(/1\/(\d+)/);
+        return match ? parseInt(match[1], 10) : 999;
+      }
+
+      // --- Populate parentModel filter options ---
+      (function populateParentFilter() {
+        var parents = [];
+        MODELS_DATA.forEach(function (item) {
+          if (item.parentModel && parents.indexOf(item.parentModel) === -1) {
+            parents.push(item.parentModel);
+          }
+        });
+        parents.sort(function (a, b) { return a.localeCompare(b, 'ko'); });
+        parents.forEach(function (p) {
+          var opt = document.createElement('option');
+          opt.value = p;
+          opt.textContent = p;
+          filterParent.appendChild(opt);
+        });
+      })();
+
+      // --- Filter data ---
+      function getFilteredData() {
+        var searchValue = searchInput.value.trim().toLowerCase();
+        var catValue = filterCategory.value;
+        var driveValue = filterDrivetrain.value;
+        var motorValue = filterMotor.value;
+        var parentValue = filterParent.value;
+
+        return MODELS_DATA.filter(function (item) {
+          // Wishlist filter
+          if (wishlistFilterActive && wishlist.indexOf(item.partNumber) === -1) return false;
+          // Category filter
+          if (catValue !== 'all' && item.category !== catValue) return false;
+          // Drivetrain filter
+          if (driveValue !== 'all' && item.drivetrain !== driveValue) return false;
+          // Motor type filter
+          if (motorValue !== 'all' && item.motorType !== motorValue) return false;
+          // Parent model filter
+          if (parentValue !== 'all' && (item.parentModel || '') !== parentValue) return false;
+          // Search filter
+          if (searchValue) {
+            var haystack = [
+              item.name,
+              item.partNumber,
+              item.motor,
+              item.esc,
+              item.category,
+              item.parentModel || '',
+              item.description,
+              item.recommended,
+              item.drivetrain,
+              item.motorType,
+              item.battery,
+              item.topSpeed,
+              item.priceRange
+            ].concat(item.features);
+            // Also search variants
+            if (item.variants && item.variants.length > 0) {
+              item.variants.forEach(function (v) {
+                haystack.push(v.name || '');
+                haystack.push(v.partNumber || '');
+                haystack.push(v.body || '');
+              });
+            }
+            return haystack.join(' ').toLowerCase().indexOf(searchValue) !== -1;
+          }
+          return true;
+        });
+      }
+
+      // --- Sort data ---
+      function sortData(data) {
+        var col = sortColumn;
+        return data.slice().sort(function (a, b) {
+          var aVal = a[col] || '';
+          var bVal = b[col] || '';
+
+          // Special numeric sorting for certain columns
+          if (col === 'topSpeed') {
+            var aSpd = extractSpeed(aVal);
+            var bSpd = extractSpeed(bVal);
+            return sortAsc ? aSpd - bSpd : bSpd - aSpd;
+          }
+          if (col === 'priceRange' || col === 'weight' || col === 'length') {
+            var aNum = extractNum(aVal);
+            var bNum = extractNum(bVal);
+            return sortAsc ? aNum - bNum : bNum - aNum;
+          }
+
+          if (col === 'scale') {
+            var aScale = extractScale(aVal);
+            var bScale = extractScale(bVal);
+            return sortAsc ? aScale - bScale : bScale - aScale;
+          }
+
+          // Default string sort
+          var cmp = aVal.localeCompare(bVal, 'ko');
+          return sortAsc ? cmp : -cmp;
+        });
+      }
+
+      // --- Render table view ---
+      function renderTable(data) {
+        if (data.length === 0) {
+          tableBody.innerHTML = '<tr><td colspan="9" style="text-align:center;padding:32px;color:var(--text-tertiary);">검색 결과가 없습니다.</td></tr>';
+          detailPanel.classList.add('hidden');
+          return;
+        }
+
+        var html = '';
+        data.forEach(function (item, idx) {
+          var catColor = CATEGORY_COLORS[item.category] || 'gray';
+          var motorColor = MOTOR_TYPE_COLORS[item.motorType] || 'gray';
+
+          var isWished = wishlist.indexOf(item.partNumber) !== -1;
+          html += '<tr data-idx="' + idx + '" style="cursor:pointer;" title="클릭하여 상세 정보 보기">';
+          html += '<td style="text-align:center;"><span class="wishlist-star" data-pn="' + escapeHtml(item.partNumber) + '" onclick="event.stopPropagation();toggleWishlist(\'' + escapeHtml(item.partNumber) + '\')">' + (isWished ? '❤️' : '🤍') + '</span></td>';
+          html += '<td style="white-space:nowrap;"><strong>' + escapeHtml(item.parentModel || '') + '</strong></td>';
+          html += '<td><strong>' + escapeHtml(item.name) + '</strong><br><span class="text-muted" style="font-size:12px;">' + escapeHtml(item.partNumber) + '</span> <span class="tag tag-' + catColor + '">' + escapeHtml(item.category) + '</span></td>';
+          html += '<td>' + escapeHtml(item.scale) + '</td>';
+          html += '<td><span class="tag tag-' + (DRIVETRAIN_COLORS[item.drivetrain] || 'gray') + '">' + escapeHtml(item.drivetrain) + '</span></td>';
+          html += '<td><span class="tag tag-' + motorColor + '">' + escapeHtml(item.motorType) + '</span></td>';
+          html += '<td>' + escapeHtml(item.topSpeed) + '</td>';
+          html += '<td>' + escapeHtml(item.priceRange) + '</td>';
+          html += '</tr>';
+        });
+
+        tableBody.innerHTML = html;
+        detailPanel.classList.add('hidden');
+
+        // Bind row click for expand
+        tableBody.querySelectorAll('tr').forEach(function (row) {
+          row.addEventListener('click', function () {
+            var idx = parseInt(this.getAttribute('data-idx'), 10);
+            if (expandedIndex === idx) {
+              detailPanel.classList.add('hidden');
+              expandedIndex = -1;
+            } else {
+              expandedIndex = idx;
+              showDetail(data[idx]);
+            }
+          });
+        });
+      }
+
+      // --- Build detail HTML (reusable for inline and new window) ---
+      function buildDetailHTML(item) {
+        var catColor = CATEGORY_COLORS[item.category] || 'gray';
+        var driveColor = DRIVETRAIN_COLORS[item.drivetrain] || 'gray';
+        var motorColor = MOTOR_TYPE_COLORS[item.motorType] || 'gray';
+
+        var html = '<div class="detail-grid">';
+
+        // Image column
+        html += '<div class="detail-grid-image">';
+        if (item.imageUrl) {
+          html += '<img src="' + escapeHtml(item.imageUrl) + '" alt="' + escapeHtml(item.name) + '" class="detail-product-image" onerror="this.style.display=\'none\'">';
+        }
+        if (item.productUrl) {
+          html += '<a href="' + escapeHtml(item.productUrl) + '" target="_blank" rel="noopener" class="product-link-btn">Traxxas 공식 페이지 &rarr;</a>';
+        }
+        html += '</div>';
+
+        // Specs column (tree-style collapsible sections)
+        html += '<div class="detail-grid-specs">';
+
+        // Section 1: 기본 정보
+        html += '<div class="detail-tree-section">';
+        html += '<div class="detail-tree-header" onclick="this.parentElement.classList.toggle(\'collapsed\')"><span class="detail-tree-arrow">▶</span>기본 정보</div>';
+        html += '<div class="detail-tree-body">';
+        html += '<div class="spec-row"><span class="spec-label">품번</span><span class="spec-value">' + escapeHtml(item.partNumber) + '</span></div>';
+        html += '<div class="spec-row"><span class="spec-label">스케일</span><span class="spec-value">' + escapeHtml(item.scale) + '</span></div>';
+        html += '<div class="spec-row"><span class="spec-label">카테고리</span><span class="spec-value"><span class="tag tag-' + catColor + '">' + escapeHtml(item.category) + '</span></span></div>';
+        html += '<div class="spec-row"><span class="spec-label">상위모델</span><span class="spec-value">' + escapeHtml(item.parentModel || '-') + '</span></div>';
+        html += '<div class="spec-row"><span class="spec-label">가격대</span><span class="spec-value"><strong>' + escapeHtml(item.priceRange) + '</strong></span></div>';
+        html += '</div></div>';
+
+        // Section 2: 파워트레인
+        html += '<div class="detail-tree-section">';
+        html += '<div class="detail-tree-header" onclick="this.parentElement.classList.toggle(\'collapsed\')"><span class="detail-tree-arrow">▶</span>파워트레인</div>';
+        html += '<div class="detail-tree-body">';
+        html += '<div class="spec-row"><span class="spec-label">구동</span><span class="spec-value"><span class="tag tag-' + driveColor + '">' + escapeHtml(item.drivetrain) + '</span></span></div>';
+        html += '<div class="spec-row"><span class="spec-label">모터</span><span class="spec-value">' + escapeHtml(item.motor) + ' <span class="tag tag-' + motorColor + '">' + escapeHtml(item.motorType) + '</span></span></div>';
+        html += '<div class="spec-row"><span class="spec-label">ESC</span><span class="spec-value">' + escapeHtml(item.esc) + '</span></div>';
+        html += '<div class="spec-row"><span class="spec-label">배터리</span><span class="spec-value">' + escapeHtml(item.battery) + '</span></div>';
+        html += '</div></div>';
+
+        // Section 3: 물리 스펙
+        html += '<div class="detail-tree-section">';
+        html += '<div class="detail-tree-header" onclick="this.parentElement.classList.toggle(\'collapsed\')"><span class="detail-tree-arrow">▶</span>물리 스펙</div>';
+        html += '<div class="detail-tree-body">';
+        html += '<div class="spec-row"><span class="spec-label">최고속도</span><span class="spec-value">' + escapeHtml(item.topSpeed) + '</span></div>';
+        html += '<div class="spec-row"><span class="spec-label">무게</span><span class="spec-value">' + escapeHtml(item.weight) + '</span></div>';
+        html += '<div class="spec-row"><span class="spec-label">길이</span><span class="spec-value">' + escapeHtml(item.length) + '</span></div>';
+        html += '</div></div>';
+
+        // Section 4: 설명 & 특징
+        html += '<div class="detail-tree-section">';
+        html += '<div class="detail-tree-header" onclick="this.parentElement.classList.toggle(\'collapsed\')"><span class="detail-tree-arrow">▶</span>설명 & 특징</div>';
+        html += '<div class="detail-tree-body">';
+        html += '<p style="margin:0 0 8px 0;">' + escapeHtml(item.description) + '</p>';
+        html += '<strong>주요 특징:</strong><ul style="margin-top:4px;">';
+        item.features.forEach(function (f) {
+          html += '<li>' + escapeHtml(f) + '</li>';
+        });
+        html += '</ul>';
+        html += '<div class="spec-row"><span class="spec-label">추천 대상</span><span class="spec-value">' + escapeHtml(item.recommended) + '</span></div>';
+        html += '</div></div>';
+
+        html += '</div>'; // end detail-grid-specs
+        html += '</div>'; // end detail-grid
+
+        // Variants section
+        if (item.variants && item.variants.length > 0) {
+          html += '<div class="detail-tree-section">';
+          html += '<div class="detail-tree-header" onclick="this.parentElement.classList.toggle(\'collapsed\')"><span class="detail-tree-arrow">▶</span>바리에이션 (' + item.variants.length + '종)</div>';
+          html += '<div class="detail-tree-body">';
+          item.variants.forEach(function (v) {
+            html += '<div class="variant-item">';
+            html += '<span class="variant-name">' + escapeHtml(v.name) + '</span>';
+            html += '<span class="variant-pn">' + escapeHtml(v.partNumber) + '</span>';
+            html += '<span class="variant-body">' + escapeHtml(v.body) + '</span>';
+            html += '</div>';
+          });
+          html += '</div></div>';
+        }
+
+        return html;
+      }
+
+      // --- Open detail in new window ---
+      var _currentDetailItem = null;
+      function openDetailNewWindow() {
+        if (!_currentDetailItem) return;
+        var item = _currentDetailItem;
+        var win = window.open('', '_blank', 'width=800,height=700,scrollbars=yes,resizable=yes');
+        if (!win) return;
+
+        var cssLink = document.querySelector('link[rel="stylesheet"]');
+        var cssHref = cssLink ? cssLink.href : '';
+        var inlineStyles = document.querySelector('head style') ? document.querySelector('head style').innerHTML : '';
+
+        var body = '<html lang="ko"><head><meta charset="UTF-8">';
+        body += '<title>' + escapeHtml(item.name) + ' — 상세 스펙</title>';
+        if (cssHref) body += '<link rel="stylesheet" href="' + cssHref + '">';
+        body += '<style>' + inlineStyles + '</style>';
+        body += '<style>body{padding:24px;max-width:900px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;background:#1e1e1e;color:#e0e0e0;}';
+        body += ':root{--bg-primary:#1e1e1e;--bg-secondary:#2a2a2a;--bg-tertiary:#333;--text-primary:#e0e0e0;--text-secondary:#aaa;--text-tertiary:#888;--text-inverse:#fff;--border:#444;--accent:#5b9bd5;--accent-hover:#4a8cc7;}';
+        body += 'a{color:#5b9bd5;}a:hover{color:#7cb8e8;}.product-link-btn{color:#fff;}</style>';
+        body += '</head><body>';
+        body += '<h2 style="margin-bottom:16px;color:#e0e0e0;">' + escapeHtml(item.name) + '</h2>';
+        body += buildDetailHTML(item);
+        body += '</body></html>';
+
+        win.document.write(body);
+        win.document.close();
+      }
+
+      // --- Show detail as modal popup ---
+      function showDetail(item) {
+        _currentDetailItem = item;
+
+        // Remove any existing modal
+        var existing = document.querySelector('.detail-modal-overlay');
+        if (existing) existing.remove();
+
+        var overlay = document.createElement('div');
+        overlay.className = 'detail-modal-overlay';
+
+        var modal = document.createElement('div');
+        modal.className = 'detail-modal-content';
+
+        var isWished = wishlist.indexOf(item.partNumber) !== -1;
+        var html = '<button class="detail-modal-close" title="닫기">&times;</button>';
+        html += '<div class="detail-top-bar">';
+        html += '<div class="detail-top-bar-title">';
+        html += '<span class="wishlist-star" style="font-size:15px;margin-right:8px;" data-pn="' + escapeHtml(item.partNumber) + '" onclick="toggleWishlist(\'' + escapeHtml(item.partNumber) + '\')">' + (isWished ? '❤️' : '🤍') + '</span>';
+        html += escapeHtml(item.name) + '</div>';
+        html += '<div class="detail-top-bar-actions">';
+        html += '<button class="detail-newwin-btn" onclick="openDetailNewWindow()">새 창으로 보기 ↗</button>';
+        html += '</div>';
+        html += '</div>';
+        html += buildDetailHTML(item);
+
+        modal.innerHTML = html;
+        overlay.appendChild(modal);
+        document.body.appendChild(overlay);
+
+        // Close on overlay background click
+        overlay.addEventListener('click', function(e) {
+          if (e.target === overlay) overlay.remove();
+        });
+        // Close on X button
+        modal.querySelector('.detail-modal-close').addEventListener('click', function() {
+          overlay.remove();
+        });
+        // Close on ESC key
+        function onEsc(e) {
+          if (e.key === 'Escape') {
+            overlay.remove();
+            document.removeEventListener('keydown', onEsc);
+          }
+        }
+        document.addEventListener('keydown', onEsc);
+      }
+
+      // --- Category display order for grouping ---
+      var CATEGORY_ORDER = ['몬스터트럭', '숏코스 트럭', '스타디움&버기', '온로드&랠리', '크롤러&트레일'];
+      var CATEGORY_EMOJI = {
+        '몬스터트럭': '🟥',
+        '숏코스 트럭': '🟦',
+        '스타디움&버기': '🟩',
+        '온로드&랠리': '💗',
+        '크롤러&트레일': '🟧'
+      };
+
+      // --- Render card view (with images, variants, category grouping) ---
+      function renderCards(data) {
+        if (data.length === 0) {
+          cardsContainer.innerHTML = '<p class="text-muted" style="text-align:center;padding:32px;">검색 결과가 없습니다.</p>';
+          return;
+        }
+
+        // Group data by category (preserving order)
+        var grouped = {};
+        data.forEach(function (item) {
+          if (!grouped[item.category]) grouped[item.category] = [];
+          grouped[item.category].push(item);
+        });
+
+        // Sort categories by predefined order
+        var orderedCats = CATEGORY_ORDER.filter(function (cat) { return grouped[cat]; });
+        // Add any remaining categories not in CATEGORY_ORDER
+        Object.keys(grouped).forEach(function (cat) {
+          if (orderedCats.indexOf(cat) === -1) orderedCats.push(cat);
+        });
+
+        var html = '';
+        orderedCats.forEach(function (cat) {
+          var emoji = CATEGORY_EMOJI[cat] || '📦';
+          html += '<div class="category-group-header">' + emoji + ' ' + escapeHtml(cat) + ' (' + grouped[cat].length + ')</div>';
+          grouped[cat].forEach(function (item) {
+            html += renderSingleCard(item);
+          });
+        });
+
+        cardsContainer.innerHTML = html;
+      }
+
+      // --- Render a single card ---
+      function renderSingleCard(item) {
+          var catColor = CATEGORY_COLORS[item.category] || 'gray';
+          var driveColor = DRIVETRAIN_COLORS[item.drivetrain] || 'gray';
+          var motorColor = MOTOR_TYPE_COLORS[item.motorType] || 'gray';
+          var html = '';
+
+          var isWished = wishlist.indexOf(item.partNumber) !== -1;
+          html += '<div class="db-card" style="position:relative;">';
+
+          // Wishlist star
+          html += '<span class="wishlist-star" style="position:absolute;top:10px;right:10px;font-size:15px;z-index:1;" data-pn="' + escapeHtml(item.partNumber) + '" onclick="event.stopPropagation();toggleWishlist(\'' + escapeHtml(item.partNumber) + '\')">' + (isWished ? '❤️' : '🤍') + '</span>';
+
+          // Product image
+          if (item.imageUrl) {
+            html += '<img src="' + escapeHtml(item.imageUrl) + '" alt="' + escapeHtml(item.name) + '" class="db-card-image" onerror="this.outerHTML=\'<div class=db-card-image-placeholder>이미지 로드 실패</div>\'">';
+          } else {
+            html += '<div class="db-card-image-placeholder">제품 이미지 없음</div>';
+          }
+
+          html += '<div class="db-card-title">' + escapeHtml(item.name) + '</div>';
+          html += '<div class="db-card-tags">';
+          html += '<span class="tag tag-' + catColor + '">' + escapeHtml(item.category) + '</span>';
+          html += '<span class="tag tag-' + driveColor + '">' + escapeHtml(item.drivetrain) + '</span>';
+          html += '<span class="tag tag-' + motorColor + '">' + escapeHtml(item.motorType) + '</span>';
+          html += '</div>';
+          html += '<div class="db-card-meta" style="margin-top:10px;">상위모델: <strong>' + escapeHtml(item.parentModel || '-') + '</strong></div>';
+          html += '<div class="db-card-meta">품번: ' + escapeHtml(item.partNumber) + '</div>';
+          html += '<div class="db-card-meta">스케일: ' + escapeHtml(item.scale) + '</div>';
+          html += '<div class="db-card-meta">모터: ' + escapeHtml(item.motor) + '</div>';
+          html += '<div class="db-card-meta">ESC: ' + escapeHtml(item.esc) + '</div>';
+          html += '<div class="db-card-meta">배터리: ' + escapeHtml(item.battery) + '</div>';
+          html += '<div class="db-card-meta">최고속도: <strong>' + escapeHtml(item.topSpeed) + '</strong></div>';
+          html += '<div class="db-card-meta">가격대: <strong>' + escapeHtml(item.priceRange) + '</strong></div>';
+          html += '<div style="margin-top:10px;font-size:13px;color:var(--text-secondary);line-height:1.6;">' + escapeHtml(item.description) + '</div>';
+          html += '<div style="margin-top:8px;font-size:12px;color:var(--text-tertiary);">추천: ' + escapeHtml(item.recommended) + '</div>';
+
+          // Variants mini-list in card
+          if (item.variants && item.variants.length > 0) {
+            html += '<div class="db-card-variants">';
+            html += '<div class="db-card-variants-title">바리에이션:</div>';
+            item.variants.forEach(function (v) {
+              html += '<span class="db-card-variant-tag">' + escapeHtml(v.body) + '</span>';
+            });
+            html += '</div>';
+          }
+
+          // Links
+          html += '<div class="db-card-links">';
+          if (item.productUrl) {
+            html += '<a href="' + escapeHtml(item.productUrl) + '" target="_blank" rel="noopener" class="db-card-link">공식 페이지</a>';
+          }
+          html += '</div>';
+
+          html += '</div>';
+          return html;
+      }
+
+      // --- Main render ---
+      function render() {
+        var filtered = getFilteredData();
+        var sorted = sortData(filtered);
+
+        // Update count
+        countDisplay.textContent = '총 ' + sorted.length + '개 모델';
+
+        // Reset expanded state
+        expandedIndex = -1;
+
+        if (currentView === 'table') {
+          renderTable(sorted);
+        } else {
+          renderCards(sorted);
+        }
+      }
+
+      // --- View toggle ---
+      viewToggleBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var view = this.getAttribute('data-view');
+          if (view === currentView) return;
+
+          currentView = view;
+          viewToggleBtns.forEach(function (b) { b.classList.remove('active'); });
+          this.classList.add('active');
+
+          if (view === 'table') {
+            tableView.classList.remove('hidden');
+            cardView.classList.add('hidden');
+          } else {
+            tableView.classList.add('hidden');
+            cardView.classList.remove('hidden');
+          }
+          detailPanel.classList.add('hidden');
+          render();
+        });
+      });
+
+      // --- Sort by header click ---
+      document.querySelectorAll('#models-table th[data-sort]').forEach(function (th) {
+        th.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var col = this.getAttribute('data-sort');
+
+          if (sortColumn === col) {
+            sortAsc = !sortAsc;
+          } else {
+            sortColumn = col;
+            // 숫자 컬럼은 첫 클릭 시 내림차순 (높은 값 먼저)
+            var descFirstCols = ['topSpeed', 'priceRange', 'weight', 'length'];
+            sortAsc = descFirstCols.indexOf(col) === -1;
+          }
+
+          // Update sort arrows
+          document.querySelectorAll('#models-table th[data-sort]').forEach(function (h) {
+            h.classList.remove('sort-asc', 'sort-desc');
+            var arrow = h.querySelector('.sort-arrow');
+            if (arrow) arrow.textContent = '';
+          });
+          this.classList.add(sortAsc ? 'sort-asc' : 'sort-desc');
+          var arrow = this.querySelector('.sort-arrow');
+          if (arrow) arrow.textContent = sortAsc ? ' ▲' : ' ▼';
+
+          render();
+        });
+      });
+
+      // --- Event listeners ---
+      searchInput.addEventListener('input', render);
+      filterCategory.addEventListener('change', render);
+      filterDrivetrain.addEventListener('change', render);
+      filterMotor.addEventListener('change', render);
+      filterParent.addEventListener('change', render);
+
+      // --- Expose render globally for wishlist toggle ---
+      window._dbRender = render;
+
+      // --- Initial render ---
+      render();
+    })();
+  </script>
+</body>
+</html>

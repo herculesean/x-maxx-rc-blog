@@ -1,0 +1,543 @@
+{
+  "brand": "FMS",
+  "pageTitle": "FMS 모델 라인업",
+  "pageDescription": "3개 스케일, 16개 상위모델 — FMS 전체 RC카 라인업을 스케일별로 정리합니다.",
+  "overviewCallout": "FMS는 크롤러/스케일 트럭 전문 브랜드로, 1:10 / 1:18 / 1:24 세 가지 스케일에 걸쳐 실차 라이선스 모델을 중심으로 라인업을 구성합니다. 총 16개 상위모델.",
+  "overviewText": "FMS(Flight Model Simulation)는 원래 비행기 RC로 유명한 브랜드이지만, 최근 FCX 시리즈를 통해 RC 크롤러/스케일 트럭 시장에서 빠르게 입지를 넓히고 있습니다. Toyota, Land Rover, Chevrolet, Mercedes-Benz 등 유명 자동차 브랜드의 공식 라이선스를 획득하여 실차의 디테일을 충실히 재현한 것이 가장 큰 특징입니다.",
+  "features": [
+    {
+      "icon": "📜",
+      "title": "공식 라이선스",
+      "desc": "Toyota, Land Rover, Chevrolet, Mercedes-Benz, GM 등 유명 자동차 브랜드의 공식 라이선스를 보유. 실차를 충실하게 재현합니다."
+    },
+    {
+      "icon": "⚙️",
+      "title": "2단 변속기",
+      "desc": "거의 모든 모델에 2단 변속기(Hi/Lo) 기본 탑재. 저속 고토크 크롤링과 고속 주행을 하나의 차량으로."
+    },
+    {
+      "icon": "🪨",
+      "title": "포탈 액슬",
+      "desc": "금속 기어 포탈 액슬로 지상고를 높이고 크롤링 성능을 극대화. 볼 베어링 기본 장착."
+    },
+    {
+      "icon": "🔋",
+      "title": "배터리 포함",
+      "desc": "1:18과 1:24 모델은 배터리 + USB 충전기 기본 포함. 1:10은 RS(Ready Set)로 배터리 별도 구매."
+    }
+  ],
+  "categoryCards": [
+    {
+      "icon": "🏔️",
+      "title": "1:10 크롤러 (FCX10)",
+      "desc": "풀사이즈 크롤러. 550 모터, 4링크 서스펜션, XT60 배터리(별도). $279~$549. 5개 상위모델."
+    },
+    {
+      "icon": "🛻",
+      "title": "1:18 크롤러 (FCX18)",
+      "desc": "중형 크롤러. 180 모터, 900mAh 배터리 포함, 메탈 프레임. $139~$239. 4개 상위모델."
+    },
+    {
+      "icon": "🔬",
+      "title": "1:24 미니 (FCX24)",
+      "desc": "미니 크롤러. 130/050 모터, 380mAh 배터리 포함, 2단 변속. $139~$229. 7개 상위모델."
+    }
+  ],
+  "categories": [
+    {
+      "id": "scale-10",
+      "name": "1:10 크롤러 — FCX10 시리즈",
+      "icon": "🏔️",
+      "parentCount": 5,
+      "description": "FMS의 플래그십 스케일. 550 브러시드 또는 브러시리스 모터, 4링크 서스펜션, 스트레이트/포탈 액슬을 갖춘 본격 크롤러입니다. 배터리(2S/3S LiPo XT60)는 별도 구매해야 합니다.",
+      "parentModels": [
+        {
+          "id": "parent-fcx10-pro-lc80",
+          "name": "FCX10 PRO LC80",
+          "tags": [{"text": "플래그십", "color": "red"}],
+          "description": "FMS 크롤러의 최상위 모델. FCX10 PRO 섀시에 브러시리스 모터, 25kg 디지털 서보, 잠금식 디퍼렌셜, 포탈 액슬을 장착한 프리미엄 크롤러입니다. Toyota 공식 라이선스.",
+          "images": [
+            {
+              "src": "https://cdn.shopify.com/s/files/1/0558/5829/8965/files/New_Year_FCX10_PRO_LC80.jpg?v=1769759144",
+              "alt": "FCX10 PRO LC80",
+              "caption": "FCX10 PRO LC80"
+            }
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/10"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "모터", "value": "3541-2100KV 브러시리스"},
+            {"label": "ESC", "value": "SL50A 2-3S 독립 브러시리스 ESC"},
+            {"label": "서보", "value": "25kg Predator 디지털 서보"},
+            {"label": "변속", "value": "2단 변속기, 잠금식 전/후 디퍼렌셜"},
+            {"label": "배터리", "value": "2S/3S 5000mAh XT60 (별도)"},
+            {"label": "크기", "value": "572 x 251 x 288mm (휠베이스 325mm)"},
+            {"label": "지상고", "value": "76mm"},
+            {"label": "가격", "value": "$499.99 ~ $549.99"}
+          ],
+          "subModelLabel": null,
+          "subModels": []
+        },
+        {
+          "id": "parent-fcx10-landrover",
+          "name": "FCX10 Land Rover Camel Trophy",
+          "tags": [{"text": "라이선스", "color": "green"}],
+          "description": "Land Rover 공식 라이선스의 Camel Trophy Edition. Discovery, Range Rover, Defender 110 세 가지 바디를 선택할 수 있습니다. PC 소프트 바디에 실차 디테일(스포트라이트, 스노클, 인테리어)을 충실하게 재현합니다.",
+          "images": [
+            {
+              "src": "https://cdn.shopify.com/s/files/1/0558/5829/8965/files/FebruaryFCX10LandRover.jpg?v=1769760482",
+              "alt": "FCX10 Land Rover Camel Trophy",
+              "caption": "FCX10 Land Rover Camel Trophy"
+            }
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/10"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "모터", "value": "550 32T 브러시드"},
+            {"label": "변속", "value": "4링크 서스펜션, 스트레이트 액슬"},
+            {"label": "배터리", "value": "2S/3S 5000mAh XT60 (별도)"},
+            {"label": "가격", "value": "$399.99 ~ $449.99"}
+          ],
+          "subModelLabel": "하위 모델 (바디 변형)",
+          "subModels": [
+            {"name": "Discovery", "details": "609 x 293 x 341mm, 휠베이스 321mm, 지상고 68mm"},
+            {"name": "Range Rover", "details": "588 x 263 x 290mm, 휠베이스 321mm, 지상고 62mm"},
+            {"name": "Defender 110", "details": "577 x 243 x 337mm, 휠베이스 326mm, 지상고 62mm"}
+          ]
+        },
+        {
+          "id": "parent-fcx10-k5",
+          "name": "FCX10 Chevrolet K5 Blazer",
+          "tags": [{"text": "라이선스", "color": "green"}],
+          "description": "GM 공식 라이선스. FMS 최초의 1/10 고성능 시뮬레이션 크롤러입니다. DIG 모드(전륜 독립 구동), 2WD/4WD 전환, 잠금식 디퍼렌셜, 포탈 액슬 등 프리미엄 기능을 갖추고 있습니다.",
+          "images": [
+            {
+              "src": "https://cdn.shopify.com/s/files/1/0558/5829/8965/files/February_FCX10_K5.jpg?v=1769756801",
+              "alt": "FCX10 K5 Blazer",
+              "caption": "FCX10 K5 Blazer"
+            }
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/10"},
+            {"label": "구동", "value": "4WD (2WD/4WD 전환, DIG 모드)"},
+            {"label": "모터", "value": "550 브러시드"},
+            {"label": "변속", "value": "2단 변속기, 포탈 액슬"},
+            {"label": "배터리", "value": "2S LiPo XT60 (별도)"},
+            {"label": "크기", "value": "548 x 249 x 285mm (휠베이스 324mm)"},
+            {"label": "지상고", "value": "89mm"},
+            {"label": "가격", "value": "$459.99 ~ $509.99"}
+          ],
+          "subModelLabel": null,
+          "subModels": []
+        },
+        {
+          "id": "parent-canyon",
+          "name": "Canyon",
+          "tags": [],
+          "description": "두바이 미래형 경찰차에서 영감을 받은 러기드 오프로드 머신. 5개 서보(스티어링, Hi/Lo, 전/후 디퍼, DIG)와 마그네틱 바디 마운트, 동기식 LED 시스템(헤드/턴/테일)을 갖추고 있습니다.",
+          "images": [
+            {
+              "src": "https://cdn.shopify.com/s/files/1/0558/5829/8965/files/FMS_Canyon_2.jpg?v=1760517327",
+              "alt": "Canyon",
+              "caption": "Canyon"
+            }
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/10"},
+            {"label": "구동", "value": "4WD (DIG 모드)"},
+            {"label": "모터", "value": "550 32T 브러시드 (Hobbywing 1060 ESC)"},
+            {"label": "최고 속도", "value": "15 km/h"},
+            {"label": "배터리", "value": "2S/3S 5000mAh XT60 (별도)"},
+            {"label": "크기", "value": "580 x 260 x 256mm (휠베이스 325mm)"},
+            {"label": "등판 각도", "value": "40°"},
+            {"label": "가격", "value": "$449.99 ~ $485.99"}
+          ],
+          "subModelLabel": null,
+          "subModels": []
+        },
+        {
+          "id": "parent-atlas-4x4",
+          "name": "Atlas 4x4",
+          "tags": [],
+          "description": "ROCHOBBY 협업 모델. 리지드 메탈 프레임에 나일론 롤 케이지, 2단 변속기를 갖춘 가성비 크롤러입니다.",
+          "images": [
+            {
+              "src": "https://cdn.shopify.com/s/files/1/0558/5829/8965/products/yw.jpg?v=1764905511",
+              "alt": "Atlas 4x4",
+              "caption": "Atlas 4x4"
+            }
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/10"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "모터", "value": "550 35T 브러시드"},
+            {"label": "최고 속도", "value": "15 km/h"},
+            {"label": "무게", "value": "1,000g"},
+            {"label": "배터리", "value": "2S 5000mAh XT60 (별도)"},
+            {"label": "크기", "value": "537 x 241 x 247mm (휠베이스 340mm)"},
+            {"label": "지상고", "value": "79mm"},
+            {"label": "가격", "value": "$279.99 ~ $329.99"}
+          ],
+          "subModelLabel": null,
+          "subModels": []
+        }
+      ]
+    },
+    {
+      "id": "scale-18",
+      "name": "1:18 크롤러 — FCX18 시리즈",
+      "icon": "🛻",
+      "parentCount": 4,
+      "description": "중형 스케일 크롤러. 180 모터 기반의 컴팩트한 사이즈에 배터리 + USB 충전기 포함으로 구매 즉시 주행 가능합니다. 메탈 프레임, 2단 변속기, LED 라이트를 기본 탑재합니다.",
+      "parentModels": [
+        {
+          "id": "parent-fcx18-lc80",
+          "name": "FCX18 Land Cruiser 80",
+          "tags": [{"text": "라이선스", "color": "green"}],
+          "description": "Toyota 공식 라이선스. FCX18 시리즈의 대표 모델입니다. 브러시드와 브러시리스 두 가지 버전을 제공합니다.",
+          "images": [
+            {
+              "src": "https://cdn.shopify.com/s/files/1/0558/5829/8965/files/FCX18LC80Blue.jpg?v=1767164244",
+              "alt": "FCX18 LC80 V2",
+              "caption": "FCX18 LC80 V2"
+            },
+            {
+              "src": "https://cdn.shopify.com/s/files/1/0558/5829/8965/files/FMSFCX18LC80Brushless_1.jpg?v=1747208176",
+              "alt": "FCX18 LC80 Brushless",
+              "caption": "FCX18 LC80 Brushless"
+            }
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/18"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "크기", "value": "282 x 126 x 136mm (휠베이스 160mm)"},
+            {"label": "무게", "value": "535g"},
+            {"label": "지상고", "value": "35mm"},
+            {"label": "배터리", "value": "7.4V 900mAh LiPo (포함)"}
+          ],
+          "subModelLabel": "하위 모델",
+          "subModels": [
+            {"name": "FCX18 LC80 V2 (브러시드)", "details": "180 모터, Blue/Gray/Yellow, $189.99"},
+            {"name": "FCX18 LC80 Brushless", "details": "1212 3200KV 모터, 포탈 액슬, Black, 런타임 ~45분, $239.99"}
+          ]
+        },
+        {
+          "id": "parent-fcx18-k10",
+          "name": "FCX18 Chevrolet K10 V2",
+          "tags": [{"text": "라이선스", "color": "green"}],
+          "description": "Chevrolet 공식 라이선스. 코일 스프링 + 메탈 오일 댐퍼, 개방형 테일게이트, 헤드/턴/테일 라이트를 갖춘 1:18 픽업 크롤러입니다.",
+          "images": [
+            {
+              "src": "https://cdn.shopify.com/s/files/1/0558/5829/8965/files/1-18K10Black.jpg?v=1766052779",
+              "alt": "FCX18 K10 V2",
+              "caption": "FCX18 K10 V2"
+            }
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/18"},
+            {"label": "모터", "value": "180 브러시드"},
+            {"label": "크기", "value": "336 x 139 x 139mm (휠베이스 199mm)"},
+            {"label": "지상고", "value": "40mm"},
+            {"label": "배터리", "value": "7.4V 900mAh LiPo (포함)"},
+            {"label": "색상", "value": "Black / Red / Yellow"},
+            {"label": "가격", "value": "$189.99 ~ $199.99"}
+          ],
+          "subModelLabel": null,
+          "subModels": []
+        },
+        {
+          "id": "parent-fcx18-hummer",
+          "name": "FCX18 Hummer EV",
+          "tags": [{"text": "라이선스", "color": "green"}],
+          "description": "GM 공식 라이선스. 포탈 액슬, 메탈 기어, 24개 볼 베어링을 갖춘 Hummer EV 픽업 크롤러. 최대 60분 런타임.",
+          "images": [],
+          "specs": [
+            {"label": "스케일", "value": "1/18"},
+            {"label": "모터", "value": "180 브러시드"},
+            {"label": "런타임", "value": "~60분"},
+            {"label": "배터리", "value": "7.4V 900mAh LiPo (포함)"},
+            {"label": "색상", "value": "Black / White"},
+            {"label": "가격", "value": "$179.99"}
+          ],
+          "subModelLabel": null,
+          "subModels": []
+        },
+        {
+          "id": "parent-atlas-6x6",
+          "name": "Atlas V2 6x6",
+          "tags": [],
+          "description": "6륜 구동(6WD) 크롤러. V2에서 130 모터로 업그레이드, 메탈 기어, 글로시 바디, 마그네틱 힌지 바디 마운트를 적용했습니다. FPV 레디 ESC 탑재.",
+          "images": [],
+          "specs": [
+            {"label": "스케일", "value": "1/18"},
+            {"label": "구동", "value": "6WD"},
+            {"label": "모터", "value": "130 브러시드 (V2 업그레이드)"},
+            {"label": "기어비", "value": "100T 토크 (V1 55T에서 업그레이드)"},
+            {"label": "무게", "value": "454g"},
+            {"label": "런타임", "value": "~30분"},
+            {"label": "배터리", "value": "7.4V 600mAh LiPo (포함)"},
+            {"label": "색상", "value": "Red / Blue"},
+            {"label": "가격", "value": "$139.99"}
+          ],
+          "subModelLabel": null,
+          "subModels": []
+        }
+      ]
+    },
+    {
+      "id": "scale-24",
+      "name": "1:24 미니 크롤러 — FCX24 시리즈",
+      "icon": "🔬",
+      "parentCount": 7,
+      "description": "FMS에서 가장 인기 있는 스케일. 손바닥 크기의 미니 크롤러이지만 2단 변속기, 포탈 액슬, 메탈 기어를 갖추고 있습니다. 380mAh 배터리와 USB 충전기가 포함됩니다. FCX24(130 모터)와 FCX24M(050 모터, 신형 섀시) 두 가지 플랫폼이 있습니다.",
+      "parentModels": [
+        {
+          "id": "parent-fcx24-powerwagon",
+          "name": "FCX24 Power Wagon",
+          "tags": [],
+          "description": "1949년 Dodge Power Wagon을 재현한 머드 오프로드 트럭. FCX24 시리즈의 대표 모델이자 베스트셀러입니다.",
+          "images": [
+            {
+              "src": "https://cdn.shopify.com/s/files/1/0558/5829/8965/products/26.jpg?v=1767164319",
+              "alt": "FCX24 Power Wagon",
+              "caption": "Power Wagon (브러시드)"
+            },
+            {
+              "src": "https://cdn.shopify.com/s/files/1/0558/5829/8965/files/1-24PowerWagonBluewithDecorationSet_WithBattery.jpg?v=1769752270",
+              "alt": "FCX24 Power Wagon Brushless",
+              "caption": "Power Wagon Brushless"
+            }
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/24"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "크기", "value": "237 x 126 x 126mm (휠베이스 139mm)"},
+            {"label": "무게", "value": "390g"},
+            {"label": "최고 속도", "value": "8 km/h"},
+            {"label": "런타임", "value": "~20분"},
+            {"label": "배터리", "value": "7.4V 380mAh LiPo (포함)"}
+          ],
+          "subModelLabel": "하위 모델",
+          "subModels": [
+            {"name": "Power Wagon (브러시드)", "details": "130 모터, Blue/Red/Yellow, $159.99"},
+            {"name": "Power Wagon Brushless", "details": "1212 3200KV, Batrazzi 머드 타이어, Metallic Green, $229.99"}
+          ]
+        },
+        {
+          "id": "parent-fcx24-k5",
+          "name": "FCX24 Chevrolet K5 Blazer",
+          "tags": [{"text": "라이선스", "color": "green"}],
+          "description": "Chevrolet 공식 라이선스의 1:24 미니 크롤러. 높은 지상고(38mm)와 2단 포탈 액슬 변속기를 갖추고 있습니다.",
+          "images": [
+            {
+              "src": "https://cdn.shopify.com/s/files/1/0558/5829/8965/files/1-24_K5_Gift_Version_Orange.jpg?v=1749179396",
+              "alt": "FCX24 K5 Blazer",
+              "caption": "K5 Blazer (브러시드)"
+            },
+            {
+              "src": "https://cdn.shopify.com/s/files/1/0558/5829/8965/files/FCX24K5BlackBrushless20.jpg?v=1748512388",
+              "alt": "FCX24 K5 Blazer Brushless",
+              "caption": "K5 Blazer Brushless"
+            }
+          ],
+          "specs": [
+            {"label": "크기", "value": "253 x 129 x 128mm (휠베이스 139mm)"},
+            {"label": "지상고", "value": "38mm"},
+            {"label": "런타임", "value": "~20분 (브러시드) / ~30분 (브러시리스)"},
+            {"label": "배터리", "value": "7.4V 380mAh LiPo (포함)"}
+          ],
+          "subModelLabel": "하위 모델",
+          "subModels": [
+            {"name": "K5 Blazer (브러시드)", "details": "130 모터, Orange, $159.99"},
+            {"name": "K5 Blazer Brushless", "details": "1212 3200KV, Black Edition, $229.99 (단종)"}
+          ]
+        },
+        {
+          "id": "parent-fcx24m-tacoma",
+          "name": "FCX24M Toyota Tacoma",
+          "tags": [{"text": "라이선스", "color": "green"}],
+          "description": "Toyota 공식 라이선스의 Tacoma 픽업. 신형 FCX24M 섀시에 153mm 확장 휠베이스, 래더 프레임, ABS 하드 바디를 적용한 스케일 크롤러입니다.",
+          "images": [
+            {
+              "src": "https://cdn.shopify.com/s/files/1/0558/5829/8965/files/FCX24MToyotaTacoma_1.jpg?v=1769075603",
+              "alt": "FCX24M Tacoma",
+              "caption": "FCX24M Tacoma"
+            }
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/24"},
+            {"label": "모터", "value": "050 브러시드 (고토크)"},
+            {"label": "크기", "value": "253 x 105 x 105mm (휠베이스 153mm)"},
+            {"label": "지상고", "value": "30mm"},
+            {"label": "런타임", "value": "~30분"},
+            {"label": "조종 거리", "value": "80m+"},
+            {"label": "배터리", "value": "7.4V 380mAh LiPo (포함)"},
+            {"label": "색상", "value": "Gray / Red / Blue"},
+            {"label": "가격", "value": "$139.99"}
+          ],
+          "subModelLabel": null,
+          "subModels": []
+        },
+        {
+          "id": "parent-fcx24m-landrover",
+          "name": "FCX24M Land Rover Family",
+          "tags": [{"text": "라이선스", "color": "green"}],
+          "description": "Land Rover 공식 라이선스. FCX24M 섀시에 Camel Trophy 옐로우 리버리, 4가지 바디(Discovery, Range Rover, Defender 90, Defender 110) 중 선택 가능합니다.",
+          "images": [
+            {
+              "src": "https://cdn.shopify.com/s/files/1/0558/5829/8965/files/FCX24MLandRoverCamelTrophy-Discovery.jpg?v=1767164276",
+              "alt": "FCX24M Land Rover Discovery",
+              "caption": "FCX24M Land Rover Discovery"
+            }
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/24"},
+            {"label": "모터", "value": "050 브러시드"},
+            {"label": "배터리", "value": "7.4V 380mAh LiPo (포함)"},
+            {"label": "가격", "value": "$139.99 ~ $155.99"}
+          ],
+          "subModelLabel": "하위 모델 (바디 변형)",
+          "subModels": [
+            {"name": "Discovery", "details": "232 x 105 x 133mm, 휠베이스 134mm"},
+            {"name": "Range Rover", "details": "227 x 103 x 120mm, 휠베이스 134mm"},
+            {"name": "Defender 110", "details": "240 x 107 x 128mm, 휠베이스 135mm"},
+            {"name": "Defender 90", "details": "214 x 107 x 128mm, 휠베이스 111mm"}
+          ]
+        },
+        {
+          "id": "parent-fcx24-unimog",
+          "name": "FCX24 Unimog 421",
+          "tags": [{"text": "라이선스", "color": "green"}],
+          "description": "Daimler-Benz 공식 라이선스의 유니목. 실차 디테일(개방형 후드, 대시보드, 그릴)과 포탈 액슬을 갖추고 있습니다.",
+          "images": [
+            {
+              "src": "https://cdn.shopify.com/s/files/1/0558/5829/8965/files/unimog_40.jpg?v=1755237897",
+              "alt": "FCX24 Unimog 421",
+              "caption": "FCX24 Unimog 421"
+            }
+          ],
+          "specs": [
+            {"label": "스케일", "value": "1/24"},
+            {"label": "모터", "value": "130 브러시드"},
+            {"label": "크기", "value": "249 x 160 x 153mm (휠베이스 142mm)"},
+            {"label": "무게", "value": "478g"},
+            {"label": "최고 속도", "value": "5 km/h"},
+            {"label": "지상고", "value": "40mm"},
+            {"label": "배터리", "value": "7.4V 380mAh LiPo (포함)"},
+            {"label": "색상", "value": "Green / Grey / Red"},
+            {"label": "가격", "value": "$149.99"}
+          ],
+          "subModelLabel": null,
+          "subModels": []
+        },
+        {
+          "id": "parent-fcx24-lemur",
+          "name": "FCX24 Lemur",
+          "tags": [],
+          "description": "록 버기 스타일. BFGoodrich 레플리카 타이어, 나일론 튜브 프레임, LED 루프 라이트바를 갖춘 미니 록 버기입니다.",
+          "images": [],
+          "specs": [
+            {"label": "스케일", "value": "1/24"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "모터", "value": "130 브러시드"},
+            {"label": "크기", "value": "209 x 128 x 120mm (휠베이스 136mm)"},
+            {"label": "지상고", "value": "41mm"},
+            {"label": "배터리", "value": "7.4V 380mAh LiPo (포함)"},
+            {"label": "색상", "value": "Green / Orange / Red"},
+            {"label": "가격", "value": "$145.99"}
+          ],
+          "subModelLabel": null,
+          "subModels": []
+        },
+        {
+          "id": "parent-fcx24-smasher",
+          "name": "FCX24 Max Smasher V2",
+          "tags": [],
+          "description": "미니 몬스터트럭 스타일. 거대한 68mm 할로우 타이어로 충격 흡수, 유성기어 디퍼렌셜을 갖추고 있습니다.",
+          "images": [],
+          "specs": [
+            {"label": "스케일", "value": "1/24"},
+            {"label": "구동", "value": "4WD"},
+            {"label": "모터", "value": "130 브러시드"},
+            {"label": "크기", "value": "227 x 156 x 127mm (휠베이스 139mm)"},
+            {"label": "지상고", "value": "44mm"},
+            {"label": "최고 속도", "value": "8 km/h"},
+            {"label": "배터리", "value": "7.4V 380mAh LiPo (포함)"},
+            {"label": "색상", "value": "Blue / Red / White"},
+            {"label": "가격", "value": "$159.99"}
+          ],
+          "subModelLabel": null,
+          "subModels": []
+        }
+      ]
+    }
+  ],
+  "comparison": {
+    "title": "상위모델 비교표",
+    "description": "각 스케일의 상위모델을 한눈에 비교해 보세요.",
+    "columns": ["상위모델", "스케일", "구동", "모터 타입", "가격대", "배터리", "추천 대상"],
+    "categoryRows": [
+      {
+        "label": "🏔️ 1:10 크롤러 (5개 상위모델)",
+        "rows": [
+          ["FCX10 PRO LC80", "1/10", "4WD", "브러시리스", "$499~$549", "별도 (XT60)", "프리미엄 크롤러"],
+          ["FCX10 K5 Blazer", "1/10", "4WD/DIG", "브러시드", "$459~$509", "별도 (XT60)", "고성능 크롤러"],
+          ["Canyon", "1/10", "4WD/DIG", "브러시드", "$449~$485", "별도 (XT60)", "오프로드 머신"],
+          ["FCX10 Land Rover", "1/10", "4WD", "브러시드", "$399~$449", "별도 (XT60)", "스케일 디테일"],
+          ["Atlas 4x4", "1/10", "4WD", "브러시드", "$279~$329", "별도 (XT60)", "가성비 크롤러"]
+        ]
+      },
+      {
+        "label": "🛻 1:18 크롤러 (4개 상위모델)",
+        "rows": [
+          ["FCX18 LC80", "1/18", "4WD", "브러시드/리스", "$189~$239", "포함 (900mAh)", "중형 스케일 대표"],
+          ["FCX18 K10", "1/18", "4WD", "브러시드", "$189~$199", "포함 (900mAh)", "스케일 픽업"],
+          ["FCX18 Hummer EV", "1/18", "4WD", "브러시드", "$179", "포함 (900mAh)", "EV 모델"],
+          ["Atlas V2 6x6", "1/18", "6WD", "브러시드", "$139", "포함 (600mAh)", "6륜 크롤러"]
+        ]
+      },
+      {
+        "label": "🔬 1:24 미니 크롤러 (7개 상위모델)",
+        "rows": [
+          ["FCX24 Power Wagon", "1/24", "4WD", "브러시드/리스", "$159~$229", "포함 (380mAh)", "베스트셀러"],
+          ["FCX24 K5 Blazer", "1/24", "4WD", "브러시드/리스", "$159~$229", "포함 (380mAh)", "라이선스 미니"],
+          ["Max Smasher V2", "1/24", "4WD", "브러시드", "$159", "포함 (380mAh)", "미니 몬스터"],
+          ["FCX24 Unimog 421", "1/24", "4WD", "브러시드", "$149", "포함 (380mAh)", "유니목 팬"],
+          ["FCX24 Lemur", "1/24", "4WD", "브러시드", "$145", "포함 (380mAh)", "록 버기"],
+          ["FCX24M Tacoma", "1/24", "4WD", "브러시드", "$139", "포함 (380mAh)", "가성비 입문"],
+          ["FCX24M Land Rover", "1/24", "4WD", "브러시드", "$139~$155", "포함 (380mAh)", "미니 스케일"]
+        ]
+      }
+    ]
+  },
+  "priceCallout": "가격은 FMS 미국 공식 RTR 기준 USD입니다. 1:18과 1:24 모델은 배터리와 USB 충전기가 포함되어 있으며, 1:10 모델은 배터리를 별도 구매해야 합니다.",
+  "recommendations": [
+    {"target": "입문자 (가성비 + 즉시 주행)", "model": "FCX24M Tacoma ($139.99) 또는 Atlas V2 6x6 ($139.99)"},
+    {"target": "미니 크롤링 입문", "model": "FCX24 Power Wagon ($159.99) 또는 FCX24 K5 Blazer ($159.99)"},
+    {"target": "스케일 디테일 중시", "model": "FCX10 Land Rover Camel Trophy ($399.99)"},
+    {"target": "최고 성능 크롤러", "model": "FCX10 PRO LC80 ($499.99) 또는 FCX10 K5 Blazer ($459.99)"},
+    {"target": "브러시리스 업그레이드", "model": "브러시드 대비 $50~70 추가로 더 조용하고 강력한 성능"}
+  ],
+  "recommendationCallout": "첫 FMS로 가장 많이 추천되는 모델은 FCX24 Power Wagon입니다. 가격, 성능, 부품 호환성 모두 뛰어나며 업그레이드 파츠가 풍부합니다. 1:10 스케일에서는 FCX10 Land Rover Camel Trophy가 스케일 디테일과 가격의 균형이 좋습니다.",
+  "glossaryLinks": [
+    {"href": "glossary.html#rtr", "icon": "📦", "text": "RTR"},
+    {"href": "glossary.html#brushless", "icon": "🔄", "text": "브러시리스"},
+    {"href": "glossary.html#lipo", "icon": "🔋", "text": "LiPo"},
+    {"href": "glossary.html#portal-axle", "icon": "🪨", "text": "포탈 액슬"},
+    {"href": "glossary.html#crawler", "icon": "🏔️", "text": "크롤러"}
+  ],
+  "nextReads": [
+    {
+      "href": "traxxas-models.html",
+      "icon": "🔴",
+      "title": "Traxxas 모델 라인업",
+      "desc": "5개 카테고리, 24개 상위모델, 77개 모델 — Traxxas 전체 라인업"
+    },
+    {
+      "href": "selection-checklist.html",
+      "icon": "🛒",
+      "title": "RC카 선택 체크리스트",
+      "desc": "예산, 목적, 주행 환경별 체크리스트로 나에게 맞는 RC카를 찾아보세요."
+    }
+  ]
+}

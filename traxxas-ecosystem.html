@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traxxas 생태계 — X-Maxx RC Blog</title>
+  <meta name="description" content="TSM, TQi, Traxxas Link, iD 커넥터, 클립리스 바디 — Traxxas만의 기술과 편의 기능을 알아봅니다.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Mobile Menu Toggle -->
+  <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
+  <div class="sidebar-overlay"></div>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <span>🏎️</span> X-Maxx RC Blog
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <!-- Home -->
+        <a href="index.html" class="sidebar-link sidebar-link--top">🏠 홈</a>
+
+        <!-- 기초 학습 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="basics">
+            <span class="arrow">▼</span> 📚 기초 학습
+          </button>
+          <div class="sidebar-section-items" data-section-items="basics">
+            <a href="how-it-works.html" class="sidebar-link">RC카 작동 원리</a>
+            <a href="parts-map.html" class="sidebar-link">핵심 부품 맵</a>
+            <a href="power-system.html" class="sidebar-link">파워 시스템</a>
+          </div>
+        </div>
+
+        <!-- 세팅 & 관리 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="setup">
+            <span class="arrow">▼</span> 🔧 세팅 &amp; 관리
+          </button>
+          <div class="sidebar-section-items" data-section-items="setup">
+            <a href="tuning.html" class="sidebar-link">셋업 &amp; 튜닝</a>
+            <a href="maintenance.html" class="sidebar-link">유지보수</a>
+          </div>
+        </div>
+
+        <!-- Traxxas -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="traxxas">
+            <span class="arrow">▼</span> 🔴 Traxxas
+          </button>
+          <div class="sidebar-section-items" data-section-items="traxxas">
+            <a href="traxxas-ecosystem.html" class="sidebar-link">Traxxas 생태계</a>
+            <a href="traxxas-models.html" class="sidebar-link">Traxxas 모델</a>
+          </div>
+        </div>
+
+        <!-- FMS -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="fms">
+            <span class="arrow">▼</span> 🟢 FMS
+          </button>
+          <div class="sidebar-section-items" data-section-items="fms">
+            <a href="fms-models.html" class="sidebar-link">FMS 모델</a>
+          </div>
+        </div>
+
+        <!-- 구매 & 커뮤니티 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="community">
+            <span class="arrow">▼</span> 🛒 구매 &amp; 커뮤니티
+          </button>
+          <div class="sidebar-section-items" data-section-items="community">
+            <a href="selection-checklist.html" class="sidebar-link">RC카 선택 체크리스트</a>
+            <a href="community.html" class="sidebar-link">커뮤니티 용어</a>
+          </div>
+        </div>
+
+        <!-- 안전 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="safety">
+            <span class="arrow">▼</span> ⚡ 안전
+          </button>
+          <div class="sidebar-section-items" data-section-items="safety">
+            <a href="battery-safety.html" class="sidebar-link">배터리 안전</a>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- 데이터베이스 -->
+        <div class="sidebar-section">
+          <button class="sidebar-section-title" data-section="database">
+            <span class="arrow">▼</span> 📊 데이터베이스
+          </button>
+          <div class="sidebar-section-items" data-section-items="database">
+            <a href="glossary.html" class="sidebar-link">용어 사전</a>
+            <a href="models.html" class="sidebar-link">모델 DB</a>
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- Q&A -->
+        <a href="qa.html" class="sidebar-link sidebar-link--top">🔍 Q&amp;A / 검색</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="theme-toggle">🌙 다크 모드</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="content">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+          <a href="index.html">홈</a> &gt;
+          <span>Traxxas</span> &gt;
+          <span>Traxxas 생태계</span>
+        </nav>
+
+        <!-- Page Header -->
+        <div class="page-icon">🔴</div>
+        <h1 class="page-title">Traxxas 생태계</h1>
+        <p class="page-description">TSM, TQi, Traxxas Link, iD 커넥터, 클립리스 바디 — Traxxas만의 기술과 편의 기능을 알아봅니다.</p>
+
+        <!-- ===== 한 줄 요약 ===== -->
+        <h2 id="overview">한 줄 요약</h2>
+        <p><strong>Traxxas는 자체 기술 생태계로 초보자도 쉽게 RC카를 즐길 수 있게 합니다.</strong></p>
+        <p>Traxxas는 조종기, 수신기, 배터리, 충전기, 앱까지 하나의 통합된 시스템으로 설계했습니다. 각 기술이 서로 연결되어 있어, 복잡한 설정 없이도 박스를 열자마자 바로 주행할 수 있습니다. 이 글에서는 Traxxas 생태계를 구성하는 핵심 기술들을 하나씩 살펴보겠습니다.</p>
+
+        <!-- ===== 왜 Traxxas인가? ===== -->
+        <h2 id="why-traxxas">왜 Traxxas인가?</h2>
+        <p>Traxxas는 현재 세계에서 가장 큰 RC카 브랜드 중 하나로, 특히 입문자에게 강력한 장점을 가지고 있습니다.</p>
+
+        <ul>
+          <li><strong>세계 최대 RC카 브랜드</strong> — 미국을 중심으로 전 세계에서 가장 많이 판매되는 취미용 RC카 브랜드입니다.</li>
+          <li><strong>RTR(Ready-To-Run) 강점</strong> — 박스를 개봉하면 조종기, 배터리, 충전기까지 모두 포함되어 있어 추가 구매 없이 즉시 주행할 수 있습니다.</li>
+          <li><strong>부품 수급 용이</strong> — 전 세계적으로 유통되기 때문에 교체 부품과 업그레이드 파츠를 쉽게 구할 수 있습니다.</li>
+          <li><strong>커뮤니티 규모</strong> — 유튜브, 포럼, SNS 등에 엄청난 양의 리뷰, 튜닝 가이드, 문제 해결 정보가 있어 혼자서도 배우기 쉽습니다.</li>
+        </ul>
+
+        <div class="callout info">
+          <div class="callout-icon">ℹ️</div>
+          <div class="callout-content">
+            <p>Traxxas는 <strong>'취미용 RC의 애플'</strong>이라고 불립니다 — 하드웨어, 소프트웨어, 액세서리가 하나의 생태계로 연결됩니다. 조종기부터 충전기까지 모든 것이 서로 최적화되어 있어, 호환성 걱정 없이 사용할 수 있습니다.</p>
+          </div>
+        </div>
+
+        <!-- ===== 회사 소개 ===== -->
+        <h2 id="company-info">Traxxas 회사 소개</h2>
+        <p>Traxxas의 역사와 창업 스토리, 그리고 본사 및 공장 위치를 살펴봅니다.</p>
+
+        <div class="spec-block">
+          <div class="spec-block-title">📋 Traxxas 기본 정보</div>
+          <div class="spec-row">
+            <span class="spec-label">설립</span>
+            <span class="spec-value">1986년</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">창업자/CEO</span>
+            <span class="spec-value">Mike Jenkins (마이크 젠킨스) — 현재까지 Owner/President/CEO</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">본사/공장</span>
+            <span class="spec-value">미국 텍사스주 맥키니 (McKinney, Texas)</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">직원 수</span>
+            <span class="spec-value">약 1,000명 이상</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">슬로건</span>
+            <span class="spec-value">"The Fastest Name in Radio Control"</span>
+          </div>
+        </div>
+
+        <h3>창업 스토리</h3>
+        <p>Traxxas는 1986년, <strong>Mike Jenkins</strong>가 미국 텍사스주에서 설립했습니다. 당시 RC카 시장은 키트(Kit) 형태가 주류였습니다 — 사용자가 직접 조립하고, 조종기·배터리·모터를 별도로 구매해야 했기 때문에 진입 장벽이 매우 높았습니다.</p>
+        <p>Mike Jenkins는 이 문제를 해결하기 위해 <strong>"Ready-To-Run(RTR)"</strong>이라는 개념을 RC카 업계 최초로 도입했습니다. 박스를 열면 조종기, 배터리, 충전기가 모두 포함되어 있어 추가 구매 없이 바로 주행할 수 있는 완성형 제품을 만든 것입니다. 이 혁신은 RC카의 대중화에 결정적인 역할을 했으며, 현재는 대부분의 RC 브랜드가 RTR 방식을 채택하고 있습니다.</p>
+
+        <h3>본사 및 공장</h3>
+        <p>Traxxas의 본사와 주요 생산 시설은 <strong>미국 텍사스주 맥키니(McKinney, Texas)</strong>에 위치해 있습니다. 댈러스(Dallas) 북쪽에 위치한 이 도시에서 제품 설계, 엔지니어링, 조립, 품질 검사가 모두 이루어집니다. "Designed and Assembled in the USA"를 모토로 미국 내 생산을 유지하고 있습니다.</p>
+
+        <div class="callout info">
+          <div class="callout-icon">ℹ️</div>
+          <div class="callout-content">
+            <p>Traxxas는 RC카 업계에서 <strong>"RTR(Ready-To-Run)"이라는 용어를 처음 만든 회사</strong>입니다. 이전에는 모든 RC카를 직접 조립해야 했지만, Traxxas 덕분에 초보자도 쉽게 RC카를 시작할 수 있게 되었습니다. 창업 이후 40년 가까이 Mike Jenkins가 직접 회사를 이끌고 있습니다.</p>
+          </div>
+        </div>
+
+        <!-- ===== TSM ===== -->
+        <h2 id="tsm">TSM (Traxxas Stability Management)</h2>
+        <p>TSM은 Traxxas가 개발한 <strong>차체 안정화 시스템</strong>으로, 실제 자동차의 ESC(Electronic Stability Control, 차체 자세 제어 장치)와 유사한 개념입니다. RC카 초보자에게 가장 핵심적인 기능이라고 할 수 있습니다.</p>
+
+        <p><strong>어떻게 작동하나요?</strong></p>
+        <ul>
+          <li><strong>수신기에 내장된 자이로 센서</strong>가 차량의 움직임(회전, 미끄러짐)을 실시간으로 감지합니다.</li>
+          <li>스로틀을 급하게 밟았을 때 발생하는 <strong>오버스티어(뒷바퀴 미끄러짐)</strong>를 자동으로 보정합니다.</li>
+          <li>조종기의 TSM 다이얼로 <strong>강도를 0~100%까지 조절</strong>할 수 있습니다.</li>
+          <li>100%에 가까울수록 차량이 안정적이지만 민첩성은 줄어들고, 0%로 설정하면 TSM이 완전히 꺼져 자유로운 드리프트가 가능합니다.</li>
+        </ul>
+
+        <div class="callout tip">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content">
+            <p>처음에는 TSM을 <strong>50~70%</strong>로 설정하고, 조종이 익숙해지면 점차 줄여보세요. TSM을 끄고 달릴 수 있게 되면, 여러분의 조종 실력이 크게 늘었다는 뜻입니다!</p>
+          </div>
+        </div>
+
+        <div class="spec-block">
+          <div class="spec-block-title">📋 TSM 설정 범위와 효과</div>
+          <div class="spec-row">
+            <span class="spec-label">0% (OFF)</span>
+            <span class="spec-value">TSM 완전 비활성 — 드리프트, 스핀 자유로움. 숙련자용.</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">25%</span>
+            <span class="spec-value">최소 보정 — 약간의 안정화만 제공. 중급자에게 적합.</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">50%</span>
+            <span class="spec-value">중간 보정 — 안정성과 민첩성의 균형. 초보자 연습용으로 좋음.</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">75%</span>
+            <span class="spec-value">강한 보정 — 미끄러짐 대부분 방지. 입문자 추천 설정.</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">100% (MAX)</span>
+            <span class="spec-value">최대 보정 — 직진 안정성 극대화. 고속 직선 주행에 적합.</span>
+          </div>
+        </div>
+
+        <!-- ===== TQi 조종 시스템 ===== -->
+        <h2 id="tqi">TQi 조종 시스템</h2>
+        <p>TQi는 Traxxas의 고급 조종 시스템으로, 조종기(송신기)와 수신기를 포함하는 통합 무선 제어 시스템입니다. 대부분의 Traxxas RTR 모델에 기본으로 포함됩니다.</p>
+
+        <ul>
+          <li><strong>2.4GHz FHSS 방식</strong> — 주파수 호핑 확산 스펙트럼 기술을 사용하여 다른 RC카와 간섭 없이 동시 주행이 가능합니다.</li>
+          <li><strong>멀티채널</strong> — 기본 2채널(조향 + 스로틀)에서 최대 5채널까지 확장할 수 있어, 조명, 윈치 등 추가 장치를 제어할 수 있습니다.</li>
+          <li><strong>Traxxas Link 앱 연동</strong> — Bluetooth 모듈(별매)을 장착하면 스마트폰 앱으로 실시간 데이터를 확인하고 세팅을 조정할 수 있습니다.</li>
+          <li><strong>내장 텔레메트리 (옵션)</strong> — 속도, 배터리 전압, 모터 온도 등의 주행 데이터를 실시간으로 수집할 수 있습니다.</li>
+          <li><strong>Bluetooth 모듈 추가 가능</strong> — TQi 조종기 내부에 Bluetooth 모듈 슬롯이 있어, 모듈을 끼우기만 하면 앱 연동이 활성화됩니다.</li>
+          <li><strong>모델 메모리</strong> — 여러 대의 Traxxas 차량 설정을 저장해두고 간편하게 전환할 수 있습니다.</li>
+        </ul>
+
+        <div class="spec-block">
+          <div class="spec-block-title">📋 TQi 시스템 사양</div>
+          <div class="spec-row">
+            <span class="spec-label">주파수</span>
+            <span class="spec-value">2.4GHz FHSS</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">채널</span>
+            <span class="spec-value">기본 2ch / 최대 5ch</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">조종 거리</span>
+            <span class="spec-value">약 300m (1,000ft)</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">TSM 내장</span>
+            <span class="spec-value">예 (수신기에 자이로 센서 내장)</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Bluetooth</span>
+            <span class="spec-value">모듈 추가 시 Traxxas Link 앱 연동</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">텔레메트리</span>
+            <span class="spec-value">속도, 배터리 전압, RPM, 온도 (옵션)</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">전원</span>
+            <span class="spec-value">AA 배터리 4개</span>
+          </div>
+        </div>
+
+        <!-- ===== Traxxas Link 앱 ===== -->
+        <h2 id="traxxas-link">Traxxas Link 앱</h2>
+        <p>Traxxas Link는 스마트폰으로 RC카의 실시간 데이터를 확인하고, 각종 세팅을 조정할 수 있는 공식 앱입니다. TQi 조종기에 Bluetooth 모듈을 장착한 후 앱과 연동하면 사용할 수 있습니다.</p>
+
+        <p><strong>주요 기능:</strong></p>
+        <ul>
+          <li><strong>실시간 데이터 확인</strong> — 스마트폰 화면에서 현재 속도, 최고 속도, 주행 거리를 한눈에 볼 수 있습니다.</li>
+          <li><strong>배터리 전압 모니터링</strong> — 배터리 잔량과 전압을 실시간으로 확인하여, 과방전을 미리 예방할 수 있습니다.</li>
+          <li><strong>모터 온도 모니터링</strong> — 모터의 발열 상태를 확인하여 과열로 인한 손상을 방지합니다.</li>
+          <li><strong>TSM/스로틀/스티어링 세팅 조정</strong> — 앱에서 직접 TSM 레벨, 스로틀 커브, 스티어링 엔드포인트 등을 미세 조정할 수 있습니다.</li>
+          <li><strong>주행 데이터 기록</strong> — 주행 기록을 저장하고 이전 데이터와 비교하여 실력 향상을 추적할 수 있습니다.</li>
+        </ul>
+
+        <div class="callout info">
+          <div class="callout-icon">ℹ️</div>
+          <div class="callout-content">
+            <p>Traxxas Link 앱은 <strong>iOS/Android 무료</strong>로 다운로드 가능합니다. 단, 앱을 사용하려면 TQi 조종기에 <strong>Bluetooth 모듈(별매, 약 3~4만 원)</strong>을 장착해야 합니다. 모듈은 조종기 내부에 끼우기만 하면 되어 설치가 간단합니다.</p>
+          </div>
+        </div>
+
+        <!-- ===== iD 배터리 시스템 ===== -->
+        <h2 id="id-system">iD 배터리 시스템</h2>
+        <p>iD 시스템은 Traxxas가 개발한 <strong>배터리 자동 인식 기술</strong>입니다. 배터리에 내장된 작은 칩이 배터리의 종류, 셀 수, 용량 등의 정보를 저장하고 있어, 충전기가 이를 자동으로 읽어 최적의 충전을 수행합니다.</p>
+
+        <ul>
+          <li><strong>배터리 내장 칩으로 자동 인식</strong> — iD 배터리를 EZ-Peak 충전기에 연결하면, 충전기가 배터리 종류(NiMH/LiPo)를 즉시 인식합니다.</li>
+          <li><strong>자동 최적 충전</strong> — EZ-Peak 충전기가 배터리에 맞는 충전 모드와 전류를 자동으로 설정합니다. 수동 설정이 전혀 필요 없습니다.</li>
+          <li><strong>NiMH/LiPo 구분 없이 안전 충전</strong> — NiMH와 LiPo 배터리를 같은 충전기로 사용할 수 있으며, 잘못된 모드로 충전하는 실수를 원천 차단합니다.</li>
+          <li><strong>과충전/과방전 자동 방지</strong> — 충전이 완료되면 자동으로 멈추고, 주행 중에도 저전압 차단(LVC)으로 배터리를 보호합니다.</li>
+        </ul>
+
+        <div class="callout tip">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content">
+            <p><strong>iD 배터리 + EZ-Peak 충전기</strong> 조합은 초보자에게 가장 안전한 선택입니다. 배터리 종류를 잘못 선택해서 발생하는 사고를 원천적으로 방지해주기 때문에, LiPo 배터리가 처음이더라도 안심하고 사용할 수 있습니다.</p>
+          </div>
+        </div>
+
+        <!-- ===== 클립리스 바디 마운트 ===== -->
+        <h2 id="clipless">클립리스 바디 마운트</h2>
+        <p>RC카의 바디(차체 커버)를 고정하는 방식에 관한 Traxxas의 혁신입니다.</p>
+
+        <ul>
+          <li><strong>기존 방식</strong> — 바디 클립(바디 핀)이라는 작은 금속 핀으로 바디를 섀시에 고정합니다. 작고 잘 튀어나가기 때문에 분실이 매우 잦고, 손가락으로 끼우고 빼기가 번거롭습니다.</li>
+          <li><strong>클립리스 방식</strong> — Traxxas가 도입한 래치(걸쇠) 방식으로, 바디를 눌러 끼우고 래치를 당기면 원터치로 탈착됩니다. 바디 핀을 잃어버릴 걱정이 없고, 배터리 교체나 정비 시 바디를 빠르게 열고 닫을 수 있습니다.</li>
+          <li><strong>적용 모델</strong> — X-Maxx, Sledge, Maxx V2 등 Traxxas의 최신 모델에 적용되고 있으며, 점차 확대되는 추세입니다.</li>
+        </ul>
+
+        <!-- ===== 셀프 라이팅 ===== -->
+        <h2 id="self-righting">셀프 라이팅 (Self-Righting)</h2>
+        <p>배싱(Bashing) 중 점프나 충돌로 RC카가 뒤집어지는 것은 매우 흔한 일입니다. 과거에는 직접 걸어가서 차를 뒤집어야 했지만, Traxxas의 셀프 라이팅 기능이 이 문제를 해결합니다.</p>
+
+        <ul>
+          <li><strong>버튼 하나로 복원</strong> — 차가 뒤집어진 상태에서 조종기의 스로틀을 풀로 당기면(또는 전용 버튼 조작), ESC가 모터를 순간적으로 강하게 회전시켜 차체를 뒤집어 원래 상태로 복원합니다.</li>
+          <li><strong>ESC에 내장된 기능</strong> — 별도의 장치 없이 ESC 펌웨어에 포함된 기능이므로, 추가 비용이 들지 않습니다.</li>
+          <li><strong>적용 모델</strong> — X-Maxx, Hoss, Maxx, Sledge 등 Traxxas의 몬스터 트럭 및 대형 모델에 적용됩니다.</li>
+        </ul>
+
+        <div class="callout tip">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content">
+            <p><strong>배싱(Bashing)</strong> 중 자주 뒤집히는 몬스터 트럭에 특히 유용합니다. 넓은 공터에서 점프를 즐기다 뒤집혀도, 멀리 걸어갈 필요 없이 조종기에서 바로 복원할 수 있어 주행 흐름이 끊기지 않습니다.</p>
+          </div>
+        </div>
+
+        <!-- ===== 방수 시스템 ===== -->
+        <h2 id="waterproof">방수 시스템</h2>
+        <p>Traxxas는 RC카 업계에서 가장 먼저 방수 전자부품을 도입한 브랜드 중 하나입니다. 비 오는 날이나 물웅덩이가 있는 환경에서도 주행할 수 있도록 핵심 전자 부품에 방수 처리가 되어 있습니다.</p>
+
+        <ul>
+          <li><strong>방수 전자부품</strong> — ESC, 서보, 수신기 박스가 방수 설계되어 있어, 물이 튀거나 얕은 물웅덩이를 지나는 정도의 환경에서 안전하게 사용할 수 있습니다.</li>
+          <li><strong>방수 ≠ 수중</strong> — "방수(Waterproof)"라고 해서 물속에 완전히 담가도 된다는 의미는 아닙니다. 수위가 전자 부품 위로 올라오면 내부로 물이 침투할 수 있으며, 장시간 물에 노출되면 위험합니다.</li>
+          <li><strong>주행 후 반드시 건조</strong> — 물기가 있는 환경에서 주행한 후에는 에어건이나 마른 천으로 물기를 완전히 제거하고, 통풍이 잘 되는 곳에서 건조해야 합니다.</li>
+        </ul>
+
+        <div class="callout warning">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content">
+            <p><strong>방수라고 물속에 담그지 마세요!</strong> 베어링, 기어, 드라이브 샤프트, 디퍼렌셜 등의 기계 부품은 방수가 아닙니다. 물에 노출되면 녹이 슬거나 윤활유가 씻겨나가 수명이 크게 단축됩니다. 물기 있는 환경에서 주행한 후에는 반드시 분해 청소 및 재주유를 해주세요.</p>
+          </div>
+        </div>
+
+        <!-- ===== 생태계 요약 ===== -->
+        <h2 id="ecosystem-summary">생태계 요약</h2>
+        <p>Traxxas 생태계를 구성하는 핵심 기술들을 한눈에 정리합니다.</p>
+
+        <div class="dashboard-grid">
+          <div class="dashboard-card">
+            <div class="dashboard-card-icon">🛡️</div>
+            <div class="dashboard-card-title">TSM</div>
+            <div class="dashboard-card-desc">자이로 센서 기반 차체 안정화 시스템. 초보자의 조종을 도와주고, 다이얼로 강도를 0~100% 조절할 수 있습니다.</div>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="dashboard-card-icon">🎮</div>
+            <div class="dashboard-card-title">TQi</div>
+            <div class="dashboard-card-desc">2.4GHz FHSS 조종 시스템. 최대 5채널, 텔레메트리 지원, Bluetooth 확장 가능.</div>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="dashboard-card-icon">📱</div>
+            <div class="dashboard-card-title">Traxxas Link</div>
+            <div class="dashboard-card-desc">스마트폰 앱으로 실시간 데이터 모니터링, 세팅 조정, 주행 기록 관리.</div>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="dashboard-card-icon">🔋</div>
+            <div class="dashboard-card-title">iD 시스템</div>
+            <div class="dashboard-card-desc">배터리 자동 인식 + EZ-Peak 충전기 최적 충전. 과충전/과방전 자동 방지.</div>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="dashboard-card-icon">🔓</div>
+            <div class="dashboard-card-title">클립리스 바디</div>
+            <div class="dashboard-card-desc">래치 방식 원터치 바디 탈착. 바디 핀 분실 걱정 없이 빠르게 바디를 열고 닫을 수 있습니다.</div>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="dashboard-card-icon">🔄</div>
+            <div class="dashboard-card-title">셀프 라이팅</div>
+            <div class="dashboard-card-desc">뒤집어져도 조종기로 원격 복원. ESC에 내장된 기능으로 추가 비용 없음.</div>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="dashboard-card-icon">💧</div>
+            <div class="dashboard-card-title">방수 시스템</div>
+            <div class="dashboard-card-desc">ESC, 서보, 수신기 박스 방수 설계. 비 오는 날, 물웅덩이 주행 가능.</div>
+          </div>
+        </div>
+
+        <!-- ===== 자주 묻는 질문 ===== -->
+        <h2 id="faq">자주 묻는 질문</h2>
+
+        <details class="toggle">
+          <summary>TSM 없이도 조종할 수 있나요?</summary>
+          <div class="toggle-content">
+            <p><strong>네, 물론 가능합니다.</strong> TSM은 보조 기능이지 필수가 아닙니다. 조종기의 TSM 다이얼을 0%로 돌리면 TSM이 완전히 꺼집니다.</p>
+            <p>TSM 없이 조종하면 차량이 더 민첩해지고 드리프트 같은 자유로운 조작이 가능해집니다. 다만 급가속 시 뒷바퀴가 미끄러지거나 직진 안정성이 떨어질 수 있으므로, 초보자는 TSM을 켜고 연습한 후 점차 줄이는 것을 추천합니다.</p>
+            <p>참고로, 다른 브랜드의 RC카에는 TSM 같은 기능이 없는 경우가 많으며, 별도의 자이로 모듈을 추가 구매해야 하는 경우도 있습니다.</p>
+          </div>
+        </details>
+
+        <details class="toggle">
+          <summary>Traxxas Link 앱은 꼭 필요한가요?</summary>
+          <div class="toggle-content">
+            <p><strong>아니요, 필수는 아닙니다.</strong> Traxxas Link 앱 없이도 RC카는 완벽하게 작동합니다. 조종기의 물리적 다이얼과 버튼만으로도 TSM 강도 조절, 기본 주행 등 모든 핵심 기능을 사용할 수 있습니다.</p>
+            <p>다만, 앱을 사용하면 <strong>실시간 속도 확인, 배터리 전압 모니터링, 모터 온도 체크, 세밀한 세팅 조정</strong> 등 추가적인 편의 기능을 활용할 수 있어, 주행을 더 체계적으로 즐기고 싶은 분에게 추천합니다.</p>
+            <p>앱을 사용하려면 Bluetooth 모듈(약 3~4만 원 별매)을 TQi 조종기에 장착해야 합니다.</p>
+          </div>
+        </details>
+
+        <details class="toggle">
+          <summary>다른 브랜드 배터리도 Traxxas에 쓸 수 있나요?</summary>
+          <div class="toggle-content">
+            <p><strong>네, 사용할 수 있습니다.</strong> 다만 몇 가지 주의사항이 있습니다.</p>
+            <ul>
+              <li><strong>커넥터 호환성</strong> — Traxxas는 고유 커넥터를 사용하므로, 다른 브랜드 배터리를 사용하려면 커넥터를 교체하거나 변환 어댑터를 사용해야 합니다.</li>
+              <li><strong>iD 기능 비활성</strong> — Traxxas가 아닌 배터리에는 iD 칩이 없으므로, EZ-Peak 충전기의 자동 인식 기능을 사용할 수 없습니다. 충전 시 배터리 종류(NiMH/LiPo)와 셀 수를 수동으로 설정해야 합니다.</li>
+              <li><strong>전압/크기 확인</strong> — 사용하는 ESC의 최대 지원 전압(셀 수)을 초과하지 않는 배터리를 선택해야 하며, 배터리 트레이에 물리적으로 맞는 크기인지도 확인해야 합니다.</li>
+            </ul>
+            <p>초보자라면 호환성 걱정 없는 <strong>Traxxas iD 배터리</strong>를 권장하지만, 경험이 쌓이면 서드파티 배터리도 충분히 활용할 수 있습니다.</p>
+          </div>
+        </details>
+
+        <!-- ===== 관련 용어 ===== -->
+        <h2 id="glossary-links">관련 용어</h2>
+        <p>이 페이지에서 다룬 핵심 용어들을 용어 사전에서 더 자세히 확인할 수 있습니다.</p>
+        <ul>
+          <li><a href="glossary.html#tsm"><strong>TSM</strong></a> — Traxxas Stability Management, 차체 안정화 시스템</li>
+          <li><a href="glossary.html#esc"><strong>ESC</strong></a> — 전자 변속기 (Electronic Speed Controller)</li>
+          <li><a href="glossary.html#lipo"><strong>LiPo</strong></a> — 리튬폴리머 배터리 (Lithium Polymer)</li>
+          <li><a href="glossary.html#id-connector"><strong>iD 커넥터</strong></a> — Traxxas 고유의 배터리 자동 인식 시스템</li>
+          <li><a href="glossary.html#rtr"><strong>RTR</strong></a> — Ready-To-Run, 즉시 주행 가능 패키지</li>
+        </ul>
+
+        <!-- ===== 다음 읽기 ===== -->
+        <div class="next-read">
+          <div class="next-read-title">다음 읽기</div>
+          <div class="next-read-grid">
+            <a href="traxxas-models.html" class="next-read-card">
+              <div class="next-read-card-icon">🚗</div>
+              <div class="next-read-card-title">Traxxas 모델</div>
+              <div class="next-read-card-desc">Traxxas의 다양한 모델 라인업을 살펴보고, 나에게 맞는 모델을 찾아봅니다.</div>
+            </a>
+            <a href="power-system.html" class="next-read-card">
+              <div class="next-read-card-icon">⚡</div>
+              <div class="next-read-card-title">파워 시스템</div>
+              <div class="next-read-card-desc">모터와 배터리의 종류, KV 값, C 레이팅 등 파워트레인의 핵심을 깊이 있게 다룹니다.</div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- TOC -->
+    <aside class="toc">
+      <div class="toc-title">목차</div>
+      <ul class="toc-list"></ul>
+    </aside>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
