@@ -236,9 +236,9 @@
     });
   }
 
-  // --- DB Table Sorting ---
+  // --- DB Table Sorting (generic — skip #models-table which has its own sort) ---
   function initDBSort() {
-    document.querySelectorAll('.db-table th[data-sort]').forEach(function (th) {
+    document.querySelectorAll('.db-table:not(#models-table) th[data-sort]').forEach(function (th) {
       th.addEventListener('click', function () {
         const table = this.closest('.db-table');
         const tbody = table.querySelector('tbody');

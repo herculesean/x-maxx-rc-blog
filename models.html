@@ -1046,28 +1046,35 @@
           return;
         }
 
-        // Group data by category (preserving order)
-        var grouped = {};
-        data.forEach(function (item) {
-          if (!grouped[item.category]) grouped[item.category] = [];
-          grouped[item.category].push(item);
-        });
-
-        // Sort categories by predefined order
-        var orderedCats = CATEGORY_ORDER.filter(function (cat) { return grouped[cat]; });
-        // Add any remaining categories not in CATEGORY_ORDER
-        Object.keys(grouped).forEach(function (cat) {
-          if (orderedCats.indexOf(cat) === -1) orderedCats.push(cat);
-        });
-
         var html = '';
-        orderedCats.forEach(function (cat) {
-          var emoji = CATEGORY_EMOJI[cat] || '📦';
-          html += '<div class="category-group-header">' + emoji + ' ' + escapeHtml(cat) + ' (' + grouped[cat].length + ')</div>';
-          grouped[cat].forEach(function (item) {
+
+        // If user explicitly sorted by a column, show flat sorted list
+        if (sortColumn !== 'name') {
+          data.forEach(function (item) {
             html += renderSingleCard(item);
           });
-        });
+        } else {
+          // Default: group data by category
+          var grouped = {};
+          data.forEach(function (item) {
+            if (!grouped[item.category]) grouped[item.category] = [];
+            grouped[item.category].push(item);
+          });
+
+          // Sort categories by predefined order
+          var orderedCats = CATEGORY_ORDER.filter(function (cat) { return grouped[cat]; });
+          Object.keys(grouped).forEach(function (cat) {
+            if (orderedCats.indexOf(cat) === -1) orderedCats.push(cat);
+          });
+
+          orderedCats.forEach(function (cat) {
+            var emoji = CATEGORY_EMOJI[cat] || '📦';
+            html += '<div class="category-group-header">' + emoji + ' ' + escapeHtml(cat) + ' (' + grouped[cat].length + ')</div>';
+            grouped[cat].forEach(function (item) {
+              html += renderSingleCard(item);
+            });
+          });
+        }
 
         cardsContainer.innerHTML = html;
       }
